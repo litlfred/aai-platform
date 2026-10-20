@@ -6665,7 +6665,7 @@
   },"952": {
     "doc": "Programme board",
     "title": "Metrics",
-    "content": "M1 Epics by Delivery health . |   | Count |   | . | On track | 0 | | . | At risk | 0 | | . | Blocked | 1 | | . M2 Blocked items by Workstream . |   | Count |   | . | WS3 Evaluation | 1 | | . | Cross-workstream | 1 | | . M3 At-risk or blocked dependencies . |   | Count |   | . | At risk or Blocked | 1 | | . M4 Overdue deliverables . |   | Count |   | . | Overdue | 0 | | . M5 Integration readiness by Pipeline stage . | Pipeline stage | Not assessed | Not ready | Partly ready | Ready to integrate | Validated | . | KG Knowledge graph | 0 | 0 | 0 | 1 | 0 | . | Cross-cutting / N/A | 1 | 0 | 0 | 0 | 0 | . ",
+    "content": "M1 Epics by Delivery health . |   | Count |   | . | On track | 1 | | . | At risk | 0 | | . | Blocked | 0 | | . M2 Blocked items by Workstream . |   | Count |   | . | WS3 Evaluation | 1 | | . M3 At-risk or blocked dependencies . |   | Count |   | . | At risk or Blocked | 1 | | . M4 Overdue deliverables . |   | Count |   | . | Overdue | 0 | | . M5 Integration readiness by Pipeline stage . | Pipeline stage | Not assessed | Not ready | Partly ready | Ready to integrate | Validated | . | KG Knowledge graph | 0 | 0 | 0 | 1 | 0 | . | Cross-cutting / N/A | 1 | 0 | 0 | 0 | 0 | . ",
     "url": "/aai-programme/programme/#metrics",
     
     "relUrl": "/programme/#metrics"
@@ -9073,7 +9073,7 @@
   },"1296": {
     "doc": "V1 Master programme",
     "title": "V1 Master programme",
-    "content": "Epics, grouped by Workstream, sorted by Start date. (req:aai-views#V1) . Cross-workstream (1) . | Title | Programme status | Delivery health | Pipeline stage | Start | Target | Gates output | Primary RQ | Sub-issues | . | [Pilot] Epic: one WHO recommendation from source guidance to a health skill | In progress | Blocked | Cross-cutting / N/A | – | – | None | R1 | 0/4 | . Built 2026-10-20 from the labels of 7 issue(s) in litlfred/aai-programme by scripts/programme/board.ts; as current as the last publish. Change a value by changing the issue’s label. ",
+    "content": "Epics, grouped by Workstream, sorted by Start date. (req:aai-views#V1) . Cross-workstream (1) . | Title | Programme status | Delivery health | Pipeline stage | Start | Target | Gates output | Primary RQ | Sub-issues | . | [Pilot] Epic: one WHO recommendation from source guidance to a health skill | In progress | On track | Cross-cutting / N/A | 2026-10-20 | 2026-12-04 | None | R1 | 0/4 | . Built 2026-10-20 from the labels of 7 issue(s) in litlfred/aai-programme by scripts/programme/board.ts; as current as the last publish. Change a value by changing the issue’s label. ",
     "url": "/aai-programme/programme/v1.html#v1-master-programme",
     
     "relUrl": "/programme/v1.html#v1-master-programme"
@@ -9087,7 +9087,7 @@
   },"1298": {
     "doc": "V10 Blocked and at risk",
     "title": "V10 Blocked and at risk",
-    "content": "Delivery health At risk or Blocked, or labelled blocked, at-risk or validation-exception. Every item here should carry a Next action line. (req:aai-views#V10) . At risk · WS3 Evaluation (1) . | Title | Workstream | Risk category | Impact | Target | Assignee | Next action | . | D-P1: [Pilot] WS3’s check waits on WS1’s extracted graph | WS3 Evaluation | Dependency | Medium | – | – | WS1 merges the extraction; the WS1 lead, by the pilot’s end | . Blocked · Cross-workstream (1) . | Title | Workstream | Risk category | Impact | Target | Assignee | Next action | . | [Pilot] Epic: one WHO recommendation from source guidance to a health skill | Cross-workstream | – | – | – | – | missing | . Blocked · WS3 Evaluation (1) . | Title | Workstream | Risk category | Impact | Target | Assignee | Next action | . | [Pilot] Feature (WS3): check the extracted graph against the source | WS3 Evaluation | Dependency | Medium | – | – | WS3 starts the comparison when the WS1 extraction is merged; the WS3 lead, by the pilot’s end. | . Built 2026-10-20 from the labels of 7 issue(s) in litlfred/aai-programme by scripts/programme/board.ts; as current as the last publish. Change a value by changing the issue’s label. ",
+    "content": "Delivery health At risk or Blocked, or labelled blocked, at-risk or validation-exception. Every item here should carry a Next action line. (req:aai-views#V10) . At risk · WS3 Evaluation (1) . | Title | Workstream | Risk category | Impact | Target | Assignee | Next action | . | D-P1: [Pilot] WS3’s check waits on WS1’s extracted graph | WS3 Evaluation | Dependency | Medium | 2026-11-09 | – | WS1 merges the extraction; the WS1 lead, by the pilot’s end | . Blocked · WS3 Evaluation (1) . | Title | Workstream | Risk category | Impact | Target | Assignee | Next action | . | [Pilot] Feature (WS3): check the extracted graph against the source | WS3 Evaluation | Dependency | Medium | 2026-11-20 | – | WS3 starts the comparison when the WS1 extraction is merged; the WS3 lead, by the pilot’s end. | . Built 2026-10-20 from the labels of 7 issue(s) in litlfred/aai-programme by scripts/programme/board.ts; as current as the last publish. Change a value by changing the issue’s label. ",
     "url": "/aai-programme/programme/v10.html#v10-blocked-and-at-risk",
     
     "relUrl": "/programme/v10.html#v10-blocked-and-at-risk"
@@ -9101,7 +9101,7 @@
   },"1300": {
     "doc": "V11 WHO review",
     "title": "V11 WHO review",
-    "content": "Items with a Review type other than Not needed, in columns by Review status. (req:aai-views#V11) . Not submitted 1[Pilot] Feature (WS3): check the extracted graph against the sourceWS3 Evaluation · SME sign-off · due –Submitted 0Under WHO review 0Feedback issued 0Resubmitted 0Approved 0Closed 0 Built 2026-10-20 from the labels of 7 issue(s) in litlfred/aai-programme by scripts/programme/board.ts; as current as the last publish. Change a value by changing the issue’s label. ",
+    "content": "Items with a Review type other than Not needed, in columns by Review status. (req:aai-views#V11) . Not submitted 1[Pilot] Feature (WS3): check the extracted graph against the sourceWS3 Evaluation · SME sign-off · due 2026-11-20Submitted 0Under WHO review 0Feedback issued 0Resubmitted 0Approved 0Closed 0 Built 2026-10-20 from the labels of 7 issue(s) in litlfred/aai-programme by scripts/programme/board.ts; as current as the last publish. Change a value by changing the issue’s label. ",
     "url": "/aai-programme/programme/v11.html#v11-who-review",
     
     "relUrl": "/programme/v11.html#v11-who-review"
@@ -9115,7 +9115,7 @@
   },"1302": {
     "doc": "V12 Decisions",
     "title": "V12 Decisions",
-    "content": "Decision issues, open and closed. (req:aai-views#V12) . Open (1) . | Title | Workstream | Programme status | Target | . | DEC-P1: [Pilot] Which recommendation the thin slice uses | Cross-workstream | Not started | – | . Built 2026-10-20 from the labels of 7 issue(s) in litlfred/aai-programme by scripts/programme/board.ts; as current as the last publish. Change a value by changing the issue’s label. ",
+    "content": "Decision issues, open and closed. (req:aai-views#V12) . Open (1) . | Title | Workstream | Programme status | Target | . | DEC-P1: [Pilot] Which recommendation the thin slice uses | Cross-workstream | Not started | 2026-10-30 | . Built 2026-10-20 from the labels of 7 issue(s) in litlfred/aai-programme by scripts/programme/board.ts; as current as the last publish. Change a value by changing the issue’s label. ",
     "url": "/aai-programme/programme/v12.html#v12-decisions",
     
     "relUrl": "/programme/v12.html#v12-decisions"
@@ -9143,7 +9143,7 @@
   },"1306": {
     "doc": "V2 Roadmap",
     "title": "V2 Roadmap",
-    "content": "Epics and milestones with dates, by Workstream. (req:aai-views#V2) . No epic or milestone has both a Start date and a Target date yet. They are set in each issue’s Programme fields table. Without dates: [Pilot] Milestone: thin slice demonstrated, [Pilot] Epic: one WHO recommendation from source guidance to a health skill . Built 2026-10-20 from the labels of 7 issue(s) in litlfred/aai-programme by scripts/programme/board.ts; as current as the last publish. Change a value by changing the issue’s label. ",
+    "content": "Epics and milestones with dates, by Workstream. (req:aai-views#V2) . 2026-10-20 to 2026-12-04 . [Pilot] Epic: one WHO recommendation from source guidance to a health skillCross-workstream[Pilot] Milestone: thin slice demonstrated– Built 2026-10-20 from the labels of 7 issue(s) in litlfred/aai-programme by scripts/programme/board.ts; as current as the last publish. Change a value by changing the issue’s label. ",
     "url": "/aai-programme/programme/v2.html#v2-roadmap",
     
     "relUrl": "/programme/v2.html#v2-roadmap"
@@ -9157,7 +9157,7 @@
   },"1308": {
     "doc": "V3 Milestones",
     "title": "V3 Milestones",
-    "content": "Milestone issues, and items with any gates: label, by Gates output. (req:aai-views#V3) . None (1) . | Title | Workstream | Programme status | Delivery health | Target | . | [Pilot] Milestone: thin slice demonstrated | – | Not started | On track | – | . Built 2026-10-20 from the labels of 7 issue(s) in litlfred/aai-programme by scripts/programme/board.ts; as current as the last publish. Change a value by changing the issue’s label. ",
+    "content": "Milestone issues, and items with any gates: label, by Gates output. (req:aai-views#V3) . None (1) . | Title | Workstream | Programme status | Delivery health | Target | . | [Pilot] Milestone: thin slice demonstrated | – | Not started | On track | 2026-12-04 | . Built 2026-10-20 from the labels of 7 issue(s) in litlfred/aai-programme by scripts/programme/board.ts; as current as the last publish. Change a value by changing the issue’s label. ",
     "url": "/aai-programme/programme/v3.html#v3-milestones",
     
     "relUrl": "/programme/v3.html#v3-milestones"
@@ -9185,7 +9185,7 @@
   },"1312": {
     "doc": "V5 Pipeline stages",
     "title": "V5 Pipeline stages",
-    "content": "Epics and thin-slice items, in columns by Pipeline stage, L1 through LOC, with Cross-cutting / N/A separate. (req:aai-views#V5) . L1 Corpus 0KG Knowledge graph 0L2 Operational (DAK) 0L3 Computable (FHIR/CQL) 0L5 Health skills + MCP 0EVAL Evaluation 0LOC Localization 0Cross-cutting / N/A 1[Pilot] Epic: one WHO recommendation from source guidance to a health skillCross-workstream · In progress · Blocked Built 2026-10-20 from the labels of 7 issue(s) in litlfred/aai-programme by scripts/programme/board.ts; as current as the last publish. Change a value by changing the issue’s label. ",
+    "content": "Epics and thin-slice items, in columns by Pipeline stage, L1 through LOC, with Cross-cutting / N/A separate. (req:aai-views#V5) . L1 Corpus 0KG Knowledge graph 0L2 Operational (DAK) 0L3 Computable (FHIR/CQL) 0L5 Health skills + MCP 0EVAL Evaluation 0LOC Localization 0Cross-cutting / N/A 1[Pilot] Epic: one WHO recommendation from source guidance to a health skillCross-workstream · In progress · On track Built 2026-10-20 from the labels of 7 issue(s) in litlfred/aai-programme by scripts/programme/board.ts; as current as the last publish. Change a value by changing the issue’s label. ",
     "url": "/aai-programme/programme/v5.html#v5-pipeline-stages",
     
     "relUrl": "/programme/v5.html#v5-pipeline-stages"
@@ -9199,7 +9199,7 @@
   },"1314": {
     "doc": "V6 Integration readiness",
     "title": "V6 Integration readiness",
-    "content": "thin-slice items, and epics assessed for readiness, by Pipeline stage. Awaiting validation is the Technical Integration Lead’s queue. (req:aai-views#V6) . Awaiting validation (1) . | Title | Workstream | Integration readiness | Assignee | Target | Sub-issues | . | [Pilot] Feature (WS1): extract the recommendation’s tables into the knowledge graph | WS1 Knowledge graph | Ready to integrate | – | – | – | . Cross-cutting / N/A (1) . | Title | Workstream | Integration readiness | Assignee | Target | Sub-issues | . | [Pilot] Epic: one WHO recommendation from source guidance to a health skill | Cross-workstream | Not assessed | – | – | 0/4 | . Built 2026-10-20 from the labels of 7 issue(s) in litlfred/aai-programme by scripts/programme/board.ts; as current as the last publish. Change a value by changing the issue’s label. ",
+    "content": "thin-slice items, and epics assessed for readiness, by Pipeline stage. Awaiting validation is the Technical Integration Lead’s queue. (req:aai-views#V6) . Awaiting validation (1) . | Title | Workstream | Integration readiness | Assignee | Target | Sub-issues | . | [Pilot] Feature (WS1): extract the recommendation’s tables into the knowledge graph | WS1 Knowledge graph | Ready to integrate | – | 2026-11-06 | – | . Cross-cutting / N/A (1) . | Title | Workstream | Integration readiness | Assignee | Target | Sub-issues | . | [Pilot] Epic: one WHO recommendation from source guidance to a health skill | Cross-workstream | Not assessed | – | 2026-12-04 | 0/4 | . Built 2026-10-20 from the labels of 7 issue(s) in litlfred/aai-programme by scripts/programme/board.ts; as current as the last publish. Change a value by changing the issue’s label. ",
     "url": "/aai-programme/programme/v6.html#v6-integration-readiness",
     
     "relUrl": "/programme/v6.html#v6-integration-readiness"
@@ -9227,7 +9227,7 @@
   },"1318": {
     "doc": "V8 Next 30 days",
     "title": "V8 Next 30 days",
-    "content": "Open epics, milestones, dependencies and cross-workstream deliverables due in the next 30 days. (req:aai-views#V8) . Nothing here yet. Built 2026-10-20 from the labels of 7 issue(s) in litlfred/aai-programme by scripts/programme/board.ts; as current as the last publish. Change a value by changing the issue’s label. ",
+    "content": "Open epics, milestones, dependencies and cross-workstream deliverables due in the next 30 days. (req:aai-views#V8) . WS3 Evaluation (1) . | Title | Workstream | Programme status | Delivery health | Assignee | Target | . | D-P1: [Pilot] WS3’s check waits on WS1’s extracted graph | WS3 Evaluation | – | At risk | – | 2026-11-09 | . Cross-workstream (1) . | Title | Workstream | Programme status | Delivery health | Assignee | Target | . | DEC-P1: [Pilot] Which recommendation the thin slice uses | Cross-workstream | Not started | – | – | 2026-10-30 | . Built 2026-10-20 from the labels of 7 issue(s) in litlfred/aai-programme by scripts/programme/board.ts; as current as the last publish. Change a value by changing the issue’s label. ",
     "url": "/aai-programme/programme/v8.html#v8-next-30-days",
     
     "relUrl": "/programme/v8.html#v8-next-30-days"
@@ -9241,7 +9241,7 @@
   },"1320": {
     "doc": "V9 Dependencies",
     "title": "V9 Dependencies",
-    "content": "Dependency issues, by the waiting Workstream. (req:aai-views#V9) . WS3 Evaluation (1) . | Title | Workstream | Delivery health | Impact | Target | Assignee | . | D-P1: [Pilot] WS3’s check waits on WS1’s extracted graph | WS3 Evaluation | At risk | Medium | – | – | . Built 2026-10-20 from the labels of 7 issue(s) in litlfred/aai-programme by scripts/programme/board.ts; as current as the last publish. Change a value by changing the issue’s label. ",
+    "content": "Dependency issues, by the waiting Workstream. (req:aai-views#V9) . WS3 Evaluation (1) . | Title | Workstream | Delivery health | Impact | Target | Assignee | . | D-P1: [Pilot] WS3’s check waits on WS1’s extracted graph | WS3 Evaluation | At risk | Medium | 2026-11-09 | – | . Built 2026-10-20 from the labels of 7 issue(s) in litlfred/aai-programme by scripts/programme/board.ts; as current as the last publish. Change a value by changing the issue’s label. ",
     "url": "/aai-programme/programme/v9.html#v9-dependencies",
     
     "relUrl": "/programme/v9.html#v9-dependencies"
