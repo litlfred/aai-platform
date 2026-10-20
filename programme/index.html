@@ -576,33 +576,33 @@
   them: those are versioned in their own URLs already.
 -->
 <!-- The harness icon row's own style, which railed pages load without docs-ui.css (beans `lhvt`, `9rq1`). -->
-<link rel="stylesheet" href="/aai-programme/assets/css/navbar-row.css?v=1792519307">
-<link rel="stylesheet" href="/aai-programme/assets/css/docs-ui.css?v=1792519307">
+<link rel="stylesheet" href="/aai-programme/assets/css/navbar-row.css?v=1792520229">
+<link rel="stylesheet" href="/aai-programme/assets/css/docs-ui.css?v=1792520229">
 <!-- Narrow viewports: wide content scrolls in its own box, never the page
      (bean `2r2n`). The standalone viewers inline the same file through
      `withViewerNav`, so both kinds of page read one set of rules. -->
-<link rel="stylesheet" href="/aai-programme/assets/css/narrow-viewport.css?v=1792519307">
+<link rel="stylesheet" href="/aai-programme/assets/css/narrow-viewport.css?v=1792520229">
 
 <!--
   The work-plan dashboard's styles, split from docs-ui.css so that
   `state-visualizer.ts` can inline exactly these bytes into the generated
   `<base>/<stub>/state-visualizer/` pages. One rule, two surfaces.
 -->
-<link rel="stylesheet" href="/aai-programme/assets/css/work-plan.css?v=1792519307">
+<link rel="stylesheet" href="/aai-programme/assets/css/work-plan.css?v=1792520229">
 <!-- Sticky themes. GENERATED from the theme nodes in `schemas/themes.ts` by
      `bun run cat themes:css`; `themes:css:check` fails the build when it is stale.
      Loaded AFTER docs-ui.css deliberately: it supplies the `--fa-sticky-*`
      roles that docs-ui.css consumes, and a custom property has to be set on a
      matching element before the rule reading it takes effect. -->
-<link rel="stylesheet" href="/aai-programme/assets/css/themes.css?v=1792519307">
+<link rel="stylesheet" href="/aai-programme/assets/css/themes.css?v=1792520229">
 <!-- UML overview colours: one class per graph typology, set on the Mermaid nodes
      that `scripts/gen-uml-overview.ts` writes into docs/uml/overview/. -->
-<link rel="stylesheet" href="/aai-programme/assets/css/uml.css?v=1792519307">
+<link rel="stylesheet" href="/aai-programme/assets/css/uml.css?v=1792520229">
 <!-- Kind avatars. GENERATED from `schemas/avatars.ts` by `bun run cat avatars:css`;
      `avatars:css:check` fails the build when it is stale. One stylesheet
      rather than 68 assets: the glyph is a mask and the colour is a property,
      so a scheme swap is a custom property and the trash state is a selector. -->
-<link rel="stylesheet" href="/aai-programme/assets/css/avatars.css?v=1792519307">
+<link rel="stylesheet" href="/aai-programme/assets/css/avatars.css?v=1792520229">
 
 <!--
   The kinds THIS INSTANCE DECLARES, for the avatar fan.
@@ -623,12 +623,12 @@
 <!-- BEFORE docs-ui.js and work-plan.js: both read window.faRender. -->
 <script src="/aai-programme/assets/js/kg-render.js" defer></script>
 <!-- BEFORE docs-ui.js, which calls it: the one drawing of the harness icon row (beans `lhvt`, `9rq1`). -->
-<script src="/aai-programme/assets/js/navbar-row.js?v=1792519307" defer></script>
-<script src="/aai-programme/assets/js/docs-ui.js?v=1792519307" defer></script>
+<script src="/aai-programme/assets/js/navbar-row.js?v=1792520229" defer></script>
+<script src="/aai-programme/assets/js/docs-ui.js?v=1792520229" defer></script>
 <!-- The edit, source and feedback links of every page, from the platform's one
   recipe (cat-harness-tools/src/core/edit-links.ts, bean v433): links carry their
   facts and this builds the hrefs. -->
-<script src="/aai-programme/assets/js/edit-links.js?v=1792519307" defer></script>
+<script src="/aai-programme/assets/js/edit-links.js?v=1792520229" defer></script>
 
 <!--
   The work-plan dashboard. SELF-MOUNTING on any page carrying
@@ -715,7 +715,7 @@
 
 <link rel="stylesheet" href="../assets/css/navbar.css"><script src="../assets/navbar/rail-2gap19s7ouq.js" defer></script><script src="../assets/js/navbar.js" defer></script><link rel="stylesheet" href="../assets/page-layout.css" data-fa-page-layout><script src="../assets/page-layout.js" defer data-fa-page-layout></script><meta name="fa-platform-base" content="https://litlfred.github.io/folio-assistant" data-fa-platform-ui><link rel="stylesheet" href="../assets/css/docs-ui.css" data-fa-platform-ui><script src="../assets/js/docs-ui.js" defer data-fa-platform-ui></script><meta name="fa-pinned-data" content=".."></head>
 
-<body><script type="application/json" id="fa-rail" data-fa-root="https://litlfred.github.io/folio-assistant" data-fa-to-root="..">{"data":"rail-2gap19s7ouq","here":"/programme/","documentIndex":{"label":"On this page","icon":"§","items":[{"href":"#views","label":"Views"},{"href":"#metrics","label":"Metrics","children":[{"href":"#m1-epics-by-delivery-health","label":"M1 Epics by Delivery health","depth":1},{"href":"#m2-blocked-items-by-workstream","label":"M2 Blocked items by Workstream","depth":1},{"href":"#m3-at-risk-or-blocked-dependencies","label":"M3 At-risk or blocked dependencies","depth":1},{"href":"#m4-overdue-deliverables","label":"M4 Overdue deliverables","depth":1},{"href":"#m5-integration-readiness-by-pipeline-stage","label":"M5 Integration readiness by Pipeline stage","depth":1}],"fold":"5 sub-sections"},{"href":"#checks","label":"Checks"}],"collapsible":true}}</script><nav class="fa-nav" aria-label="folio-assistant" data-fa-rail="pending"><a href="../">Assured AI programme</a></nav>
+<body><script type="application/json" id="fa-rail" data-fa-root="https://litlfred.github.io/folio-assistant" data-fa-to-root="..">{"data":"rail-2gap19s7ouq","here":"/programme/","documentIndex":{"label":"On this page","icon":"§","items":[{"href":"#views","label":"Views"},{"href":"#metrics","label":"Metrics","children":[{"href":"#m1-epics-by-delivery-health","label":"M1 Epics by Delivery health","depth":1},{"href":"#m2-blocked-items-by-workstream","label":"M2 Blocked items by Workstream","depth":1},{"href":"#m3-at-risk-or-blocked-dependencies","label":"M3 At-risk or blocked dependencies","depth":1},{"href":"#m4-overdue-deliverables","label":"M4 Overdue deliverables","depth":1},{"href":"#m5-integration-readiness-by-pipeline-stage","label":"M5 Integration readiness by Pipeline stage","depth":1}],"fold":"5 sub-sections"},{"href":"#proposals-awaiting-the-pm","label":"Proposals awaiting the PM"},{"href":"#checks","label":"Checks"}],"collapsible":true}}</script><nav class="fa-nav" aria-label="folio-assistant" data-fa-rail="pending"><a href="../">Assured AI programme</a></nav>
   <a class="skip-to-main" href="#main-content">Skip to main content</a>
   <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
   <symbol id="svg-link" viewBox="0 0 24 24">
@@ -993,7 +993,7 @@
   <tbody>
     <tr>
       <td>At risk or Blocked</td>
-      <td>1</td>
+      <td>3</td>
       <td><span class="pb-meter" style="width:160px"></span></td>
     </tr>
   </tbody>
@@ -1070,6 +1070,59 @@
     </tr>
   </tbody>
 </table></div>
+<h2 id="proposals-awaiting-the-pm">
+  
+  
+    <a href="#proposals-awaiting-the-pm" class="anchor-heading" aria-labelledby="proposals-awaiting-the-pm"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Proposals awaiting the PM
+  
+  
+</h2>
+    
+
+<p>Epics proposed by a workstream, for the PM &amp; Architecture Integration to accept, amend or decline (req:aai-linking#LINK-07). They join V1 once accepted.</p>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Proposal</th>
+      <th>Workstream</th>
+      <th>Pipeline stage</th>
+      <th>Features</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://github.com/litlfred/aai-programme/issues/17">Epic proposal (Platform): deployment, publishing and the knowledge graph’s publication</a></td>
+      <td>Platform</td>
+      <td>Cross-cutting / N/A</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/litlfred/aai-programme/issues/16">Epic proposal (WS4): translated renders and their review</a></td>
+      <td>WS4 Localization</td>
+      <td>LOC Localization</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/litlfred/aai-programme/issues/15">Epic proposal (WS3): evaluate outputs across models and routes</a></td>
+      <td>WS3 Evaluation</td>
+      <td>EVAL Evaluation</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/litlfred/aai-programme/issues/14">Epic proposal (WS2): L1 and DAK authoring on the SMART stack</a></td>
+      <td>WS2 Authoring</td>
+      <td>L2 Operational (DAK)</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/litlfred/aai-programme/issues/13">Epic proposal (WS1): WHO guidance into the L1 knowledge graph</a></td>
+      <td>WS1 Knowledge graph</td>
+      <td>KG Knowledge graph</td>
+      <td>7</td>
+    </tr>
+  </tbody>
+</table></div>
 <h2 id="checks">
   
   
@@ -1081,10 +1134,10 @@
 
 <ul>
   <li><strong>Every item has a Workstream</strong> (req:aai-linking#LINK-06): <strong>no</strong> — <a href="https://github.com/litlfred/aai-programme/issues/11">[Pilot] Milestone: thin slice demonstrated</a>, <a href="https://github.com/litlfred/aai-programme/issues/10">[Pilot] Research question R1</a>.</li>
-  <li>Items on the board: 8 (AUTO-01’s rule; a WS5 task with none of its labels stays off).</li>
+  <li>Items on the board: 13 (AUTO-01’s rule; a WS5 task with none of its labels stays off).</li>
 </ul>
 
-<p><em>Built 2026-10-20 from the labels of 8 issue(s) in litlfred/aai-programme by <code class="language-plaintext highlighter-rouge">scripts/programme/board.ts</code>; as current as the last publish. Change a value by changing the issue’s label.</em></p>
+<p><em>Built 2026-10-20 from the labels of 13 issue(s) in litlfred/aai-programme by <code class="language-plaintext highlighter-rouge">scripts/programme/board.ts</code>; as current as the last publish. Change a value by changing the issue’s label.</em></p>
 
           
 

@@ -560,33 +560,33 @@
   them: those are versioned in their own URLs already.
 -->
 <!-- The harness icon row's own style, which railed pages load without docs-ui.css (beans `lhvt`, `9rq1`). -->
-<link rel="stylesheet" href="/aai-programme/assets/css/navbar-row.css?v=1792519307">
-<link rel="stylesheet" href="/aai-programme/assets/css/docs-ui.css?v=1792519307">
+<link rel="stylesheet" href="/aai-programme/assets/css/navbar-row.css?v=1792520229">
+<link rel="stylesheet" href="/aai-programme/assets/css/docs-ui.css?v=1792520229">
 <!-- Narrow viewports: wide content scrolls in its own box, never the page
      (bean `2r2n`). The standalone viewers inline the same file through
      `withViewerNav`, so both kinds of page read one set of rules. -->
-<link rel="stylesheet" href="/aai-programme/assets/css/narrow-viewport.css?v=1792519307">
+<link rel="stylesheet" href="/aai-programme/assets/css/narrow-viewport.css?v=1792520229">
 
 <!--
   The work-plan dashboard's styles, split from docs-ui.css so that
   `state-visualizer.ts` can inline exactly these bytes into the generated
   `<base>/<stub>/state-visualizer/` pages. One rule, two surfaces.
 -->
-<link rel="stylesheet" href="/aai-programme/assets/css/work-plan.css?v=1792519307">
+<link rel="stylesheet" href="/aai-programme/assets/css/work-plan.css?v=1792520229">
 <!-- Sticky themes. GENERATED from the theme nodes in `schemas/themes.ts` by
      `bun run cat themes:css`; `themes:css:check` fails the build when it is stale.
      Loaded AFTER docs-ui.css deliberately: it supplies the `--fa-sticky-*`
      roles that docs-ui.css consumes, and a custom property has to be set on a
      matching element before the rule reading it takes effect. -->
-<link rel="stylesheet" href="/aai-programme/assets/css/themes.css?v=1792519307">
+<link rel="stylesheet" href="/aai-programme/assets/css/themes.css?v=1792520229">
 <!-- UML overview colours: one class per graph typology, set on the Mermaid nodes
      that `scripts/gen-uml-overview.ts` writes into docs/uml/overview/. -->
-<link rel="stylesheet" href="/aai-programme/assets/css/uml.css?v=1792519307">
+<link rel="stylesheet" href="/aai-programme/assets/css/uml.css?v=1792520229">
 <!-- Kind avatars. GENERATED from `schemas/avatars.ts` by `bun run cat avatars:css`;
      `avatars:css:check` fails the build when it is stale. One stylesheet
      rather than 68 assets: the glyph is a mask and the colour is a property,
      so a scheme swap is a custom property and the trash state is a selector. -->
-<link rel="stylesheet" href="/aai-programme/assets/css/avatars.css?v=1792519307">
+<link rel="stylesheet" href="/aai-programme/assets/css/avatars.css?v=1792520229">
 
 <!--
   The kinds THIS INSTANCE DECLARES, for the avatar fan.
@@ -607,12 +607,12 @@
 <!-- BEFORE docs-ui.js and work-plan.js: both read window.faRender. -->
 <script src="/aai-programme/assets/js/kg-render.js" defer></script>
 <!-- BEFORE docs-ui.js, which calls it: the one drawing of the harness icon row (beans `lhvt`, `9rq1`). -->
-<script src="/aai-programme/assets/js/navbar-row.js?v=1792519307" defer></script>
-<script src="/aai-programme/assets/js/docs-ui.js?v=1792519307" defer></script>
+<script src="/aai-programme/assets/js/navbar-row.js?v=1792520229" defer></script>
+<script src="/aai-programme/assets/js/docs-ui.js?v=1792520229" defer></script>
 <!-- The edit, source and feedback links of every page, from the platform's one
   recipe (cat-harness-tools/src/core/edit-links.ts, bean v433): links carry their
   facts and this builds the hrefs. -->
-<script src="/aai-programme/assets/js/edit-links.js?v=1792519307" defer></script>
+<script src="/aai-programme/assets/js/edit-links.js?v=1792520229" defer></script>
 
 <!--
   The work-plan dashboard. SELF-MOUNTING on any page carrying
@@ -836,7 +836,7 @@
   
   
 </h3>
-    <p class="sv-sub">The schema generator and drawn schema page, the README writers (each directory's README, and the `kg:processes` and `kg:files` sections) with their Liquid templates, the Process renderer, the release-IRI sync, the term linker, and the checks: import closure, node identifiers, bootstrap's concepts, bootstrap's documents parsed against their Zod (`bootstrap:validate`), and the semver bump the published schemas require, computed from a diff (`bootstrap:semver`).</p><p class="sv-sub">18 files</p><ul><li><code>check-requirements.ts</code></li><li><code>gen-requirements.ts</code></li><li><code>pilot-items.ts</code></li><li><code>programme/auto-03-status.ts</code></li><li><code>programme/auto-04-health.ts</code></li><li><code>programme/auto-10-validation.ts</code></li><li><code>programme/board-model.ts</code></li><li><code>programme/board.ts</code></li><li><code>programme/config.json</code></li><li><code>programme/fields.ts</code></li><li><code>programme/lib.ts</code></li><li><code>programme/qa-validation.ts</code></li><li><code>programme/rules.test.ts</code></li><li><code>programme/rules.ts</code></li><li><code>pull-beans.ts</code></li><li><code>site-board.ts</code></li><li><code>site-redirects.ts</code></li><li><code>site-requirements.ts</code></li></ul></section>
+    <p class="sv-sub">The schema generator and drawn schema page, the README writers (each directory's README, and the `kg:processes` and `kg:files` sections) with their Liquid templates, the Process renderer, the release-IRI sync, the term linker, and the checks: import closure, node identifiers, bootstrap's concepts, bootstrap's documents parsed against their Zod (`bootstrap:validate`), and the semver bump the published schemas require, computed from a diff (`bootstrap:semver`).</p><p class="sv-sub">20 files</p><ul><li><code>check-requirements.ts</code></li><li><code>gen-requirements.ts</code></li><li><code>pilot-items.ts</code></li><li><code>programme/auto-03-status.ts</code></li><li><code>programme/auto-04-health.ts</code></li><li><code>programme/auto-10-validation.ts</code></li><li><code>programme/bean-intake.json</code></li><li><code>programme/board-model.ts</code></li><li><code>programme/board.ts</code></li><li><code>programme/config.json</code></li><li><code>programme/create-items.ts</code></li><li><code>programme/fields.ts</code></li><li><code>programme/lib.ts</code></li><li><code>programme/qa-validation.ts</code></li><li><code>programme/rules.test.ts</code></li><li><code>programme/rules.ts</code></li><li><code>pull-beans.ts</code></li><li><code>site-board.ts</code></li><li><code>site-redirects.ts</code></li><li><code>site-requirements.ts</code></li></ul></section>
 <h2 class="sv-h2">
   
   
