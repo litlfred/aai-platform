@@ -2353,7 +2353,7 @@
   },"336": {
     "doc": "aai-programme — Code",
     "title": "Code: aai-programme",
-    "content": "aai-programme · 1 declared code directory · This instance is not a pinned mount here, so files are listed without links. scripts/ bootstrap-tools-scripts . The schema generator and drawn schema page, the README writers (each directory's README, and the `kg:processes` and `kg:files` sections) with their Liquid templates, the Process renderer, the release-IRI sync, the term linker, and the checks: import closure, node identifiers, bootstrap's concepts, bootstrap's documents parsed against their Zod (`bootstrap:validate`), and the semver bump the published schemas require, computed from a diff (`bootstrap:semver`). 15 files . | check-requirements.ts | gen-requirements.ts | pilot-items.ts | programme/auto-03-status.ts | programme/auto-04-health.ts | programme/auto-10-validation.ts | programme/auto-11-backfill.ts | programme/config.json | programme/lib.ts | programme/rules.test.ts | programme/rules.ts | pull-beans.ts | site-board.ts | site-redirects.ts | site-requirements.ts | . ",
+    "content": "aai-programme · 1 declared code directory · This instance is not a pinned mount here, so files are listed without links. scripts/ bootstrap-tools-scripts . The schema generator and drawn schema page, the README writers (each directory's README, and the `kg:processes` and `kg:files` sections) with their Liquid templates, the Process renderer, the release-IRI sync, the term linker, and the checks: import closure, node identifiers, bootstrap's concepts, bootstrap's documents parsed against their Zod (`bootstrap:validate`), and the semver bump the published schemas require, computed from a diff (`bootstrap:semver`). 15 files . | check-requirements.ts | gen-requirements.ts | pilot-items.ts | programme/auto-03-status.ts | programme/auto-04-health.ts | programme/auto-10-validation.ts | programme/config.json | programme/fields.ts | programme/lib.ts | programme/rules.test.ts | programme/rules.ts | pull-beans.ts | site-board.ts | site-redirects.ts | site-requirements.ts | . ",
     "url": "/aai-programme/en/cat-harness/code/aai-programme/#code-aai-programme",
     
     "relUrl": "/en/cat-harness/code/aai-programme/#code-aai-programme"
@@ -6735,7 +6735,7 @@
   },"962": {
     "doc": "Assured AI programme",
     "title": "Assured AI programme",
-    "content": "Coordination for the WHO Assured AI programme, staged in litlfred/aai-programme until the owner syncs it to the WHO organisation. Programme status is held on GitHub issues: see the programme set-up request, litlfred/folio-assistant#2605. | Area | Where | . | Requirements | v0.5, current draft: all public, no private layer. Earlier: v0.4.2 · v0.4.1, as written by the PM &amp; Architecture Integration · v0.3.6, the original request (from litlfred/smart-ra#76). Each section is a JSON-LD node. | . | Requirement nodes | One statement per requirement ID, cited as req:&lt;group&gt;#&lt;ID&gt;, for example req:aai-automation#AUTO-04. | . | Programme board (staging) | How to create it: the 14 fields, the 13 views V1 to V13 and auto-add, for a person to set up. The pilot items are created by scripts/pilot-items.ts. | . | Build process | The section 13 build sequence: who does each step, and where the build must stop. | . | Work plan | The combined board: this repository’s work items and those of the platform repositories it reviews. | . ",
+    "content": "Coordination for the WHO Assured AI programme, staged in litlfred/aai-programme until the owner syncs it to the WHO organisation. Programme status is held on GitHub issues: see the programme set-up request, litlfred/folio-assistant#2605. | Area | Where | . | Requirements | v0.5, current draft: all public, no private layer. Earlier: v0.4.2 · v0.4.1, as written by the PM &amp; Architecture Integration · v0.3.6, the original request (from litlfred/smart-ra#76). Each section is a JSON-LD node. | . | Requirement nodes | One statement per requirement ID, cited as req:&lt;group&gt;#&lt;ID&gt;, for example req:aai-automation#AUTO-04. | . | Programme board | Project 110, showing the issues of this repository; how to set it up. The field values are labels on each issue; the pilot items carry them. | . | Build process | The section 13 build sequence: who does each step, and where the build must stop. | . | Work plan | The combined board: this repository’s work items and those of the platform repositories it reviews. | . ",
     "url": "/aai-programme/",
     
     "relUrl": "/"
@@ -8574,559 +8574,531 @@
     
     "relUrl": "/en/cat-harness/processes/slice-sqlite-publish.html"
   },"1225": {
-    "doc": "Staging the programme project",
-    "title": "Staging the Assured AI Programme project",
-    "content": "How to create, by hand, the staging copy of the programme project for litlfred/aai-programme, so the board the requirements describe can be seen and tested before the WHO build. Generated from requirements v0.5; the views and fields are its section 8.1 and 7.1. ",
-    "url": "/aai-programme/docs/staging-project.html#staging-the-assured-ai-programme-project",
-    
-    "relUrl": "/docs/staging-project.html#staging-the-assured-ai-programme-project"
-  },"1226": {
-    "doc": "Staging the programme project",
-    "title": "Why it differs from the WHO build",
-    "content": "litlfred is a personal account. Issue fields and issue types exist only on an organisation, so this copy uses the requirements’ own fallback (section 7.4) and one stand-in: . | Fields are project fields with the same names and options as section 7.1 (req:aai-acceptance#AC-03 allows this when the fallback is used). | Issue types are type: labels (type:epic, type:milestone, type:research-question, type:dependency, type:decision, type:assumption, type:feature, type:story, type:spike, type:task). Views and the auto-add filter select on them where the WHO build would select on the issue type. | One repository. Workstream items sit in aai-programme too, so PIL-02 (sub-issues from two repositories roll up) cannot be tested here. | . Projects and their views cannot be created through this session (and views have no API at all), so the steps below are done by a person. ",
-    "url": "/aai-programme/docs/staging-project.html#why-it-differs-from-the-who-build",
-    
-    "relUrl": "/docs/staging-project.html#why-it-differs-from-the-who-build"
-  },"1227": {
-    "doc": "Staging the programme project",
-    "title": "1. Create the project",
-    "content": ". | github.com/litlfred → Projects → New project → Table. Name: Assured AI Programme (staging). Visibility: Public (req:aai-information#SEC-04). | Settings → Manage access: leave as is. | . ",
-    "url": "/aai-programme/docs/staging-project.html#1-create-the-project",
-    
-    "relUrl": "/docs/staging-project.html#1-create-the-project"
-  },"1228": {
-    "doc": "Staging the programme project",
-    "title": "2. Add the 14 fields",
-    "content": "In the project: + at the end of the header row → New field, for each row below. Single select options in the order given. Do not add any other field (section 7.2). | Field | Type | Options or format | . | Workstream | Single select | WS1 Knowledge graph, WS2 Authoring, WS3 Evaluation, WS4 Localization, WS5 Governance and stewardship, Platform, Cross-workstream | . | Programme status | Single select | Not started, In progress, In review, Done, Cancelled | . | Delivery health | Single select | On track, At risk, Blocked | . | Risk category | Single select | Dependency, Schedule, Technical, Resource, Review, External, Governance | . | Impact | Single select | Low, Medium, High | . | Pipeline stage | Single select | L1 Corpus, KG Knowledge graph, L2 Operational (DAK), L3 Computable (FHIR/CQL), L5 Health skills + MCP, EVAL Evaluation, LOC Localization, Cross-cutting / N/A | . | Integration readiness | Single select | Not assessed, Not ready, Partly ready, Ready to integrate, Validated | . | Review type | Single select | Not needed, SME sign-off, Validation packet adjudication, Science Division publication clearance | . | Review status | Single select | Not submitted, Submitted, Under WHO review, Feedback issued, Resubmitted, Approved, Closed | . | Gates output | Single select | One option per Gates output from the input list, plus None | . | Primary research question | Single select | R1 to R7, plus None | . | Start date | Date |   | . | Target date | Date | For a review item, the date the review is due. For a dependency, the date it is needed by | . | Backlog ref | Text | Epic code, for example WS1-E2 | . ",
-    "url": "/aai-programme/docs/staging-project.html#2-add-the-14-fields",
-    
-    "relUrl": "/docs/staging-project.html#2-add-the-14-fields"
-  },"1229": {
-    "doc": "Staging the programme project",
-    "title": "3. Create the 13 views",
-    "content": "For each row: New view (the tab bar) → pick the layout → name it exactly → set the filter, group, sort and the visible fields. The filter column is this staging copy’s; the WHO build filters on issue types. Field filters are written the way GitHub’s project filter bar spells a field (lower case, spaces as hyphens); I could not test them from here, so adjust any the filter bar rejects. | View | Name | Layout | Filter (staging) | Group and sort | Fields shown | . | V1 | Master programme | Table | label:type:epic | Group by Workstream; sort by Start date | Title, Programme status, Delivery health, Pipeline stage, Start date, Target date, Gates output, Primary research question, sub-issue progress | . | V2 | Roadmap | Roadmap | label:type:epic,type:milestone | Group by Workstream; zoom to quarter | Start date, Target date, Programme status, Delivery health | . | V3 | Milestones | Table | label:type:milestone (then one saved filter per gates: label) | Group by Gates output; sort by Target date. One saved filter per Gates output on its gates: label, which shows both primary and secondary contributions | Title, Workstream, Programme status, Delivery health, Target date | . | V4 | Research questions | Table | label:type:research-question (then one saved filter per rq: label) | Group by Primary research question. One saved filter per research question on its rq: label | Title, Workstream, Programme status, rq: and route: labels | . | V5 | Pipeline stages | Board | label:type:epic,thin-slice | Columns by Pipeline stage, L1 through LOC, with Cross-cutting / N/A shown separately. Saved filter for label:thin-slice | Title, Workstream, Programme status, Delivery health | . | V6 | Integration readiness | Table | label:thin-slice,type:epic -integration-readiness:\"Not assessed\" | Group by Pipeline stage; sort by Target date. Saved filter “Awaiting validation”: Integration readiness is Ready to integrate | Title, Workstream, Integration readiness, assignee, Target date, sub-issue progress | . | V7 | Sprint review | Table | label:sprint-demo | Group by Workstream | Title, Workstream, Programme status, linked epic | . | V8 | Next 30 days | Table | is:open target-date:@today..@today+30d | Group by Workstream; sort by Target date | Title, Workstream, Programme status, Delivery health, assignee, Target date | . | V9 | Dependencies | Table | label:type:dependency | Group by Workstream (the waiting workstream); sort by Target date | Title (starts with D-number), Workstream, Delivery health, Impact, Target date, assignee | . | V10 | Blocked and at risk | Table | delivery-health:\"At risk\",\"Blocked\", plus a second view filter label:blocked,at-risk,validation-exception if one filter cannot hold both | Group by Delivery health, then Workstream; sort by Impact, then Target date | Title, Workstream, Risk category, Impact, Target date, assignee | . | V11 | WHO review | Board | -review-type:\"Not needed\" | Columns by Review status; sort by Target date | Title, Workstream, Review type, Target date | . | V12 | Decisions | Table | label:type:decision | Group by open or closed; sort by Target date | Title (starts with DEC-number), Workstream, Programme status, Target date | . | V13 | Overdue | Table | target-date:&lt;@today -programme-status:Done,Cancelled | Group by Workstream | Title, Target date, Delivery health, assignee | . Notes from section 8.1 that matter while you set them up: . | V6 gets a saved filter “Awaiting validation”: Integration readiness is Ready to integrate. It is the Technical Integration Lead’s queue. | V10’s view description: “Every item here carries a Next action line in its issue body; open the item for it.” | V3 and V4 get one saved filter per Gates output and per research question once those lists exist. | . ",
-    "url": "/aai-programme/docs/staging-project.html#3-create-the-13-views",
-    
-    "relUrl": "/docs/staging-project.html#3-create-the-13-views"
-  },"1230": {
-    "doc": "Staging the programme project",
-    "title": "4. Auto-add (AUTO-01)",
-    "content": "Project → … → Workflows → Auto-add to project → repository litlfred/aai-programme, filter: . is:issue label:type:epic,type:milestone,type:research-question,type:dependency,type:decision,type:assumption,thin-slice,sprint-demo,blocked,at-risk . That is AUTO-01 in this copy: programme-level items by type, and workstream items only when labelled (req:aai-linking#LINK-05). A WS5 task with none of these labels stays off the board. Then add the items that already exist: in the project, Add item → paste litlfred/aai-programme#&lt;n&gt; for each pilot issue, or run the backfill (AUTO-11) once it exists. ",
-    "url": "/aai-programme/docs/staging-project.html#4-auto-add-auto-01",
-    
-    "relUrl": "/docs/staging-project.html#4-auto-add-auto-01"
-  },"1231": {
-    "doc": "Staging the programme project",
-    "title": "5. Charts (M1 to M5)",
-    "content": "Project → Insights → New chart, one per row of the metrics. Record any that cannot be built natively instead of building a workaround (section 8.2). ",
-    "url": "/aai-programme/docs/staging-project.html#5-charts-m1-to-m5",
-    
-    "relUrl": "/docs/staging-project.html#5-charts-m1-to-m5"
-  },"1232": {
-    "doc": "Staging the programme project",
-    "title": "6. Set the pilot items’ fields",
-    "content": "Each pilot issue’s body has a Programme fields table: the value each field takes. Set them in the project table view; the automations will keep Programme status and Delivery health current from then on. ",
-    "url": "/aai-programme/docs/staging-project.html#6-set-the-pilot-items-fields",
-    
-    "relUrl": "/docs/staging-project.html#6-set-the-pilot-items-fields"
-  },"1233": {
-    "doc": "Staging the programme project",
-    "title": "Staging the programme project",
-    "content": " ",
+    "doc": "Project 110 as the programme board",
+    "title": "Project 110 as the programme board",
+    "content": "How to set up WorldHealthOrganization project 110 to show the Assured AI programme, by hand. Owner decisions of 20 October 2026: project 110 is the programme project (overriding “110 stays separate and is not changed”), and no tokens. ",
     "url": "/aai-programme/docs/staging-project.html",
     
     "relUrl": "/docs/staging-project.html"
-  },"1234": {
+  },"1226": {
+    "doc": "Project 110 as the programme board",
+    "title": "How it fits together",
+    "content": ". | The issues hold the values. Each programme field (section 7.1) is a label on the issue: ws:WS1 Knowledge graph, status:In progress, health:Blocked, stage:KG Knowledge graph, readiness:Validated, review-type:SME sign-off, review:Submitted, risk:Dependency, impact:Medium. One label per field. Dates, the Backlog ref and the primary research question are in the issue body’s Programme fields table. The full list is scripts/programme/fields.ts. | The automations keep them current with the workflow’s own token (AUTO-03 status, AUTO-04 health, AUTO-10 validation). They write labels, never the project. | Project 110 shows the issues through label filters. A view that needs a board column, a roadmap or a date needs a real project field, which nobody can set automatically without a token, so it is set by hand. | Issue types are type: labels (type:epic, type:feature, …): the items live in litlfred/aai-programme, outside the WHO organisation, so WHO’s issue types and issue fields do not apply to them (BD-02). | . Ritika owns 110; tell her before changing it. ",
+    "url": "/aai-programme/docs/staging-project.html#how-it-fits-together",
+    
+    "relUrl": "/docs/staging-project.html#how-it-fits-together"
+  },"1227": {
+    "doc": "Project 110 as the programme board",
+    "title": "1. Add the items",
+    "content": "Auto-add only reads repositories in WHO’s organisation, so items from litlfred/aai-programme are added by hand: in 110, + Add item at the bottom of a table → paste each issue’s URL. The pilot items are #4 to #12. Add any later programme item the same way (AUTO-01’s rule: type:epic, type:milestone, type:research-question, type:dependency, type:decision, type:assumption, or a workstream item labelled thin-slice, sprint-demo, blocked or at-risk). ",
+    "url": "/aai-programme/docs/staging-project.html#1-add-the-items",
+    
+    "relUrl": "/docs/staging-project.html#1-add-the-items"
+  },"1228": {
+    "doc": "Project 110 as the programme board",
+    "title": "2. The views",
+    "content": "For each row: New view → the layout → the name → the filter → the grouping. Make sure the Labels field is shown, since that is where the values are. I could not test the filters or “Slice by Labels” from here; adjust any the filter bar rejects. | View | Name | Filter | Grouping | Needs a hand-set field | . | V1 | Master programme | label:type:epic | Slice by Labels, pick the ws: labels (stands in for “Group by Workstream”) | none | . | V2 | Roadmap | label:type:epic,type:milestone | Roadmap needs Start date and Target date | Start date, Target date (project date fields, set by hand from each body table) | . | V3 | Milestones | label:type:milestone | Group by Gates output | Gates output once the list exists | . | V4 | Research questions | label:type:research-question | Slice by Labels, pick the rq: labels | none | . | V5 | Pipeline stages | label:type:epic,thin-slice | Board columns by Pipeline stage | Pipeline stage (single select, set by hand from the stage: label) | . | V6 | Integration readiness | label:thin-slice,type:epic | Slice by Labels, pick the readiness: labels; saved filter “Awaiting validation”: label:\"readiness:Ready to integrate\" | none | . | V7 | Sprint review | label:sprint-demo | Slice by Labels, pick the ws: labels | none | . | V8 | Next 30 days | is:open | Needs Target date in the next 30 days | Target date | . | V9 | Dependencies | label:type:dependency | Slice by Labels, pick the ws: labels | none | . | V10 | Blocked and at risk | label:\"health:At risk\",health:Blocked,blocked,at-risk,validation-exception | Slice by Labels, pick the health: labels | none | . | V11 | WHO review | label:\"review-type:SME sign-off\",\"review-type:Validation packet adjudication\",\"review-type:Science Division publication clearance\" | Board columns by Review status | Review status (single select, set by hand from the review: label) | . | V12 | Decisions | label:type:decision | Group by open or closed (the built-in Status) | none | . | V13 | Overdue | is:open | Needs Target date before today | Target date | . Seven of the thirteen work from labels alone. The other six (V2, V3, V5, V8, V11 and V13) need a project field kept by hand in step with the issue, which is exactly the drift the requirements were written to avoid (DP-01). V3 needs its field only once the Gates output list exists. A board built from the labels, with nothing kept by hand, can show all thirteen. ",
+    "url": "/aai-programme/docs/staging-project.html#2-the-views",
+    
+    "relUrl": "/docs/staging-project.html#2-the-views"
+  },"1229": {
+    "doc": "Project 110 as the programme board",
+    "title": "3. Charts (M1 to M5)",
+    "content": "Insights → New chart. M1 to M5 group by Delivery health, Workstream, Integration readiness and Pipeline stage, which are labels here; if Insights cannot group by a label prefix, record that rather than building a workaround (section 8.2). ",
+    "url": "/aai-programme/docs/staging-project.html#3-charts-m1-to-m5",
+    
+    "relUrl": "/docs/staging-project.html#3-charts-m1-to-m5"
+  },"1230": {
     "doc": "Render log — the publish branch keeps its own history",
     "title": "Render log — the publish branch keeps its own history",
     "content": "Process_RenderLog · strict · 6 step(s) . Every change to the publish branch appends an entry to _render-log/&lt;day&gt;.jsonl. A removal is a NEW entry, never the erasure of the rendered one before it — the pair is the history. The lane is the build pipeline because every writer is a workflow job; no agent decides what goes in this log. A system lane runs a fixed program and exercises no judgement, which is exactly what an append-only log wants. The question it exists to answer: what happened to STAGING/, and why. Bean `plj1` is why it is needed — a full-replace deploy silently deleted every open PR's preview, for months, and the publish branch kept no record of its own changes. The publish branch has several publishers and one of them replaces the whole branch, which is why a removed preview needs a record of its own. i i i i i i ",
     "url": "/aai-programme/en/cat-harness/processes/staging-render-log.html#render-log--the-publish-branch-keeps-its-own-history",
     
     "relUrl": "/en/cat-harness/processes/staging-render-log.html#render-log--the-publish-branch-keeps-its-own-history"
-  },"1235": {
+  },"1231": {
     "doc": "Render log — the publish branch keeps its own history",
     "title": "How it connects",
     "content": ". | Called by: no call activity names this process | Calls: none | Presented on: no docs page section shows this diagram | . ",
     "url": "/aai-programme/en/cat-harness/processes/staging-render-log.html#how-it-connects",
     
     "relUrl": "/en/cat-harness/processes/staging-render-log.html#how-it-connects"
-  },"1236": {
+  },"1232": {
     "doc": "Render log — the publish branch keeps its own history",
     "title": "Lanes — who acts",
     "content": "| lane | role | what it does here | . | CI/CD Pipeline | build-pipeline | Every branch of GW_What — deploy, takedown, full-replace — is logged by this same lane regardless of which is firing, and the ORDER matters as much as the fact: A_LogRemoved happens before A_Remove specifically so a job that dies mid-step leaves a record of intent rather than an artefact that vanished with nothing said about it. | . ",
     "url": "/aai-programme/en/cat-harness/processes/staging-render-log.html#lanes--who-acts",
     
     "relUrl": "/en/cat-harness/processes/staging-render-log.html#lanes--who-acts"
-  },"1237": {
+  },"1233": {
     "doc": "Render log — the publish branch keeps its own history",
     "title": "Steps",
     "content": "Every one of the 6 step(s) is documented. | step | lane | skill / sub-process | what it does | . | Append renderedA_LogRendered | CI/CD Pipeline | render-logging | A re-deploy is a rendering, so it gets its own entry rather than overwriting the last. “When was this last built” is then answerable without diffing commits. | . | Preflight: is the preview live?A_Preflight | CI/CD Pipeline | render-logging | previewLiveness — a disjunction over open-pr, unmerged-branch and recent-commit, shared with the health sweep so the two cannot disagree. Bean w2g5: a preview whose pull request is closed is NOT an abandoned one. | . | Append retained with the reasonA_LogRetained | CI/CD Pipeline | render-logging | THE ENTRY THAT MAKES THE LOG WORTH READING. A preview still standing because a signal fired leaves no trace otherwise, and the next person asking “why is this still up” has nothing to consult. A reason is REQUIRED — the tool refuses without one. | . | Append removed with the reasonA_LogRemoved | CI/CD Pipeline | render-logging | BEFORE the removal, not after: a job that dies mid-step must leave a record of the intent rather than an artefact that vanished with no entry. A reason is REQUIRED — an entry saying an artefact went and not why is the ambiguity this log exists to prevent. | . | Remove the artefactA_Remove | CI/CD Pipeline | render-logging | rm -rf STAGING/&lt;slug&gt;. Cannot reach the log, which lives outside STAGING/ — structural rather than guarded, because a branch named to collide with a directory under STAGING/ slugifies to exactly that name and git permits the ref. | . | Append restoredA_LogRestored | CI/CD Pipeline | render-logging | A full-replace deploy (docs-site.yml, the only publisher without keep_files) wipes the branch; restore-staging carries the previews AND this log back in. Its own event rather than a second rendered, because “somebody pushed this branch” and “an unrelated merge nearly deleted it” are different facts — and bean plj1 is what happens when the second is invisible. | . ",
     "url": "/aai-programme/en/cat-harness/processes/staging-render-log.html#steps",
     
     "relUrl": "/en/cat-harness/processes/staging-render-log.html#steps"
-  },"1238": {
+  },"1234": {
     "doc": "Render log — the publish branch keeps its own history",
     "title": "Decisions",
     "content": "Every one of the 2 decision(s) is documented. | decision | what decides it | branches | . | What is happening?GW_What | What is about to happen to the publish branch? A deploy appends rendered; a takedown first preflights whether the preview is live; a full-replace deploy appends restored for the previews it put back. | deploy → Append renderedtakedown → Preflight: is the preview live?full-replace deploy → Append restored | . | Any liveness signal fired?GW_Live | Answered by the preflight: did any liveness signal fire for this preview? yes — refuse keeps it and appends retained with the reason; no removes it and appends removed with the reason. | yes — refuse → Append retained with the reasonno → Append removed with the reason | . ",
     "url": "/aai-programme/en/cat-harness/processes/staging-render-log.html#decisions",
     
     "relUrl": "/en/cat-harness/processes/staging-render-log.html#decisions"
-  },"1239": {
+  },"1235": {
     "doc": "Render log — the publish branch keeps its own history",
     "title": "Render log — the publish branch keeps its own history",
     "content": "Generated from cat-harness/processes/ui/staging-render-log.bpmn by gen-processes-viz.ts — do not edit here. All processes . ",
     "url": "/aai-programme/en/cat-harness/processes/staging-render-log.html",
     
     "relUrl": "/en/cat-harness/processes/staging-render-log.html"
-  },"1240": {
+  },"1236": {
     "doc": "Stalled-agent triage: collect handovers, consolidate themes, recommend, re-route",
     "title": "Stalled-agent triage: collect handovers, consolidate themes, recommend, re-route",
     "content": "Process_StalledAgentTriage · strict · 6 step(s) . When agents stall (context exhausted, container lost, session timed out) their work is spread over PRs, branches, beans and process runs. Collect each agent’s handover report, or reconstruct one, group the work into 2-4 themes, recommend how to pick each up, let the user decide, then record it and re-route open PRs through the merge steward. Owner, 2026-10-02: ‘an incoming stalled agent triage process which needs to look at stalled agents (named or over a given time window from active PRs, branches, discussions, beans etc), try to get as many handover reports as possible, if many then consolidate the various workstreams into 2-4 themes, give recommendation on how to pick up the work as part of current/new workplan; if open PRs etc, coordinate with relevant agents (e.g. the Merge Manager)’. Operating skills: stalled-agent-triage, handover-report. i i i i i i ",
     "url": "/aai-programme/en/cat-harness/processes/stalled-agent-triage.html#stalled-agent-triage-collect-handovers-consolidate-themes-recommend-re-route",
     
     "relUrl": "/en/cat-harness/processes/stalled-agent-triage.html#stalled-agent-triage-collect-handovers-consolidate-themes-recommend-re-route"
-  },"1241": {
+  },"1237": {
     "doc": "Stalled-agent triage: collect handovers, consolidate themes, recommend, re-route",
     "title": "How it connects",
     "content": ". | Called by: no call activity names this process | Calls: none | Presented on: no docs page section shows this diagram | . ",
     "url": "/aai-programme/en/cat-harness/processes/stalled-agent-triage.html#how-it-connects",
     
     "relUrl": "/en/cat-harness/processes/stalled-agent-triage.html#how-it-connects"
-  },"1242": {
+  },"1238": {
     "doc": "Stalled-agent triage: collect handovers, consolidate themes, recommend, re-route",
     "title": "Lanes — who acts",
     "content": "| lane | role | what it does here | . | Triage agent | authoring-agent | Reads the footprint the stalled agents left, collects or reconstructs a handover report per agent, groups the work into 2-4 themes, and recommends. It never finishes, closes or deletes another agent’s work. | . | Merge steward | session-coordinator | Receives the open PRs that lost their driver: which are green and ready, which are mid-merge, which must be re-driven from their PR head. | . | User | user | Decides one theme at a time: continue, fold into the plan, new epic, park, or scrap. | . ",
     "url": "/aai-programme/en/cat-harness/processes/stalled-agent-triage.html#lanes--who-acts",
     
     "relUrl": "/en/cat-harness/processes/stalled-agent-triage.html#lanes--who-acts"
-  },"1243": {
+  },"1239": {
     "doc": "Stalled-agent triage: collect handovers, consolidate themes, recommend, re-route",
     "title": "Steps",
     "content": "1 of 6 step(s) carry no documentation — activity-documented lists them. | step | lane | skill / sub-process | what it does | . | Find the footprintA_Footprint | Triage agent | stalled-agent-triage | handover notes (beans/notes, title ‘handover:’), open PRs and branches by session or time window, in-progress beans, workflow instances, last PR and issue comments. REST, one batched pass. | . | Collect or reconstruct a handover report per agentA_Collect | Triage agent | handover-report | Use the agent’s own report and check it against live state; if none, ask the agent if it is still reachable, else reconstruct with the handover-report template and mark it reconstructed. Unpushed state is unknown, never empty. | . | Consolidate into 2-4 themes, with a recommendation eachA_Consolidate | Triage agent | stalled-agent-triage | Group by what the work delivers, not by agent. Each theme gets its epic, members, dependencies, risk, and one of: continue, fold in, new epic, park, scrap (owner only). | . | Decide each themeU_Decide | User | — | — | . | Record the triage and claim the picked-up workA_Record | Triage agent | bean-coordination | A ‘triage: ' bean note on each theme's epic; new or re-parented beans; claims via beans:claim. Owning sessions still alive are notified before their branches are touched. | . | Re-route open PRs that lost their driverS_Reroute | Merge steward | coordinate | Green, up-to-date PRs join the queue; mid-merge branches are re-driven from the PR head, never guessed at; red PRs go back to the new driver. | . ",
     "url": "/aai-programme/en/cat-harness/processes/stalled-agent-triage.html#steps",
     
     "relUrl": "/en/cat-harness/processes/stalled-agent-triage.html#steps"
-  },"1244": {
+  },"1240": {
     "doc": "Stalled-agent triage: collect handovers, consolidate themes, recommend, re-route",
     "title": "Stalled-agent triage: collect handovers, consolidate themes, recommend, re-route",
     "content": "Generated from cat-harness/processes/sdlc/stalled-agent-triage.bpmn by gen-processes-viz.ts — do not edit here. All processes . ",
     "url": "/aai-programme/en/cat-harness/processes/stalled-agent-triage.html",
     
     "relUrl": "/en/cat-harness/processes/stalled-agent-triage.html"
-  },"1245": {
+  },"1241": {
     "doc": "A sub-KG is staged in place, then leaves for its own repository",
     "title": "A sub-KG is staged in place, then leaves for its own repository",
     "content": "Process_SubKgLifecycle · strict · 16 step(s) . Create a knowledge graph inside a harnessed repository as an instance of its own, grow it there, and when it should leave, stage it for separation and move it whole into a new repository. Declared in place with a planned repository and a livesAt saying where it sits today; staged by one import seam (&lt;name&gt;/platform.ts), the separation guard and a self-contained rehearsal; then, each behind an explicit owner confirmation, the repository is created, the staged contents are copied in with their history, the declaration is re-pointed, a fresh clone is verified, and the in-repo copy is deleted. Extracted in retrospect from the staged IG separations of 2026-09-21 to 2026-10-06 (beans n3ni, kg83, rbz3, hcpz). The light sibling of kg-separation, which splits a graph into a content and a tools repository; this moves a data instance whole, and shares kg-separation’s seeding gateway and decision table. i i i i i i i i i i i i i i i i ",
     "url": "/aai-programme/en/cat-harness/processes/sub-kg-lifecycle.html#a-sub-kg-is-staged-in-place-then-leaves-for-its-own-repository",
     
     "relUrl": "/en/cat-harness/processes/sub-kg-lifecycle.html#a-sub-kg-is-staged-in-place-then-leaves-for-its-own-repository"
-  },"1246": {
+  },"1242": {
     "doc": "A sub-KG is staged in place, then leaves for its own repository",
     "title": "How it connects",
     "content": ". | Called by: no call activity names this process | Calls: none | Names the sub-kg-lifecycle skill without calling this process: Mount a declared subgraph — activity-calls-skill-process asks whether each should be a call activity. | Presented on: no docs page section shows this diagram | . ",
     "url": "/aai-programme/en/cat-harness/processes/sub-kg-lifecycle.html#how-it-connects",
     
     "relUrl": "/en/cat-harness/processes/sub-kg-lifecycle.html#how-it-connects"
-  },"1247": {
+  },"1243": {
     "doc": "A sub-KG is staged in place, then leaves for its own repository",
     "title": "Lanes — who acts",
     "content": "| lane | role | what it does here | . | Authoring agent | authoring-agent | Declares the sub-KG in place and grows it, reports what would move before each irreversible step, drains the open pull requests that keep the source from settling, and copies the staged contents into the new repository with their history. | . | Platform authoring agent | platform-authoring-agent | The platform-side stages: pushing generic code and declarations down into the harness below, routing every climb out of the sub-KG through its one import seam, and re-pointing the declaration, the seam and the host’s consumption once the new repository exists. | . | Build pipeline | build-pipeline | Runs the checks that decide the gateways: the separation guard and the three direction checks, the self-contained rehearsal, the seed-readiness table at seed time, and the gates of the new repository from a fresh clone. A check that could not run stops the process; it is never read as a pass. | . | Administrator (owner) | administrator | The person’s decisions: whether the sub-KG leaves at all, whether the new repository may be created, and whether the in-repo copy may be deleted. An agent reports and waits at each, asks with numbered options and a default that changes nothing, and none of the three may be relaxed by a package. | . ",
     "url": "/aai-programme/en/cat-harness/processes/sub-kg-lifecycle.html#lanes--who-acts",
     
     "relUrl": "/en/cat-harness/processes/sub-kg-lifecycle.html#lanes--who-acts"
-  },"1248": {
+  },"1244": {
     "doc": "A sub-KG is staged in place, then leaves for its own repository",
     "title": "Steps",
     "content": "Every one of the 16 step(s) is documented. | step | lane | skill / sub-process | what it does | . | Brief, and claim the beanTask_Brief | Authoring agent | opening-brief | What the sub-KG is and why it is staged here rather than in a repository of its own, what is already measured, and what would falsify the plan. Claim the bean so a sibling session sees the work. | . | 1 · Declare it in place, with its seamTask_Declare | Authoring agent | sub-kg-lifecycle | &lt;name&gt;/&lt;name&gt;.json with name, version, repository (the planned home), livesAt (where it sits today), needs, and only the directories that exist, each declared with its files in one commit (bean dh4f). &lt;name&gt;/platform.ts from the first commit, so no climb out of the directory ever needs rerouting. Scaffolded by init-folio --staged &lt;path&gt;, which writes those two files and nothing at the host root; never --instance, which writes a whole repository. | . | 2 · Grow it in placeTask_Grow | Authoring agent | sub-kg-lifecycle | The content type’s own authoring process runs here, against the staged instance. Many sub-KGs never leave; this task can last as long as the graph does. | . | Should it leave now?Task_DecideLeave | Administrator (owner) | sub-kg-lifecycle | The owner decides, from what is measured, whether the sub-KG starts staging for separation now. Asked as numbered options with the recommended one first and a stated default: keeping it in place is the default, and is a real outcome. | . | 3 · Push generic down firstTask_PushDown | Platform authoring agent | graph-detanglement | Move what is generic into the harness below before the seam is closed, and consolidate what the sub-KG needs into the harness it instantiates. Wrong-direction edges hide in declarations and data as well as imports: run check:import-direction, check:reference-direction and check:process-bindings. Learned from stages A-D of bean n3ni (#1768, #1782, #1783, #1795). | . | 4 · Route every climb through platform.tsTask_Seam | Platform authoring agent | sub-kg-lifecycle | Every platform symbol the sub-KG uses is re-exported from &lt;name&gt;/platform.ts, so re-pointing the platform is a one-file edit. A merge from main is where new climbs arrive; reroute them here. Learned from #1767 and #1860. | . | 5 · Rehearse self-containedTask_Rehearse | Build pipeline | sub-kg-lifecycle | bun run cat seed:ready --layer &lt;name&gt; --rehearse copies the layer and what it needs into a scratch workspace of sibling directories and runs the tests there. Run the gates rather than scanning imports: the fork rehearsal (bean rbz3) found a static scan saw 20 of the 23 platform files the gates loaded, and that renaming the directory changed every generated page. | . | 6 · Report what would move, and how it undoesTask_Report | Authoring agent | deletion-requires-confirmation | Before the first outward-facing step the agent reports: the files and bytes that would move, the history that comes with them, what in the host changes, and how each step is undone. It never creates a repository on its own initiative. | . | 7 · Owner confirms: create the repositoryTask_ConfirmCreate | Administrator (owner) | deletion-requires-confirmation | Creating a repository is visible outside this one and is not undone by a revert. Numbered options, recommended first: (1) the owner creates it and says when it exists, (2) the agent creates it, only with that permission, (3) not yet. Default if there is no answer: (3), nothing is created. Non-relaxable. | . | 8 · Create the repositoryTask_CreateRepo | Administrator (owner) | sub-kg-lifecycle | The owner creates the repository, or authorises the agent that has the permission to; when that agent is in another environment, the hand-over is one bean and one sentence (agent-handoff). The new repository is read before anything is written to it: empty is a fact to check, not to assume. | . | Drain: land, close or re-target the open PRsTask_Drain | Authoring agent | kg-separation | Work the pull requests seed:ready named until the source settles, then ask again. | . | 9 · Copy the staged contents in, with historyTask_Seed | Authoring agent | sub-kg-lifecycle | git subtree split --prefix=&lt;name&gt; in the host, then the split branch added to the new repository on a branch, as a draft pull request, never straight to main. The new repository’s own root files are a second commit, so the copy stays byte-identical and reviewable. The first fork seed carried 378 commits this way (bean n3ni, stage E). | . | 10 · Re-point: livesAt, seam, submodule or subscriptionTask_Repoint | Platform authoring agent | sub-kg-lifecycleupstream-version-adoption | In the new repository livesAt goes (absent means it sits at the root of repository) and platform.ts points at where the platform now is. The host consumes it as a submodule if it imports its code, or a subscription if it only reads its content, pinned to a commit while staging. Additive: the host keeps its copy. | . | 11 · Verify on a fresh cloneTask_FreshClone | Build pipeline | sub-kg-lifecycle | bun run cat sub-kg:verify-clone --repo &lt;owner&gt;/&lt;name&gt; --ref &lt;branch&gt; (Tool sub-kg-verify-clone): clone into an empty scratch directory with submodules and any sibling it needs, install, and run its own gates. Green, red or unknown, and unknown is never green. The measured falsifier (#2082): the first seeded fork failed with “Cannot find module” because nothing in a seed runs standalone until the seam is re-pointed. | . | 12 · Owner confirms: freeze the in-repo copyTask_ConfirmCutover | Administrator (owner) | deletion-requires-confirmation | The agent reports the files that would move, their size, the new repository and the commit the copy matches, then asks: (1) freeze it in the kept trashcan now, (2) keep in place until the first release, (3) show the file list first. Default if there is no answer: (2), nothing moves. A green fresh clone is the precondition for asking, not the answer. Non-relaxable. Owner ruling, 2026-10-06 (bean 3tza, “1”): the host keeps a FROZEN copy in the kept trashcan, not a refreshed mirror and not a deletion; the live copy is the submodule or subscription set up at stage 10. | . | 13 · Cutover: freeze the copy in the kept trashcanTask_Cutover | Administrator (owner) | deletion-requires-confirmation | Only on the owner’s answer (1) at step 12. The in-repo directory moves, as one relocation, under separated// in the kept trashcan, on its own branch (a plain mv, git rm --cached, state:push; the trashcan skill says how), with ONE note carrying movedFrom, movedOn, the new repository and the commit the copy matches. Frozen: never refreshed, never rendered; a reader wanting the live content follows the note to the new repository. On main this is one revertable commit removing the directory. | . ",
     "url": "/aai-programme/en/cat-harness/processes/sub-kg-lifecycle.html#steps",
     
     "relUrl": "/en/cat-harness/processes/sub-kg-lifecycle.html#steps"
-  },"1249": {
+  },"1245": {
     "doc": "A sub-KG is staged in place, then leaves for its own repository",
     "title": "Decisions",
     "content": "Every one of the 4 decision(s) is documented. | decision | what decides it | branches | . | Guard green, no edge up?GW_Guard | Decided by commands: instance-separation-imports.test.ts (every instance whose repository differs from its livesAt is covered), and the three direction checks adding nothing. Red goes back to the seam. | red → 4 · Route every climb through platform.tsgreen → 5 · Rehearse self-contained | . | Green alone?GW_Alone | Green with only the layer and what it needs present goes on. Red means a climb or a run-time load the guard did not see: back to the seam. If the rehearsal could not run, that is not a pass: stop. | red: an unseen climb → 4 · Route every climb through platform.tscould not run → UNKNOWN: stop. Not cleangreen → 6 · Report what would move, and how it undoes | . | Ready to seed?GW_SeedReady | Asked at seed time, because the tree has moved since the rehearsal: every open pull request over the layer when the copy is taken is orphaned. Computed by decisions/seed-readiness-gate.dmn from the facts bun run cat seed:ready --layer &lt;name&gt; --rehearse gathers; the same table kg-separation uses. | not yet → Drain: land, close or re-target the open PRsunknown → UNKNOWN: do not seed. Not cleansettled → 9 · Copy the staged contents in, with history | . | Green from a fresh clone?GW_Fresh | Green goes to the owner. Red is fixed in the new repository, not in the staged copy, and goes back to the re-point. A clone that could not run is not a pass: stop. | red → 10 · Re-point: livesAt, seam, submodule or subscriptioncould not run → UNKNOWN: stop. Not cleangreen → 12 · Owner confirms: freeze the in-repo copy | . ",
     "url": "/aai-programme/en/cat-harness/processes/sub-kg-lifecycle.html#decisions",
     
     "relUrl": "/en/cat-harness/processes/sub-kg-lifecycle.html#decisions"
-  },"1250": {
+  },"1246": {
     "doc": "A sub-KG is staged in place, then leaves for its own repository",
     "title": "A sub-KG is staged in place, then leaves for its own repository",
     "content": "Generated from cat-harness/processes/kg/sub-kg-lifecycle.bpmn by gen-processes-viz.ts — do not edit here. All processes . ",
     "url": "/aai-programme/en/cat-harness/processes/sub-kg-lifecycle.html",
     
     "relUrl": "/en/cat-harness/processes/sub-kg-lifecycle.html"
-  },"1251": {
+  },"1247": {
     "doc": "Subscribe to an external knowledge graph",
     "title": "Subscribe to an external knowledge graph",
     "content": "Process_SubscribeKg · strict · 11 step(s) . Subscribe a folio or harness to an external knowledge graph pinned to a full commit SHA, then take each chosen part from referenced to materialized through materialize-remote and instantiate each chosen harness once its needs are held. Owner, 2026-09-30 (issue #1719): “a way for a folio instance (or cat-harness in general) to “subscribe” to external KGs … they can choose to materialize some or all subgraphs … an asset reference … they can choose to materialize locally … instantiate one or more harnesses … so then harness appears in their navbar.” Design: cat-harness/docs/proposals/kg-subscriptions.md, epic bean fnx4, slice 8. A SUBSCRIPTION IS NOT A NEW MECHANISM, and this diagram is where that claim is kept honest. Every byte that arrives does so through Process_MaterializeRemote, called once per chosen subgraph or asset; every held copy is refreshed through Process_RefreshMaterialized. Neither is re-described here. What this process adds is only the walk: pin, validate, choose, and then carry each chosen part from referenced to materialised one at a time. A SUBSTRATE is a repository whose root declaration meets bootstrap’s schema requirements and declares at least one harness (the owner’s definition). Both are answerable from the declaration file alone, so validating one never needs the whole repository. WHERE IT LIVES: cat-harness/processes/, beside Process_MaterializeRemote and Process_RefreshMaterialized, which it calls, and naming the kg-subscription and materialize-remote skills in cat-harness/skills/library/large-datasets/. It was written in large-datasets (proposal decision #3), because those subprocesses and skills lived there and a diagram in cat-harness would have run every edge against the dependency arrow (bean cjvs). The owner’s 2026-10-01 ruling dissolved large-datasets into cat-harness’s concern groups (bean j7ql), so the callees came with it: the calls are siblings again and every ref stays inside the harness. STRICT. The pin and the five gates are the reason: an unpinned subscription is how two subscribers see two graphs under one name, and a copy that skipped the gates is the xom7 shape — a check nobody fails because it only ever warned. i i i i i i i i i i i ",
     "url": "/aai-programme/en/cat-harness/processes/subscribe-kg.html#subscribe-to-an-external-knowledge-graph",
     
     "relUrl": "/en/cat-harness/processes/subscribe-kg.html#subscribe-to-an-external-knowledge-graph"
-  },"1252": {
+  },"1248": {
     "doc": "Subscribe to an external knowledge graph",
     "title": "How it connects",
     "content": ". | Called by: no call activity names this process | Calls: Materialize remote content — the shared subprocess, Refresh materialized remote content | Presented on: no docs page section shows this diagram | . ",
     "url": "/aai-programme/en/cat-harness/processes/subscribe-kg.html#how-it-connects",
     
     "relUrl": "/en/cat-harness/processes/subscribe-kg.html#how-it-connects"
-  },"1253": {
+  },"1249": {
     "doc": "Subscribe to an external knowledge graph",
     "title": "Lanes — who acts",
     "content": "| lane | role | what it does here | . | Subscriber (the folio’s owner) | user | Every CHOICE in the walk is made here and nowhere else: which substrate and at which commit, which of its subgraphs, asset classes and harnesses to hold. The engine never chooses a part on the subscriber’s behalf — a subgraph not chosen stays referenced, which is a state, not an omission — and the pre-check on harness needs sends the choice back here rather than resolving it silently. | . | Ingestion Engine (agent, runs unattended) | ingestion-agent | Validates the substrate at the pin, then walks the chosen parts one at a time: each subgraph or asset through the shared materialisation subprocess, each held copy through the shared refresh, each harness by writing its config. Every loop here re-enters its decision after each part, so a refusal on one part is recorded and the walk continues to the next rather than aborting the subscription. | . | Corpus — the subscriber’s declaration | corpus | Where the subscription is written down: the entry in the subscriber’s instance declaration (choice and pin only, never state), the cached copy of the substrate’s declaration the visualizer reads offline, and the record of how the walk ended. A refusal lands here with the same weight as a success, so the next caller does not re-litigate it. | . ",
     "url": "/aai-programme/en/cat-harness/processes/subscribe-kg.html#lanes--who-acts",
     
     "relUrl": "/en/cat-harness/processes/subscribe-kg.html#lanes--who-acts"
-  },"1254": {
+  },"1250": {
     "doc": "Subscribe to an external knowledge graph",
     "title": "Steps",
     "content": "Every one of the 11 step(s) is documented. | step | lane | skill / sub-process | what it does | . | Name the substrate, pin a full commit SHATask_Pin | Subscriber (the folio’s owner) | kg-subscription | owner/repo and a 40-character commit SHA — never a branch, never an abbreviated SHA. The schema refuses anything else (SubscriptionSchema.ref), and this step exists so the refusal is met while choosing rather than at commit time. A tag replaces the SHA only once the substrate publishes releases. | . | Fetch the root declaration at the pin, and validate itTask_Validate | Ingestion Engine (agent, runs unattended) | kg-subscription | A sparse, shallow fetch of the substrate’s root declaration only. Two questions: does it parse as bootstrap’s KnowledgeGraphDeclarationSchema, and does it declare at least one harness? could not fetch is a third answer and is never read as conforms. | . | Record why it is not a substrate; write no entryTask_Refuse | Corpus — the subscriber’s declaration | kg-subscription | No subscription entry is written for a repository that is not a substrate. What is recorded is the reason (non-conforming, no harness, or unreachable) and the pin it was asked at, so a later attempt at a different commit starts from what failed. | . | Write the entry and cache the declarationTask_Record | Corpus — the subscriber’s declaration | kg-subscription | The subscriptions entry in the subscriber’s instance declaration — id, repository, ref, and nothing chosen yet — plus a cached copy of the substrate’s declaration at the pin. The entry holds the choice and the pin, never state: whether a part is held is answered by its materialisation record, and a second answer here would be free to disagree with it. | . | Refresh the held partCall_Refresh | Ingestion Engine (agent, runs unattended) | calls Refresh materialized remote contentmaterialize-remote | The shared refresh, called, not re-described: what changed upstream, what changed locally, and what to do when both did. An archival copy is fixity-checked and never re-fetched. Whatever that process decides — refreshed, kept divergent, or deferred — is the part’s new state; this loop only moves to the next part. | . | Move the entry’s ref and re-cache the declarationTask_RePin | Corpus — the subscriber’s declaration | kg-subscription | Only after every held part has been through the refresh. Moving the ref first would make the records of parts not yet refreshed describe a commit the entry no longer names. The cached declaration is replaced so the review that follows shows what the NEW pin offers, including subgraphs that did not exist at the old one. | . | Review what the substrate offersTask_Review | Subscriber (the folio’s owner) | kg-subscription | Every subgraph, asset class and harness the cached declaration names, each with its current state — referenced, materialised, unknown, stale, or refused by a gate. Shown whole, because a reader who sees only what was chosen cannot tell “not offered” from “not taken”. | . | Choose subgraphs, the asset policy, harnessesTask_Choose | Subscriber (the folio’s owner) | kg-subscription | Written to the entry as subgraphs, assets.policy (none, on-demand or all) and harnesses. Choosing is not holding: a chosen subgraph is still referenced until the gates below let it through. Choosing nothing is legitimate — a subscription with no parts chosen is a pinned reference, the case associatedHarnesses covers today. | . | Materialise the partCall_Materialize | Ingestion Engine (agent, runs unattended) | calls Materialize remote content — the shared subprocessmaterialize-remote | The ONLY way bytes arrive. Purpose first, then the five gates — size, restrictions, copyright, retention, source loss — then fetch with fixity, or stay referenced with the refusing gate’s basis recorded. Both ends of that subprocess return here and the walk continues: one part refused is not the subscription refused. | . | Instantiate the harness: write its configTask_Instantiate | Ingestion Engine (agent, runs unattended) | kg-subscriptionindex-config | Write &lt;harness&gt;.config.json at the repository root, plus the state directories the harness declares, and — where the checkout has a root index.config.json — add the harness to its instances[] (kg:instantiate does both), because the index, not the file, is then what reads as INSTANTIATED (index-config skill); a root config the index does not list fails check:landing-instance. That instantiation is what puts the harness in the navbar’s bottom region. check:instance-render must be green on the result; a config that renders nothing is an entry pointing nowhere. | . | Record how the walk ended, part by partTask_Summarise | Corpus — the subscriber’s declaration | kg-subscription | One line per offered part: materialised, referenced by choice, or referenced because a gate refused (and which). Nothing new is decided here; it is the account the visualizer and the next refresh read, written once rather than reconstructed from the loop. | . ",
     "url": "/aai-programme/en/cat-harness/processes/subscribe-kg.html#steps",
     
     "relUrl": "/en/cat-harness/processes/subscribe-kg.html#steps"
-  },"1255": {
+  },"1251": {
     "doc": "Subscribe to an external knowledge graph",
     "title": "Decisions",
     "content": "Every one of the 6 decision(s) is documented. | decision | what decides it | branches | . | A substrate at this pin?Gateway_Substrate | Decided from Task_Validate’s result, not by a person. yes needs both answers positive; a declaration that does not conform, declares no harness, or could not be fetched all take no, and the reason is recorded rather than the subscription half-written. | no, or could not tell → Record why it is not a substrate; write no entryyes → New subscription, or moving a held pin? | . | New subscription, or moving a held pin?Gateway_Kind | Answered by the subscriber’s declaration: an entry with this id already exists or it does not. A new one is recorded and reviewed; an existing one first refreshes every part it already holds against the new pin, because a pin that moved under held bytes would leave their records describing a commit nobody is subscribed to. | new → Write the entry and cache the declarationmoving a held pin → Another held part not yet refreshed? | . | Another held part not yet refreshed?Gateway_NextHeld | Walks the parts this subscription already holds — every subgraph and asset with a materialisation record — one at a time. yes refreshes the next; no re-pins. Held parts are found from their records, never from the entry’s subgraphs list, which says what was chosen, not what arrived. | yes → Refresh the held partno, all refreshed → Move the entry’s ref and re-cache the declaration | . | Every chosen harness’s needs held here?Gateway_NeedsHeld | For each chosen harness, is every instance it needs either local to this checkout or itself subscribed? Decided from the two declarations, before any byte moves. no goes back to the choice — subscribe the missing dependency first, or leave that harness referenced — because instantiating a harness whose needs cannot load writes a navbar entry that fails check:instance-render. | no — choose again → Choose subgraphs, the asset policy, harnessesyes → Another chosen subgraph or asset not yet walked? | . | Another chosen subgraph or asset not yet walked?Gateway_NextPart | One part at a time, in the order chosen. yes hands the next subgraph — or, under an all asset policy, the next referenced asset — to the shared subprocess. Under on-demand, assets are not walked here at all: each is materialised through the same subprocess when first asked for. no moves on to harnesses. | yes → Materialise the partno, every part walked → Another chosen harness not yet instantiated? | . | Another chosen harness not yet instantiated?Gateway_NextHarness | Walks the chosen harnesses, whose needs the pre-check already found held. yes instantiates the next; no closes the walk. A harness already instantiated at this pin is skipped rather than rewritten. | yes → Instantiate the harness: write its configno, every harness walked → Record how the walk ended, part by part | . ",
     "url": "/aai-programme/en/cat-harness/processes/subscribe-kg.html#decisions",
     
     "relUrl": "/en/cat-harness/processes/subscribe-kg.html#decisions"
-  },"1256": {
+  },"1252": {
     "doc": "Subscribe to an external knowledge graph",
     "title": "Subscribe to an external knowledge graph",
     "content": "Generated from cat-harness/processes/library/subscribe-kg.bpmn by gen-processes-viz.ts — do not edit here. All processes . ",
     "url": "/aai-programme/en/cat-harness/processes/subscribe-kg.html",
     
     "relUrl": "/en/cat-harness/processes/subscribe-kg.html"
-  },"1257": {
+  },"1253": {
     "doc": "SWOT situation analysis",
     "title": "SWOT situation analysis",
     "content": "Process_SwotAnalysis · advisory · 7 step(s) . Situation analysis over two axes — internal/external and helpful/harmful — producing the raw material a decision is made from, and NEVER the decision. THE ONE STRUCTURAL CLAIM THIS DIAGRAM MAKES: there is no path through it that decides anything. Every completed run ends either at a recorded situation or at a handoff into options-analysis, which selects a decision methodology. That is not a modelling preference; it is the swot methodology’s stated refusal drawn so it cannot be skipped. Gürel and Tat’s conclusion is that SWOT gives “the raw material needed to perform more in-depth strategic analysis” but “cannot show them how to achieve a competitive advantage”, and that it must not become “an end in itself”. A diagram with a decide-here activity would contradict the methodology it implements. WHY EXTERNAL IS SCANNED FIRST: Weihrich (1982), reported in the source, holds that the only logical starting point is opportunities and threats — they are outside the organisation and largely beyond its control, and must be managed using its strengths and weaknesses. The order is his argument, rendered; it is not a house preference. WHAT IT DOES NOT DO: it does not rank the factors it finds. The source is explicit that SWOT has no way to prioritise — “quantity does not mean quality” — and the long list of quantitative extensions it surveys (AHP, ANP, their fuzzy variants, SMART, SMAA-O, MADM, TRIZ) is NOT adopted here. An activity that scored or weighted factors would be inventing the part of the method that does not exist. i i i i i i i ",
     "url": "/aai-programme/en/cat-harness/processes/swot-analysis.html#swot-situation-analysis",
     
     "relUrl": "/en/cat-harness/processes/swot-analysis.html#swot-situation-analysis"
-  },"1258": {
+  },"1254": {
     "doc": "SWOT situation analysis",
     "title": "How it connects",
     "content": ". | Called by: no call activity names this process | Calls: none | Presented on: no docs page section shows this diagram | . ",
     "url": "/aai-programme/en/cat-harness/processes/swot-analysis.html#how-it-connects",
     
     "relUrl": "/en/cat-harness/processes/swot-analysis.html#how-it-connects"
-  },"1259": {
+  },"1255": {
     "doc": "SWOT situation analysis",
     "title": "Lanes — who acts",
     "content": "| lane | role | what it does here | . | Business analyst | business-analyst | Performs the scan and the crossing. This lane owns the analysis and owns nothing else: it does not authorise, and it does not choose between options. Its deliverable is four lists, the four matched strategies, and an explicit record of what could not be classified. | . | Stakeholder | stakeholder | Consulted, in a lane of their own because the source names group discussion as a property of the method rather than as good practice around it: SWOT “promotes group discussion about strategic issues” and pools knowledge through participatory techniques. It is also the mitigation for the limitation the source states most sharply — that a list of strengths is “bound up with aspirations, biases, and hope of the individuals involved”. A single analyst producing four lists alone has performed the technique’s shape without the part that checks it. | . ",
     "url": "/aai-programme/en/cat-harness/processes/swot-analysis.html#lanes--who-acts",
     
     "relUrl": "/en/cat-harness/processes/swot-analysis.html#lanes--who-acts"
-  },"1260": {
+  },"1256": {
     "doc": "SWOT situation analysis",
     "title": "Steps",
     "content": "Every one of the 7 step(s) is documented. | step | lane | skill / sub-process | what it does | . | Name the subject and the levelA_FrameSubject | Business analyst | swot-analysis | One sentence naming WHAT is being analysed and at WHICH level — individual, organisational, national, international. The source requires this before anything is listed: “the classification of a variable also depends on the purpose of the practice”, and the criteria for assigning a variable to a quadrant “may be more difficult to clarify if the methodology is not used for a company but for a country”.It also bounds the known limitation that SWOT “is rarely deployed at lower than the organization level”, where one scan drives strategy for units its factors do not hold equally for. Naming the level does not remove that risk; it makes it visible in the record. | . | Scan the environment opportunities and threatsA_ScanExternal | Business analyst | swot-analysis | The external axis, first, per Weihrich. Work the source’s categories of environmental change rather than free-associating: societal, governmental, economic, competitive, supplier and market changes, each item recorded with what it impacts.An opportunity is an external element that gives benefit; a threat is one that could cause trouble. Both are outside the subject and largely beyond its control — that is what puts them on this axis, not whether they feel good or bad. | . | Scan the subject strengths and weaknessesA_ScanInternal | Business analyst | swot-analysis | The internal axis. Work the source’s functional checklist rather than a blank page: marketing, research and development, management information systems, management team, operations, finance, human resources.A strength gives advantage over others in the field; a weakness places the subject at a disadvantage relative to others. Both are attributes OF the subject. The source’s warning belongs to this step specifically: listing strengths on paper “is very different from testing the organization and experiencing the strengths at work”, so a strength recorded here is a claim, and where evidence for it exists it is cited. | . | Pool knowledge across participantsA_GroupReview | Stakeholder | swot-analysis | The four lists are reviewed by more than the person who wrote them. This is the method’s own answer to its own bias limitation, and it is a distinct activity rather than advice attached to the scans, because an activity can be recorded as not performed and a recommendation cannot.Disagreement about which quadrant a factor belongs in is an OUTPUT of this step, not a failure of it — it feeds A_RecordAmbiguous. | . | Record what did not classify cleanlyA_RecordAmbiguous | Business analyst | swot-analysis | Factors that sit in two quadrants, or in none, are written down as such. The source states this as inherent rather than as analyst error: “the same factor can be fitted in two categories. A factor can be a strength and a weakness at the same time.” It adds the two drifts — strengths not maintained become weaknesses, and opportunities not taken but taken by competitors become threats.A scan that silently forced every factor into one quadrant would report a cleanliness the method does not have. This is the same third-state discipline the rest of this repository applies to “could not determine”: an unclassifiable factor is a finding, not a blank. | . | Cross the axes into SO, WO, ST, WTA_Cross | Business analyst | swot-analysis | The TOWS matching step, and the only step that produces anything actionable. Strengths and weaknesses across, opportunities and threats down, and each cell names the strategy the pairing implies: SO — achieve opportunities that greatly match the strengths; WO — overcome weaknesses to attain opportunities; ST — use strengths to reduce vulnerability to threats; WT — prevent weaknesses, to avoid becoming more susceptible to threats.A SWOT that stops at four lists is the failure the source names as its central one. This step is what the process exists to reach.It produces CANDIDATE strategies, not a chosen one, and they are not ranked — see the process documentation on why no scoring activity exists. | . | Hand the candidates to a decision methodologyA_HandOff | Business analyst | methodology-adoption | The candidate strategies go to options-analysis, which selects the decision methodology by context and applies it. SWOT does not make that selection and does not make the decision.What is handed over includes the ambiguities from A_RecordAmbiguous and the fact that the candidates are UNRANKED. A receiving methodology that assumed an ordered list would be reading a priority SWOT never established. | . ",
     "url": "/aai-programme/en/cat-harness/processes/swot-analysis.html#steps",
     
     "relUrl": "/en/cat-harness/processes/swot-analysis.html#steps"
-  },"1261": {
+  },"1257": {
     "doc": "SWOT situation analysis",
     "title": "Decisions",
     "content": "Every one of the 1 decision(s) is documented. | decision | what decides it | branches | . | Does a decision follow?GW_DecisionFollows | Is this scan feeding a choice that has to be made now, or is it standing situation analysis?DELIBERATELY NOT DMN-BACKED. Whether a decision follows is a fact about the caller’s intent, not a function of the analysis’s contents, so there is nothing recurring for a table to compute. dmn’s own test — would the same inputs have to produce the same branch next month — fails here, and a table would assert a repeatability this does not have.Both branches are completed runs. Neither is a skipped step. | yes → Hand the candidates to a decision methodologyno → Situation recorded; no decision in play | . ",
     "url": "/aai-programme/en/cat-harness/processes/swot-analysis.html#decisions",
     
     "relUrl": "/en/cat-harness/processes/swot-analysis.html#decisions"
-  },"1262": {
+  },"1258": {
     "doc": "SWOT situation analysis",
     "title": "SWOT situation analysis",
     "content": "Generated from cat-harness/processes/process/swot-analysis.bpmn by gen-processes-viz.ts — do not edit here. All processes . ",
     "url": "/aai-programme/en/cat-harness/processes/swot-analysis.html",
     
     "relUrl": "/en/cat-harness/processes/swot-analysis.html"
-  },"1263": {
+  },"1259": {
     "doc": "Test-plan execution",
     "title": "Test-plan execution",
     "content": "Process_TestPlanExecution · strict · 11 step(s) . Executing a test-plan/v1 against a system under test and taking the result to a certification decision: requested by (or for) the system, run by a tester, re-executed in sample by an untainted checker, decided by a certifier through the plan’s exit-criteria table, and signed through qa-report-signing.bpmn. You are in this process when somebody wants a system — a skill, an agent, a tool, a machine, an IG or a process — certified against a named plan. Executing a plan with no certification in view is still this process; it ends at undetermined or refused without anything being signed. The run, the report and the certification are three records, and they point backwards: the run at the plan, the report at the run, the certification at the report. The certification is a judgement and lives under the declared attestations graph, on main; the report is derived and lives on the qa-reports branch. i i i i i i i i i i i ",
     "url": "/aai-programme/en/cat-harness/processes/test-plan-execution.html#test-plan-execution",
     
     "relUrl": "/en/cat-harness/processes/test-plan-execution.html#test-plan-execution"
-  },"1264": {
+  },"1260": {
     "doc": "Test-plan execution",
     "title": "How it connects",
     "content": ". | Called by: no call activity names this process | Calls: QA report signing | Presented on: no docs page section shows this diagram | . ",
     "url": "/aai-programme/en/cat-harness/processes/test-plan-execution.html#how-it-connects",
     
     "relUrl": "/en/cat-harness/processes/test-plan-execution.html#how-it-connects"
-  },"1265": {
+  },"1261": {
     "doc": "Test-plan execution",
     "title": "Lanes — who acts",
     "content": "| lane | role | what it does here | . | Requester / system under test | test-requester | The system under test, or whoever speaks for it, asking for certification against plan P at a named version. Its only task is the request, and that is the design rather than an omission: the system under test never writes a verdict about itself, so after this lane it is the SUBJECT of the process and never a performer in it. | . | Tester | tester | Runs the plan against the system: resolves it, binds its fixed or generated test data, executes every case or skips it with a reason, and writes the folio-test-run/v1 and the test-report/v1. Untainted from the system under test — never the same actor — and it does not certify: what it writes is what the certifier decides on. | . | Untainted checker | untainted-checker | A second party re-executing a sample of the cases from the plan and the data alone, never from the tester’s verdicts. It rules on nothing: whether it agrees is a fact the certification table reads. One party doing both halves is not this check — it would compare a run with its own paraphrase of itself. | . | Certifier | certifier | The accountable party for the decision, a specialisation of the stakeholder. The gateway is computed from the plan’s exit-criteria table; what the certifier adds, and what makes it a judgement, is recording the decision under their name. Never the tester and never the system under test. | . | Attestation service | attestation-service | Signs the certification and files it. Reached only from certified: a refusal and an undetermined result are recorded by the certifier and signed by nobody. The signature itself is qa-report-signing.bpmn, called unchanged, whose own gateway chooses the API or a human release authority by the signer’s reach. | . ",
     "url": "/aai-programme/en/cat-harness/processes/test-plan-execution.html#lanes--who-acts",
     
     "relUrl": "/en/cat-harness/processes/test-plan-execution.html#lanes--who-acts"
-  },"1266": {
+  },"1262": {
     "doc": "Test-plan execution",
     "title": "Steps",
     "content": "Every one of the 11 step(s) is documented. | step | lane | skill / sub-process | what it does | . | Request certification of the system against plan PA_Request | Requester / system under test | test-plan-execution | Name the plan by id AND version, and the system under test by actor id. The actor must carry the systemUnderTest facet: an actor that has not said it can be tested is not run against a plan by default. The bean this instance tracks is claimed here. | . | Resolve the plan [test-plan/v1]A_ResolvePlan | Tester | test-plan-execution | The plan parses, names at least one req: requirement, its exitCriteria resolves to a decision in a .dmn that exists, and its scope.kind is the system’s facet kind. A plan that does not resolve is not run — test-plan-resolves audits the same join afterwards. | . | Bind the test data [fixed or generated]A_BindData | Tester | test-plan-execution | Per bean vm6m: a fixed set is a committed path and counts as evidence only once reviewed; a generated set is template + params + seed and is never materialised. Both feed the run’s data hash, and nothing that feeds the process hash may feed it too. | . | Execute every case, or skip it with a reasonA_Execute | Tester | test-plan-executiontest-engineer | Every case in dependency order. A case is executed or explicitly skipped with its reason; a case that simply has no verdict is a finding, because it cannot be told from a case nobody ran. | . | Write the test run and the test report [folio-test-run/v1 + test-report/v1]A_WriteRun | Tester | test-plan-execution | The run records plan {id, version} and sut {actor, version, reach} with its data and process hashes; the report rolls up per plan, never across plans, and goes to the qa-reports branch at tests/plan/sut/run/. No verdict in it may name the system under test as its reviewer. | . | Re-execute a sample, blind to the tester’s verdictsA_ReExecuteSample | Untainted checker | untainted-verificationtest-plan-execution | Given the plan, the bound data and a sample of case ids — not the report. Says agree, disagree or unknown; unknown (could not run) is said as plainly as a disagreement, because the table reads both the same way and an unknown read as agreement certifies on one party’s word. | . | Record the certification decisionA_RecordCertification | Certifier | test-plan-execution | The judgement: the certifier records, under their own name, that the system meets plan P at this version on this run. It is written under the declared attestations graph beside the other judgements, never on the qa-reports branch with derived results. A user task, so no agent or pipeline can fill it. | . | Record the refusal, with the failing casesA_RecordRefusal | Certifier | test-plan-execution | A complete, trusted run in which a case failed. The refusal names the failing cases and is the end of this request; nothing is signed. The bean resolves here because the process has finished — what to do about the failure is a new piece of work. | . | Record why it could not be decidedA_RecordUndetermined | Certifier | test-plan-execution | The third state: which fact kept the table from deciding — a run not finished, an unknown data hash, an unexecuted case, a checker that disagreed or could not run, or nothing passed. A note and not a resolution, because the request is still open: it needs a re-run or an adjudication, not a verdict. | . | Sign the certificationCall_Sign | Attestation service | calls QA report signingqa-report-signing | qa-report-signing.bpmn, unchanged: it builds the signable run record, resolves the signer’s reach, and routes the signature to the API or to a human release authority. | . | File the signed certification [qa-attestations/v1]A_FileCertification | Attestation service | test-plan-execution | The signed certification goes under the declared attestations graph on main (owner ruling D2 (a), D5 default), pointing at the report it certifies. The bean resolves here, once the process has actually finished. | . ",
     "url": "/aai-programme/en/cat-harness/processes/test-plan-execution.html#steps",
     
     "relUrl": "/en/cat-harness/processes/test-plan-execution.html#steps"
-  },"1267": {
+  },"1263": {
     "doc": "Test-plan execution",
     "title": "Decisions",
     "content": "Every one of the 1 decision(s) is documented. | decision | what decides it | branches | . | Exit criteria met?GW_ExitCriteria | Computed from six facts read off the records — report status, data hash known, unexecuted cases, the checker’s agreement, failed and passed cases — by the table the plan’s exitCriteria names (resolved dynamically; if unresolvable, routes to undetermined and never silently falls back to default). Supplying the branch by hand is refused. | certified → Record the certification decisionrefused → Record the refusal, with the failing casesundetermined → Record why it could not be decided | . ",
     "url": "/aai-programme/en/cat-harness/processes/test-plan-execution.html#decisions",
     
     "relUrl": "/en/cat-harness/processes/test-plan-execution.html#decisions"
-  },"1268": {
+  },"1264": {
     "doc": "Test-plan execution",
     "title": "Test-plan execution",
     "content": "Generated from cat-harness/processes/sdlc/test-plan-execution.bpmn by gen-processes-viz.ts — do not edit here. All processes . ",
     "url": "/aai-programme/en/cat-harness/processes/test-plan-execution.html",
     
     "relUrl": "/en/cat-harness/processes/test-plan-execution.html"
-  },"1269": {
+  },"1265": {
     "doc": "Theme and UI review — at ingestion",
     "title": "Theme and UI review — at ingestion",
     "content": "Process_ThemeUIReview · advisory · 6 step(s) . Reviewing GRAPHICAL ASSETS AS THEY ARE INGESTED — accessibility, branding, languages — in the context of the website or app design they are for, to determine what the graphical assets and the UI are going to be. AT INGESTION ONLY, by the owner’s ruling (bean 9fdi). 2026-09-23: “theme review to ingestion of graphical assets in context of website or app design and determining graphical assets/UI”. 2026-09-24, asked directly whether that meant ONLY at ingestion: “Yes only at ingestion”. This process was post-MVP until then — started by “MVP accepted” and called from crdm-deliver.bpmn on the edge out of stakeholder acceptance, reviewing what had already shipped. That call is gone. It is now called from ingest-theme.bpmn. WHY THE MOMENT MATTERS. Reviewed after a build, a finding is a defect in something shipped. Reviewed at ingestion, the same finding is a decision about what the assets WILL be, taken while it is still cheap. The question the review asks is unchanged; the object it asks it of moved upstream, and so did the cost of the answer. WHAT DID NOT MOVE. There is still no role-to-theme mapping — theme choice remains an authoring judgement, per note — so nothing here checks a binding. What gets reviewed is the ingested art in its design context. i i i i i i ",
     "url": "/aai-programme/en/cat-harness/processes/theme-ui-review.html#theme-and-ui-review--at-ingestion",
     
     "relUrl": "/en/cat-harness/processes/theme-ui-review.html#theme-and-ui-review--at-ingestion"
-  },"1270": {
+  },"1266": {
     "doc": "Theme and UI review — at ingestion",
     "title": "How it connects",
     "content": ". | Called by: Ingestion subprocess — ingest a theme | Calls: none | Presented on: no docs page section shows this diagram | . ",
     "url": "/aai-programme/en/cat-harness/processes/theme-ui-review.html#how-it-connects",
     
     "relUrl": "/en/cat-harness/processes/theme-ui-review.html#how-it-connects"
-  },"1271": {
+  },"1267": {
     "doc": "Theme and UI review — at ingestion",
     "title": "Lanes — who acts",
     "content": "| lane | role | what it does here | . | Reviewer | reviewer | The single point in this process where a person looks rather than a tool measures, reached only after all four agent passes are done — so what this lane judges is the ingested assets as a whole, in the design they are for — not any one axis in isolation. Its finding is the only thing that can send the process to A_RaiseFindings; a clean ingest, a passing accessibility check and a correct branding pass can each be true and still miss what only laying the assets out and looking catches. | . | Agent | ingestion-agent | Four measured passes into R_Judge — inventory, accessibility, branding, locales — each one required to MEASURE rather than assert, because an automated pass alone missed three defects a rendered look caught outright. If GW_Findings comes back yes, this lane still does not fix anything: A_RaiseFindings sends the finding back to whoever authored the theme choice, since picking it was a judgement call this lane does not get to override. | . ",
     "url": "/aai-programme/en/cat-harness/processes/theme-ui-review.html#lanes--who-acts",
     
     "relUrl": "/en/cat-harness/processes/theme-ui-review.html#lanes--who-acts"
-  },"1272": {
+  },"1268": {
     "doc": "Theme and UI review — at ingestion",
     "title": "Steps",
     "content": "Every one of the 6 step(s) is documented. | step | lane | skill / sub-process | what it does | . | Inventory the ingested assetsA_Inventory | Agent | theme-ui-review | Which graphical assets arrived, for which surfaces of the website or app design, in which locales, and at which VIEWPORTS: every surface at a web width and at a mobile width (owner, 2026-09-23, issue #1023). Read off the ingested artefacts rather than off the intent — a layout the source declares but does not supply is not in the inventory, and a surface the design needs but no asset covers is the one that would ship wrong. | . | Accessibility: measure, do not assertA_Accessibility | Agent | theme-ui-review | Contrast COMPUTED against the real ground, including the worst case a backdrop can present; a non-colour channel wherever colour carries meaning (SC 1.4.1); an accessible name on every region; keyboard and focus order. An automated pass is necessary and not sufficient — axe accepts a non-empty placeholder as an accessible name, and a CSS selector that matches nothing raises no error at all. | . | Branding: does it read as this instance?A_Branding | Agent | theme-ui-review | Marks, palettes and art against the instance’s own declaration rather than a remembered style. The question a downstream folio makes sharp: would this instance inherit something it did not choose? | . | Languages: extracted, rendered, and RTLA_Locales | Agent | theme-ui-review | Every user-facing string reaches the .pot; every declared locale renders without clipping or overflow; right-to-left is laid out rather than mirrored by accident. New UI is where untranslated strings enter, because nothing was stale — there was nothing there before. | . | Judge the assets in their designR_Judge | Reviewer | — | A person looks at the ingested assets laid out in the design they are for, at BOTH a web and a mobile width. THIS IS A HUMAN STEP INSIDE INGESTION, and that is stated rather than hidden: ingest-theme.bpmn used to refuse to call this process for exactly that reason. The owner’s ruling puts theme review at ingestion only, and a ruling that moves a review does not remove the person who performs it — so ingestion of a THEME SOURCE is attended at this step, while ingestion of everything else stays unattended because Gateway_ThemeSource routes it past. A judgement made at one viewport is incomplete, not passed, and the wireframe of the surface (wireframe-design-review) says what each layout was meant to be. Three defects in the landing board — a selector matching nothing, a crop cutting the subject, a fade wrong in both directions — were invisible to a clean build, a passing suite and every gate, and were found only by rendering the page and looking. | . | Raise findings before the assets landA_RaiseFindings | Agent | theme-ui-review | Findings go back to whoever authored the choice, because the choice was theirs: a theme is picked per note by a human or an agent, and there is no mapping to correct instead. Raised, never silently fixed — a reviewer who re-themes a note has substituted their judgement for the author’s without saying so. | . ",
     "url": "/aai-programme/en/cat-harness/processes/theme-ui-review.html#steps",
     
     "relUrl": "/en/cat-harness/processes/theme-ui-review.html#steps"
-  },"1273": {
+  },"1269": {
     "doc": "Theme and UI review — at ingestion",
     "title": "Decisions",
     "content": "Every one of the 1 decision(s) is documented. | decision | what decides it | branches | . | Findings?GW_Findings | The reviewer’s judgement of the ingested assets in their design. yes raises findings before the assets land; none ends reviewed and the Theme node proceeds. | yes → Raise findings before the assets landnone → Assets reviewed | . ",
     "url": "/aai-programme/en/cat-harness/processes/theme-ui-review.html#decisions",
     
     "relUrl": "/en/cat-harness/processes/theme-ui-review.html#decisions"
-  },"1274": {
+  },"1270": {
     "doc": "Theme and UI review — at ingestion",
     "title": "Theme and UI review — at ingestion",
     "content": "Generated from cat-harness/processes/ui/theme-ui-review.bpmn by gen-processes-viz.ts — do not edit here. All processes . ",
     "url": "/aai-programme/en/cat-harness/processes/theme-ui-review.html",
     
     "relUrl": "/en/cat-harness/processes/theme-ui-review.html"
-  },"1275": {
+  },"1271": {
     "doc": "Translation Workflow",
     "title": "Translation Workflow",
     "content": "Process_Translation · advisory · 10 step(s) . The machine half of translation, end to end: extract the translatable strings, inject a catalogue back, check the result by back-translating it, and track whether the source has moved since. You are in this process whenever translation happens without a person having to be present. Two of its steps are the exception and are drawn in their own lane: a flagged passage is ADJUDICATED by a human, and a translation becomes official only when a human signs it off. human-translation-workflow is what happens when a person is doing the translating rather than checking it. Staleness is an END state that re-enters at the beginning, not a failure. A source change does not invalidate a translation’s accuracy; it invalidates its currency, which is a different fact and is why it is recorded rather than thrown away. i i i i i i i i i i ",
     "url": "/aai-programme/en/cat-harness/processes/translation-workflow.html#translation-workflow",
     
     "relUrl": "/en/cat-harness/processes/translation-workflow.html#translation-workflow"
-  },"1276": {
+  },"1272": {
     "doc": "Translation Workflow",
     "title": "How it connects",
     "content": ". | Called by: no call activity names this process | Calls: Adjudication | Presented on: no docs page section shows this diagram | . ",
     "url": "/aai-programme/en/cat-harness/processes/translation-workflow.html#how-it-connects",
     
     "relUrl": "/en/cat-harness/processes/translation-workflow.html#how-it-connects"
-  },"1277": {
+  },"1273": {
     "doc": "Translation Workflow",
     "title": "Lanes — who acts",
     "content": "| lane | role | what it does here | . | Author (source content) | author | — | . | Agent / platform (automated) | authoring-agent | Everything in this process that runs without asking: extraction to a template, injection of a catalogue, the staleness comparison, and writing the official rendering once sign-off exists. It decides nothing a person would disagree about — every branch it takes is computed from a hash or a file’s presence.It is one lane rather than two because agentic and mechanical is a judgement rather than a line (see the role model), and nothing in THIS process turns on which of the two ran a step. Where that distinction does matter, the process says so by putting the step in the reviewer’s lane instead. | . | Human reviewer / adjudicator | translation-adjudicator | The only lane here that JUDGES. Mechanical translation QA produces candidates — a flagged passage, a terminology miss, a staleness verdict — and a candidate is not a finding until somebody decides it is. This lane is where that decision is made, and it is the lane that signs the translation off, because the actor who resolves a disputed passage is the one who can say the whole is fit to publish.Adjudicator rather than reviewer alone, and the distinction is the accountability: a reviewer reports, an adjudicator settles. The word is used here because the passage reaching this lane is one where a checker and a translator disagree, and somebody has to choose between them WITH a reason. That reason is the record, not the choice. | . ",
     "url": "/aai-programme/en/cat-harness/processes/translation-workflow.html#lanes--who-acts",
     
     "relUrl": "/en/cat-harness/processes/translation-workflow.html#lanes--who-acts"
-  },"1278": {
+  },"1274": {
     "doc": "Translation Workflow",
     "title": "Steps",
     "content": "Every one of the 10 step(s) is documented. | step | lane | skill / sub-process | what it does | . | Extract translatable strings (POT generation)Task_PotExtract | Agent / platform (automated) | translation-manager | Scans content nodes and extracts translatable stringsto .pot files. Excludes math, labels, code, and Lean companions.Tool: translation_extract MCP tool or bun run content/pipeline/pot-extract.ts | . | Produce translation (PO file)Task_Translate | Agent / platform (automated) | translation-manager | Translation of .pot → .po by one of:1. Existing PO from the WHO SMART Base IG (Weblate/Crowdin/Launchpad)2. FHIR/translation-utils po-translate CLI (DeepL/Google, tagged #fuzzy)3. Agent (LLM) translation4. Human translatorResult: /block.po with msgid/msgstr pairs. | . | Inject translations (PO → Markdown)Task_PoInject | Agent / platform (automated) | translation-manager | Reads .po file and source .md, substitutes msgstr formsgid, preserves non-translatable elements, writes translated .md totranslations//block.md.Tool: translation_inject MCP tool or bun run content/pipeline/po-inject.ts | . | Round-trip translation QA (back-translate)Task_RoundTripQA | Agent / platform (automated) | translation-manager | Bean: folio-assistant-ktt2Back-translates the target-language .md into the source language andcompares meaning with the original. Detects semantic drift andterminology misses that a forward-only fluency check cannot see.Tool: translation_validate MCP tool | . | Adjudicate flagged passage (human reviewer)Task_Adjudicate | Human reviewer / adjudicator | calls Adjudicationtranslation-manageradjudication | A human SME or editor reviews the flagged passage.They may:- Accept the translation as-is (false positive)- Edit the translation and re-run QA- Reject and request re-translationThe round trip establishes that two readings differ. Which one isright is a human call. | . | Edit the flagged passage and re-injectTask_EditTranslation | Human reviewer / adjudicator | translation-manager | The reviewer corrects the passage in the PO rather than sending the whole translation back. Flows to Task_PoInject, so the round-trip QA runs again over the corrected text — “edit the translation and re-run QA”, which is what the adjudication step has always offered and what this process could not do.A userTask, not a service task: this is the one step here where a person edits content, and the lane’s actor is the reviewer who just adjudicated. | . | Write status.json (unofficial)Task_WriteUnofficial | Agent / platform (automated) | translation-manager | Records the translation as unofficial intranslations//status.json:{ official: false, generatedBy: \"...\", generatedAt: \"...\" }The translation is usable but carries a visible warning badge. | . | Sign off translation (human adjudicator)Task_Signoff | Human reviewer / adjudicator | translation-manager | A human reviewer signs off the translation at thechosen hierarchy level (block, section, chapter, or folio).Updates status.json:{ official: true, signedOffBy: “…”, signedOffAt: “…”, sourceHash: “…” }Tool: translation_signoff MCP tool | . | Write status.json (official)Task_WriteOfficial | Agent / platform (automated) | translation-manager | Records the sign-off with the SHA-256 of the source.md, enabling staleness detection on future source changes. | . | Check staleness (source hash)Task_StalenessCheck | Agent / platform (automated) | translation-manager | On source content change: computes sha256(source.md)and compares to each translation’s status.json sourceHash. If theydiffer, sets stale: true. The translation remains visible with a“stale — needs re-adjudication” indicator. | . ",
     "url": "/aai-programme/en/cat-harness/processes/translation-workflow.html#steps",
     
     "relUrl": "/en/cat-harness/processes/translation-workflow.html#steps"
-  },"1279": {
+  },"1275": {
     "doc": "Translation Workflow",
     "title": "Decisions",
     "content": "Every one of the 3 decision(s) is documented. | decision | what decides it | branches | . | Drift or bad terminology?Gateway_Drift | Answered by the round-trip (back-translation) QA: did it flag drift or a terminology miss? Drift detected sends the passage to a human reviewer; Clean writes an unofficial status.json. | Drift detected → Adjudicate flagged passage (human reviewer)Clean → Write status.json (unofficial) | . | Which of the three?Gateway_PostQA | The three this diagram’s own adjudication step has always promised — “Accept the translation as-is (false positive) / Edit the translation and re-run QA / Reject and request re-translation” — and until 2026-09-23 it offered TWO. edit had no branch, so a reviewer who wanted to correct a passage had to choose between accepting a wrong one and discarding a good translation wholesale. Bean bvuk, found while wiring the codes.edit and retranslate re-enter at different points, which is the difference: an edit keeps the translation and re-injects, so QA re-runs over the corrected PO; a re-translation goes back to Task_Translate and produces a new one.Renamed from “QA passed?”, which was the wrong question: its only incoming flow is the adjudication’s, so it never read a QA result. | Reject — re-translate → Produce translation (PO file)Accept as-is (false positive) → Write status.json (unofficial)Edit and re-run QA → Edit the flagged passage and re-inject | . | Human sign-off?Gateway_Signoff | Is a human sign-off happening now? Yes goes to the adjudicator’s sign-off, which makes the translation official; Not now ends with the translation complete but unofficial. | Yes → Sign off translation (human adjudicator)Not now → Translation complete | . ",
     "url": "/aai-programme/en/cat-harness/processes/translation-workflow.html#decisions",
     
     "relUrl": "/en/cat-harness/processes/translation-workflow.html#decisions"
-  },"1280": {
+  },"1276": {
     "doc": "Translation Workflow",
     "title": "Translation Workflow",
     "content": "Generated from cat-harness/processes/library/translation-workflow.bpmn by gen-processes-viz.ts — do not edit here. All processes . ",
     "url": "/aai-programme/en/cat-harness/processes/translation-workflow.html",
     
     "relUrl": "/en/cat-harness/processes/translation-workflow.html"
-  },"1281": {
+  },"1277": {
     "doc": "Watching a pinned upstream dependency",
     "title": "Watching a pinned upstream dependency",
     "content": "Process_UpstreamPinWatch · strict · 6 step(s) . Has a pinned upstream dependency fallen behind a release: check each pin, keep one tracking issue, and enter the adoption subprocess for each dependency that is behind. THE WATCHER’S DISPATCH POINT, drawn rather than described. Bean 29ij records the rule this follows: a watcher fires on specific events, and those events are process events — they belong in a diagram, not in prose that no tool reads. Everything up to the tracking issue is MECHANICAL and sits in a system lane: read the registry, list upstream’s releases, compare, and maintain ONE issue. No step here exercises judgement, which is what makes build-pipeline the correct lane rather than a convenient one. Three outcomes and the middle one is the point. Current closes the issue; behind opens or edits it; COULD NOT TELL leaves the issue exactly as it is and fails the job, because a watchdog that has gone blind must not read as good news — check-ci-health.ts’s rule, and the reason this repository has a watchdog at all. The adoption itself is a call activity, so the judgement half lives in its own reusable process and this one stays free of it. i i i i i i ",
     "url": "/aai-programme/en/cat-harness/processes/upstream-pin-watch.html#watching-a-pinned-upstream-dependency",
     
     "relUrl": "/en/cat-harness/processes/upstream-pin-watch.html#watching-a-pinned-upstream-dependency"
-  },"1282": {
+  },"1278": {
     "doc": "Watching a pinned upstream dependency",
     "title": "How it connects",
     "content": ". | Called by: no call activity names this process | Calls: Adopting an upstream version bump | Presented on: no docs page section shows this diagram | . ",
     "url": "/aai-programme/en/cat-harness/processes/upstream-pin-watch.html#how-it-connects",
     
     "relUrl": "/en/cat-harness/processes/upstream-pin-watch.html#how-it-connects"
-  },"1283": {
+  },"1279": {
     "doc": "Watching a pinned upstream dependency",
     "title": "Lanes — who acts",
     "content": "| lane | role | what it does here | . | CI/CD Pipeline | build-pipeline | Owns exactly three outcomes and must keep them visibly different: current closes the tracking issue, behind opens or edits it, and UNKNOWN leaves the issue untouched while failing the job anyway — a watchdog that goes blind must never read as clean, so this lane is the one place that distinction cannot be collapsed into a single pass or fail. It hands off at the first sign of judgement: the moment a bump needs adopting, that is Lane_Agent’s, never this one’s. | . | Agent | authoring-agent | Entered only once Lane_Ci has confirmed a pin is behind and filed the issue, never to make that determination itself: A_PickUp’s claim is what stops two sessions adopting the same bump. The judgement of adoption is not drawn here either — Call_Adopt hands it to its own reusable process, so this lane is only the hand-off from mechanical detection to judgement, not the judgement itself. | . ",
     "url": "/aai-programme/en/cat-harness/processes/upstream-pin-watch.html#lanes--who-acts",
     
     "relUrl": "/en/cat-harness/processes/upstream-pin-watch.html#lanes--who-acts"
-  },"1284": {
+  },"1280": {
     "doc": "Watching a pinned upstream dependency",
     "title": "Steps",
     "content": "Every one of the 6 step(s) is documented. | step | lane | skill / sub-process | what it does | . | Read the pin registry upstream-pins.jsonTask_ReadPins | CI/CD Pipeline | upstream-version-adoption | The registry lists the tenants and says, per row, WHICH FILE holds the pin literal and how to read it. It deliberately does not store the version: one answer to “what are we running”, read from the file the build reads. | . | List upstream releases and compare to the pinTask_QueryUpstream | CI/CD Pipeline | upstream-version-adoption | git ls-remote --tags, filtered by the row’s tagPattern and ordered by version. Nothing is cloned and no API token is needed, so the check runs the same way on a laptop and in CI. | . | Close the tracking issueTask_CloseIssue | CI/CD Pipeline | upstream-version-adoption | Closed automatically when every pin is current, so the issue’s existence is the state rather than a log of past states. | . | Open or EDIT the one tracking issueTask_TrackIssue | CI/CD Pipeline | upstream-version-adoption | One issue, edited in place. GitHub’s own failure mail is the channel that was already ignored thirty times, so this adds none: an edit does not notify, and a pin that stays behind for two months stays one unread item rather than nine. | . | Pick up the stale pin claim a beanA_PickUp | Agent | upstream-version-adoption | The hand-off from the mechanical lane to the one that can exercise judgement. Claiming the bean here is what stops two sessions adopting the same bump. | . | Adopt the version bumpCall_Adopt | Agent | calls Adopting an upstream version bumpupstream-version-adoption | The reusable subprocess. Every pinned dependency enters it the same way, so a new tenant is a registry row and a call — never a second diagram saying the same thing in different words. | . ",
     "url": "/aai-programme/en/cat-harness/processes/upstream-pin-watch.html#steps",
     
     "relUrl": "/en/cat-harness/processes/upstream-pin-watch.html#steps"
-  },"1285": {
+  },"1281": {
     "doc": "Watching a pinned upstream dependency",
     "title": "Decisions",
     "content": "Every one of the 2 decision(s) is documented. | decision | what decides it | branches | . | Could we tell?GW_Determined | Asked of the verdict output of ‘Check the pins’ in .github/workflows/upstream-pins.yml, which runs check:upstream-pins --out. Exit 0 is every pin current, 1 at least one behind, 2 could not tell; an exit 1 with no report file is a crash and is reclassified as could-not-tell, as is any other code. no is verdict == ‘unknown’: ‘Refuse to report success on an undetermined pin’ runs exit 1 and the tracking issue is left untouched. yes is verdict != ‘unknown’, the guard on ensuring the upstream-pin label. | no → Unknown — issue untouched, job redyes → Behind a release? | . | Behind a release?GW_Stale | Asked of the same verdict. no is verdict == ‘current’: the tracking issue is closed because every pin is current. yes is verdict == ‘behind’: the one tracking issue is opened or edited in place. | no → Close the tracking issueyes → Open or EDIT the one tracking issue | . ",
     "url": "/aai-programme/en/cat-harness/processes/upstream-pin-watch.html#decisions",
     
     "relUrl": "/en/cat-harness/processes/upstream-pin-watch.html#decisions"
-  },"1286": {
+  },"1282": {
     "doc": "Watching a pinned upstream dependency",
     "title": "Watching a pinned upstream dependency",
     "content": "Generated from cat-harness/processes/sdlc/upstream-pin-watch.bpmn by gen-processes-viz.ts — do not edit here. All processes . ",
     "url": "/aai-programme/en/cat-harness/processes/upstream-pin-watch.html",
     
     "relUrl": "/en/cat-harness/processes/upstream-pin-watch.html"
-  },"1287": {
+  },"1283": {
     "doc": "Adopting an upstream version bump",
     "title": "Adopting an upstream version bump",
     "content": "Process_UpstreamAdoption · strict · 10 step(s) . A REUSABLE SUBPROCESS, entered once per pinned upstream dependency that has fallen behind a release. Callers invoke it with calledElement=\"Process_UpstreamAdoption\"; upstream-pin-watch.bpmn is the first, and a person may enter it directly with workflow_start when they want to try a version the watcher has not raised. Reusable means the tenant-specific part is DATA. upstream-pins.json carries, per row, what of ours binds to the dependency and what its MVP runs; this diagram carries the order those are done in, which is the same for every tenant. A second tenant is a registry row, not a second diagram. Shaped after crdm-requirements.bpmn because the question is the same one: something outside the repository wants to change what we ship, and the answer has to be a judgement somebody made on evidence rather than a merge that happened. The loop back into impact analysis is the MVP loop — findings the agent can fix are fixed on the same branch and re-evidenced, and only what remains reaches the decider. i i i i i i i i i i ",
     "url": "/aai-programme/en/cat-harness/processes/upstream-version-adoption.html#adopting-an-upstream-version-bump",
     
     "relUrl": "/en/cat-harness/processes/upstream-version-adoption.html#adopting-an-upstream-version-bump"
-  },"1288": {
+  },"1284": {
     "doc": "Adopting an upstream version bump",
     "title": "How it connects",
     "content": ". | Called by: A knowledge graph leaves for its own repositories, Watching a pinned upstream dependency | Calls: Options analysis | Names the upstream-version-adoption skill without calling this process: A sub-KG is staged in place, then leaves for its own repository, Watching a pinned upstream dependency — activity-calls-skill-process asks whether each should be a call activity. | Presented on: no docs page section shows this diagram | . ",
     "url": "/aai-programme/en/cat-harness/processes/upstream-version-adoption.html#how-it-connects",
     
     "relUrl": "/en/cat-harness/processes/upstream-version-adoption.html#how-it-connects"
-  },"1289": {
+  },"1285": {
     "doc": "Adopting an upstream version bump",
     "title": "Lanes — who acts",
     "content": "| lane | role | what it does here | . | Agent | authoring-agent | Owns the whole MVP loop end to end except the two calls it cannot make: SF_UA_8 re-enters this lane’s own A_Impact on a fixable finding rather than escalating, so a defect gets fixed and re-evidenced here before anyone outside the lane sees it, and Call_OptionsAnalysis sits here specifically because framing the options is not deciding among them — that judgement belongs to PM_Decide in a different lane entirely. | . | CI/CD Pipeline | build-pipeline | Produces evidence, not verdicts: Task_Gates going red does not end the process or loop by itself — “this version breaks us” is a finding the decider needs to see, not a reason for this lane to stop the run — and Task_Mvp exists so that finding is checked against a real deployed build rather than a description of one. | . | Reviewer / SME | reviewer | Narrower than a general release review: the question is only whether what upstream-pins.json lists as bound still holds against the deployed MVP, not whether the new version is good on its own terms, and a finding here (GW_Findings) sends the run back to the Agent lane’s own impact analysis rather than stopping it. | . | Publication manager | publication-manager | Holds the one call in this subprocess that policy marks unrelaxable: PM_Decide’s lane admits a person only, because a pin change is not an edit to the corpus but a change to what the published artefact is BUILT FROM — the fact that puts this decision in the publication manager’s lane rather than the editor’s, which owns corpus changes elsewhere in this repository. | . ",
     "url": "/aai-programme/en/cat-harness/processes/upstream-version-adoption.html#lanes--who-acts",
     
     "relUrl": "/en/cat-harness/processes/upstream-version-adoption.html#lanes--who-acts"
-  },"1290": {
+  },"1286": {
     "doc": "Adopting an upstream version bump",
     "title": "Steps",
     "content": "Every one of the 10 step(s) is documented. | step | lane | skill / sub-process | what it does | . | Scope the delta pinned → candidateA_Scope | Agent | upstream-version-adoption | Restricted to the directories that reach our output — for a Jekyll theme _sass, _includes, _layouts, assets. Upstream’s own docs, CI and tests cannot reach us, and counting them makes a harmless release look alarming.The changelog is the claim; git diff --stat pinned..candidate over those paths is the evidence. | . | Impact analysis what of ours binds itA_Impact | Agent | upstream-version-adoption | The half a changelog cannot supply, because upstream does not know what you reached into. Worked from the row’s binds list in upstream-pins.json.For the theme: site-chrome/assets/js/docs-ui.js MOVES the theme’s own search markup into the action launcher and binds .search, #search-input and .search-label; docs-ui.css overrides .side-bar, .site-header and .main-header; three e2e specs assert the structure the theme emits. An upstream rename of any of those is not a build failure — it is a shipped feature that quietly stops working. | . | MVP: build the candidate on a staging branchTask_Mvp | CI/CD Pipeline | feature-staging | An MVP is a DEPLOYED BUILD, not a description of one. The pin is moved on a branch and feature-staging.yml publishes it under STAGING/&lt;branch-slug&gt;/, so the reviewer looks at the artefact rather than at a screenshot — the same argument the merge discipline makes about rendered work. | . | Run the row’s gates tests · e2e · site-linksTask_Gates | CI/CD Pipeline | content-test | The mvp commands declared for this tenant. For the theme: bun test, CI=1 bunx playwright test (a11y, action tiles, sidebar panels, QA panel) and scripts/site-links.ts --site ./_site, which checks the navbar tiles against the BUILT site rather than against the attribute — the distinction that let a 404 ship unnoticed once already.A red gate is EVIDENCE, not an exit. It does not end the process and it does not loop by itself: “this version breaks us” is a finding the decider needs, not a reason to stop before they see it. | . | Post the MVP evidence staging URL + gate resultsA_Evidence | Agent | delivery-summary | Staging URL, gate results and the impact analysis, on the PR. Enough for the reviewer to answer without opening anything else. | . | Review the MVP against what we bind toR_Review | Reviewer / SME | staging-review | A narrower question than “is the new version good”: does everything in binds still hold, checked against the deployed page.A userTask, and the lane admits person and agent — a review agent is a legitimate reviewer here, and the separation that matters is the next lane’s: a reviewer cannot accept. | . | Options analysis adopt · hold · declineCall_OptionsAnalysis | Agent | calls Options analysis | On the single edge into PM_Decide, and deliberately not earlier: the MVP build and its gates are HOW the options’ costs are measured, so an analysis before Task_Mvp would weigh alternatives against no evidence. Everything the decider needs exists by the time the reviewer has finished and the fixable findings are fixed.In the Agent lane, because this step produces the analysis and does not make the decision — PM_Decide is a userTask whose lane admits person only, and putting the analysis in the agent’s lane is what keeps that separation legible rather than implied. A subprocess that decided would be a second accepting party.Reached through the loop as well as straight through: SF_UA_8 re-enters at A_Impact, so a run where the reviewer found something fixable arrives here a second time with different evidence. That is a genuine re-analysis and its op=\"note\" appends rather than deduping, which is the behaviour wanted — a second note records that the options were weighed again against changed inputs. | . | Adopt, hold or declinePM_Decide | Publication manager | decision-audit | A PERSON decides. The lane admits person only, so activity-fulfilment-kind fails the moment somebody makes an agent the accepting party, and relaxable=\"false\" means no package may relax the step.The publication manager rather than the editor because a pin is not a change to the corpus — it is a change to what the published artefact is BUILT FROM, and that role is the one accountable for what is live.Deliberately NOT a DMN-backed gateway. Every computed gateway in this repository reduces to arithmetic over tool output; this one weighs a rendering nobody can score against the cost of staying behind, and a table here would look authoritative without being so. | . | Move the pin and open the PRA_ApplyPin | Agent | prepare-merge | The pin literal moves in the one file upstream-pins.json declares, and the PR body says what the version range changed in RENDERED output — the evidence, not just the verdict. | . | Record the hold or the declineA_RecordOutcome | Agent | upstream-version-adoption | A HOLD is a block with an expiry and a revisit trigger: a hold with neither cannot be told from abandoned work, and the next watcher run re-raises the same pin with no memory of why it was left. A DECLINE is a scrapped bean carrying its reasons — what stops the next agent re-entering the same dead end.Either way the decision is written down before the process ends, and the bean is resolved from here: a run that stops at “we looked and said no” is as finished as one that moved the pin. | . ",
     "url": "/aai-programme/en/cat-harness/processes/upstream-version-adoption.html#steps",
     
     "relUrl": "/en/cat-harness/processes/upstream-version-adoption.html#steps"
-  },"1291": {
+  },"1287": {
     "doc": "Adopting an upstream version bump",
     "title": "Decisions",
     "content": "Every one of the 2 decision(s) is documented. | decision | what decides it | branches | . | Findings we can fix?GW_Findings | The review of the upstream MVP against what we bind to: are there findings we can fix on our side? yes goes to impact analysis; no goes to the options analysis (adopt, hold or decline). | yes → Impact analysis what of ours binds itno → Options analysis adopt · hold · decline | . | Adopt?GW_Adopt | The project manager’s decision. yes moves the pin and opens the PR; no records the hold or the decline. | yes → Move the pin and open the PRno → Record the hold or the decline | . ",
     "url": "/aai-programme/en/cat-harness/processes/upstream-version-adoption.html#decisions",
     
     "relUrl": "/en/cat-harness/processes/upstream-version-adoption.html#decisions"
-  },"1292": {
+  },"1288": {
     "doc": "Adopting an upstream version bump",
     "title": "Adopting an upstream version bump",
     "content": "Generated from cat-harness/processes/sdlc/upstream-version-adoption.bpmn by gen-processes-viz.ts — do not edit here. All processes . ",
     "url": "/aai-programme/en/cat-harness/processes/upstream-version-adoption.html",
     
     "relUrl": "/en/cat-harness/processes/upstream-version-adoption.html"
-  },"1293": {
+  },"1289": {
     "doc": "Voice overlay review",
     "title": "Voice overlay review",
     "content": "Process_VoiceReview · advisory · 6 step(s) . The voice axis: load whichever editorial voices are active, run each rule’s mechanical half, and decide — for each finding — whether the prose is wrong, the rule does not apply to this content, or this block is a stated exception. You are in this process after the base voice has been adjudicated, and only if a voice is active at all: the first gateway ends the process honestly when none is, rather than reporting a clean review of nothing. Three outcomes, all legitimate, and the third is the one that needs recording: an exception without a reviewer entry is indistinguishable from a rule nobody ran. There is also a fourth path the diagram draws deliberately — if the rule’s own citation does not support it, the RULE is the defect, and that becomes a bean rather than a finding against the prose. i i i i i i ",
     "url": "/aai-programme/en/cat-harness/processes/voice-review.html#voice-overlay-review",
     
     "relUrl": "/en/cat-harness/processes/voice-review.html#voice-overlay-review"
-  },"1294": {
+  },"1290": {
     "doc": "Voice overlay review",
     "title": "How it connects",
     "content": ". | Called by: Narrative review | Calls: Criterion adjudication | Presented on: no docs page section shows this diagram | . ",
     "url": "/aai-programme/en/cat-harness/processes/voice-review.html#how-it-connects",
     
     "relUrl": "/en/cat-harness/processes/voice-review.html#how-it-connects"
-  },"1295": {
+  },"1291": {
     "doc": "Voice overlay review",
     "title": "Lanes — who acts",
     "content": "| lane | role | what it does here | . | Narrative reviewer | narrative-reviewer | Runs every active voice to completion rather than stopping at the first, because rules from separate voices are UNIONED rather than merged — two voices can both flag capitalisation and both findings must stand, so folding voice N+1’s pass into voice N’s would lose which voice raised what. At each citation, this lane also has to route the defect to the right place: a rule its own citation does not support goes to Task_RuleIsWrong as a finding against the VOICE, never into Task_Adjudicate, which only ever judges the block. | . ",
     "url": "/aai-programme/en/cat-harness/processes/voice-review.html#lanes--who-acts",
     
     "relUrl": "/en/cat-harness/processes/voice-review.html#lanes--who-acts"
-  },"1296": {
+  },"1292": {
     "doc": "Voice overlay review",
     "title": "Steps",
     "content": "Every one of the 6 step(s) is documented. | step | lane | skill / sub-process | what it does | . | Load the active voicesTask_LoadActive | Narrative reviewer | voice-overlay-review | The activated set only, never everything shipped. An id naming no shipped voice is an error rather than a skip — a folio that believes it is applying a voice and is applying nothing has the cleanest-looking output of the three. | . | Run the rule’s mechanical halfTask_MechanicalHalf | Narrative reviewer | voice-overlay-review | Whatever patterns and terminology the rule carries. A judgementOnly rule has no mechanical half by declaration, which is different from nobody having written one yet. | . | Open the rule’s citationTask_OpenCitation | Narrative reviewer | voice-overlay-review | Every rule resolves to a real library/ section or a KG node, and carries the quote it was read from. Opening it is what lets a reviewer say WHY the rule applies — and it is the only way to catch a rule that misread its own source. | . | The RULE is the defect — bean itTask_RuleIsWrong | Narrative reviewer | voice-overlay-review | A rule its own quote does not support is a finding against the voice, not against the block. Measured precedent: voice-editorializing flags “clearly”, and the exemplar the Milnor gate is named after uses it fourteen times as proof economy (bean 2t41). | . | Adjudicate: prose, scope, or exceptionTask_Adjudicate | Narrative reviewer | calls Criterion adjudicationvoice-overlay-reviewadjudication | The same three outcomes as the base voice axis. The register is wrong for this block (fix the prose); the rule does not apply to this content (scope it on the voice, one edit rather than ten overrules); or the rule applies and this block is an exception (a reviewer entry saying why). | . | Record on the block’s QA sidecarTask_RecordOnSidecar | Narrative reviewer | voice-overlay-review | Through qa-merge-findings, so the icon and the published witness agree with the decision. The adjudication LEADS the criterion and the script entry is kept beneath it: a disagreement between a checker and a reviewer is information. | . ",
     "url": "/aai-programme/en/cat-harness/processes/voice-review.html#steps",
     
     "relUrl": "/en/cat-harness/processes/voice-review.html#steps"
-  },"1297": {
+  },"1293": {
     "doc": "Voice overlay review",
     "title": "Decisions",
     "content": "Every one of the 3 decision(s) is documented. | decision | what decides it | branches | . | Any voice activated?GW_AnyActive | Is any voice activated for this block, beyond the base voice already adjudicated? none ends with nothing to review; one or more loads the active voices. | none → No voice — nothing to reviewone or more → Load the active voices | . | Does the quote support the rule?GW_QuoteSupports | Answered by opening the rule’s citation: does the quoted source support the rule? no means the rule itself is the defect and is beaned; yes goes to adjudicating the prose, the rule’s scope or an exception. | no → The RULE is the defect — bean ityes → Adjudicate: prose, scope, or exception | . | Another active voice?GW_MoreVoices | Is another active voice left to review? yes runs that voice’s mechanical half; no records the results on the block’s QA sidecar. | yes → Run the rule’s mechanical halfno → Record on the block’s QA sidecar | . ",
     "url": "/aai-programme/en/cat-harness/processes/voice-review.html#decisions",
     
     "relUrl": "/en/cat-harness/processes/voice-review.html#decisions"
-  },"1298": {
+  },"1294": {
     "doc": "Voice overlay review",
     "title": "Voice overlay review",
     "content": "Generated from cat-harness/processes/content/voice-review.bpmn by gen-processes-viz.ts — do not edit here. All processes . ",
     "url": "/aai-programme/en/cat-harness/processes/voice-review.html",
     
     "relUrl": "/en/cat-harness/processes/voice-review.html"
-  },"1299": {
+  },"1295": {
     "doc": "Wireframe design review",
     "title": "Wireframe design review",
     "content": "Process_WireframeDesignReview · advisory · 6 step(s) . WireGen (methodologies/wiregen) made executable: a written design intent, at least two mid-fidelity candidates each with a web AND a mobile layout, mechanical checks, a blind per-criterion review, adjudication where reviewers disagree, and a recorded choice. A wireframe is part of the design process for adjudication (owner, 2026-09-23). Operating skill: wireframe-design-review. Issue #1023. The same mechanical checks back the as-is wireframe every declared visualiser owes, which check:wireframes runs. i i i i i i ",
     "url": "/aai-programme/en/cat-harness/processes/wireframe-design-review.html#wireframe-design-review",
     
     "relUrl": "/en/cat-harness/processes/wireframe-design-review.html#wireframe-design-review"
-  },"1300": {
+  },"1296": {
     "doc": "Wireframe design review",
     "title": "How it connects",
     "content": ". | Called by: CRDM Phases 2–4 — BPA and requirements | Calls: Criterion adjudication, Options analysis | Presented on: no docs page section shows this diagram | . ",
     "url": "/aai-programme/en/cat-harness/processes/wireframe-design-review.html#how-it-connects",
     
     "relUrl": "/en/cat-harness/processes/wireframe-design-review.html#how-it-connects"
-  },"1301": {
+  },"1297": {
     "doc": "Wireframe design review",
     "title": "Lanes — who acts",
     "content": "| lane | role | what it does here | . | Designer | authoring-agent | Writes the intent, produces candidates with real content, and runs the mechanical checks. Does not review its own candidates. | . | Feedback providers | feedback-provider | One or more reviewers (agent and human) who see candidates shuffled, without their author, and record pass, warn or fail per criterion with a reason. There are no scores and no averages. | . | Adjudicator | adjudicator | Reached only when entries for one criterion disagree. Settles the disagreement with a reason, and decides between surviving candidates through options analysis. | . ",
     "url": "/aai-programme/en/cat-harness/processes/wireframe-design-review.html#lanes--who-acts",
     
     "relUrl": "/en/cat-harness/processes/wireframe-design-review.html#lanes--who-acts"
-  },"1302": {
+  },"1298": {
     "doc": "Wireframe design review",
     "title": "Steps",
     "content": "Every one of the 6 step(s) is documented. | step | lane | skill / sub-process | what it does | . | Write the design intentD_Intent | Designer | wireframe-design-review | A short statement of who the screen is for, what they need to do, and what it must show. It is the criterion every candidate is judged against. | . | Produce &gt;= 2 candidates, web + mobileD_Candidates | Designer | wireframe-design-review | Mid-fidelity HTML: monochrome, real folio content, semantic icons, no placeholder text. Each candidate has both a web layout and a mobile layout. | . | Mechanical checks, both viewportsD_Check | Designer | wireframe-design-review | Tool wireframe-check renders every candidate at a web and a mobile viewport. It fails on horizontal overflow at mobile width, on placeholder text, and on a missing viewport, and writes screenshots and a script entry per criterion. | . | Blind review per criterionR_Review | Feedback providers | wireframe-design-review | Criteria: intent-fit, web usability, mobile usability, accessibility, and alternatives considered. A review at one viewport only is incomplete. | . | AdjudicationCall_Adjudicate | Adjudicator | calls Criterion adjudication | folio-assistant’s adjudication: the adjudication leads, the checker’s entry is kept, and the dispensation carries its reason. Reviewers disagreeing on ONE criterion is a criterion disagreement, so this calls the QA-criterion specialisation (bean bvuk, owner 2026-09-23): the failing entry stands, the criterion does not apply to this screen, or a dispensation is granted with its reason.FOR THIS CALLER THE SPLIT WAS A REGRESSION, not a fix, and that is worth keeping because the PR that made it said the opposite. When bvuk moved the outcome half out of adjudication.bpmn, #1074 reported that all four remaining callers “no longer reach A_ScopeCriterion or A_Dispensation” and framed it as the intended effect. True for three of them, whose question never admitted those steps. Here it removed the two steps the sentence above already documents, so the call was left pointing at a shared judgement that no longer runs either. Repointing restores what the documentation always claimed rather than changing it.The entry condition matches exactly rather than approximately: GW_Agree asks whether the blind reviewers’ entries agree and takes no here, and Process_CriterionAdjudication starts at “entries for one criterion disagree” — R_Review records pass, warn or fail PER CRITERION with a reason, so the disagreement reaching this step is a per-criterion disagreement between reviewer entries and nothing else. | . | Choose a candidateCall_Choose | Adjudicator | calls Options analysis | A one-off choice between surviving candidates. Rejected candidates are kept, with the reason each lost. | . ",
     "url": "/aai-programme/en/cat-harness/processes/wireframe-design-review.html#steps",
     
     "relUrl": "/en/cat-harness/processes/wireframe-design-review.html#steps"
-  },"1303": {
+  },"1299": {
     "doc": "Wireframe design review",
     "title": "Decisions",
     "content": "Every one of the 3 decision(s) is documented. | decision | what decides it | branches | . | Checks pass?GW_Checks | Answered by the mechanical checks at both viewports. yes goes to blind review; no returns to producing candidates. | yes → Blind review per criterionno → Produce &gt;= 2 candidates, web + mobile | . | Entries agree?GW_Agree | Do the blind reviewers’ entries agree? no goes to adjudication; yes goes to choosing a candidate. | no → Adjudicationyes → Choose a candidate | . | Revise the intent?GW_Iterate | Asked after a candidate is chosen: should the design intent be revised? yes rewrites the intent and starts again; no accepts the wireframe. | yes → Write the design intentno → Wireframe accepted | . ",
     "url": "/aai-programme/en/cat-harness/processes/wireframe-design-review.html#decisions",
     
     "relUrl": "/en/cat-harness/processes/wireframe-design-review.html#decisions"
-  },"1304": {
+  },"1300": {
     "doc": "Wireframe design review",
     "title": "Wireframe design review",
     "content": "Generated from cat-harness/processes/ui/wireframe-design-review.bpmn by gen-processes-viz.ts — do not edit here. All processes . ",
