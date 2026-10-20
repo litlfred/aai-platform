@@ -1,0 +1,46 @@
+{
+ "$schema": "process-task-panel/v1",
+ "process": "Process_AAI_Dependency",
+ "tasks": {
+  "A_Native": {
+   "id": "A_Native",
+   "name": "Link the issues with \"blocked by\"",
+   "type": "bpmn:Task",
+   "lane": "Workstream team",
+   "skills": [],
+   "binding": "dangling"
+  },
+  "A_Raise": {
+   "id": "A_Raise",
+   "name": "Raise it with the PM",
+   "type": "bpmn:Task",
+   "lane": "Workstream lead",
+   "skills": [],
+   "binding": "dangling"
+  },
+  "A_DNumber": {
+   "id": "A_DNumber",
+   "name": "Create the D-number issue",
+   "type": "bpmn:Task",
+   "lane": "PM & Architecture Integration",
+   "skills": [],
+   "binding": "dangling"
+  },
+  "A_Next": {
+   "id": "A_Next",
+   "name": "Write the Next action",
+   "type": "bpmn:Task",
+   "lane": "PM & Architecture Integration",
+   "skills": [],
+   "binding": "dangling"
+  },
+  "A_EpicLink": {
+   "id": "A_EpicLink",
+   "name": "Link the two epics with \"blocked by\"",
+   "type": "bpmn:Task",
+   "lane": "PM & Architecture Integration",
+   "skills": [],
+   "binding": "dangling"
+  }
+ }
+}

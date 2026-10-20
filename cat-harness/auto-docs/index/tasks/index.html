@@ -560,33 +560,33 @@
   them: those are versioned in their own URLs already.
 -->
 <!-- The harness icon row's own style, which railed pages load without docs-ui.css (beans `lhvt`, `9rq1`). -->
-<link rel="stylesheet" href="/aai-programme/assets/css/navbar-row.css?v=1792515615">
-<link rel="stylesheet" href="/aai-programme/assets/css/docs-ui.css?v=1792515615">
+<link rel="stylesheet" href="/aai-programme/assets/css/navbar-row.css?v=1792515917">
+<link rel="stylesheet" href="/aai-programme/assets/css/docs-ui.css?v=1792515917">
 <!-- Narrow viewports: wide content scrolls in its own box, never the page
      (bean `2r2n`). The standalone viewers inline the same file through
      `withViewerNav`, so both kinds of page read one set of rules. -->
-<link rel="stylesheet" href="/aai-programme/assets/css/narrow-viewport.css?v=1792515615">
+<link rel="stylesheet" href="/aai-programme/assets/css/narrow-viewport.css?v=1792515917">
 
 <!--
   The work-plan dashboard's styles, split from docs-ui.css so that
   `state-visualizer.ts` can inline exactly these bytes into the generated
   `<base>/<stub>/state-visualizer/` pages. One rule, two surfaces.
 -->
-<link rel="stylesheet" href="/aai-programme/assets/css/work-plan.css?v=1792515615">
+<link rel="stylesheet" href="/aai-programme/assets/css/work-plan.css?v=1792515917">
 <!-- Sticky themes. GENERATED from the theme nodes in `schemas/themes.ts` by
      `bun run cat themes:css`; `themes:css:check` fails the build when it is stale.
      Loaded AFTER docs-ui.css deliberately: it supplies the `--fa-sticky-*`
      roles that docs-ui.css consumes, and a custom property has to be set on a
      matching element before the rule reading it takes effect. -->
-<link rel="stylesheet" href="/aai-programme/assets/css/themes.css?v=1792515615">
+<link rel="stylesheet" href="/aai-programme/assets/css/themes.css?v=1792515917">
 <!-- UML overview colours: one class per graph typology, set on the Mermaid nodes
      that `scripts/gen-uml-overview.ts` writes into docs/uml/overview/. -->
-<link rel="stylesheet" href="/aai-programme/assets/css/uml.css?v=1792515615">
+<link rel="stylesheet" href="/aai-programme/assets/css/uml.css?v=1792515917">
 <!-- Kind avatars. GENERATED from `schemas/avatars.ts` by `bun run cat avatars:css`;
      `avatars:css:check` fails the build when it is stale. One stylesheet
      rather than 68 assets: the glyph is a mask and the colour is a property,
      so a scheme swap is a custom property and the trash state is a selector. -->
-<link rel="stylesheet" href="/aai-programme/assets/css/avatars.css?v=1792515615">
+<link rel="stylesheet" href="/aai-programme/assets/css/avatars.css?v=1792515917">
 
 <!--
   The kinds THIS INSTANCE DECLARES, for the avatar fan.
@@ -607,12 +607,12 @@
 <!-- BEFORE docs-ui.js and work-plan.js: both read window.faRender. -->
 <script src="/aai-programme/assets/js/kg-render.js" defer></script>
 <!-- BEFORE docs-ui.js, which calls it: the one drawing of the harness icon row (beans `lhvt`, `9rq1`). -->
-<script src="/aai-programme/assets/js/navbar-row.js?v=1792515615" defer></script>
-<script src="/aai-programme/assets/js/docs-ui.js?v=1792515615" defer></script>
+<script src="/aai-programme/assets/js/navbar-row.js?v=1792515917" defer></script>
+<script src="/aai-programme/assets/js/docs-ui.js?v=1792515917" defer></script>
 <!-- The edit, source and feedback links of every page, from the platform's one
   recipe (cat-harness-tools/src/core/edit-links.ts, bean v433): links carry their
   facts and this builds the hrefs. -->
-<script src="/aai-programme/assets/js/edit-links.js?v=1792515615" defer></script>
+<script src="/aai-programme/assets/js/edit-links.js?v=1792515917" defer></script>
 
 <!--
   The work-plan dashboard. SELF-MOUNTING on any page carrying
@@ -878,7 +878,7 @@
 </div>
 
 <ul class="subs">
-<li><a href="aai-processes/">aai-processes</a> <span class="p">processes</span> <span class="n">13</span></li>
+<li><a href="aai-processes/">aai-processes</a> <span class="p">processes</span> <span class="n">32</span></li>
 <li><a href="core-processes/">core-processes</a> <span class="p">folio-assistant-core/processes</span> <span class="n">161</span></li>
 <li><a href="processes/">processes</a> <span class="p">cat-harness/processes</span> <span class="n">483</span></li>
 </ul>
@@ -3467,12 +3467,60 @@
   <td><a href="https://github.com/litlfred/folio-assistant-core/blob/main/processes/ui/board-relocate.bpmn#Say what moved and where it went"><code>Say what moved and where it went</code></a><br><span class="p">folio-assistant-core/processes/ui/board-relocate.bpmn#Say what moved and where it went</span></td>
   <td>task in board-relocate</td>
 </tr>
+<tr id="a-processes-process-dependency-escalation-bpmn-Create-the-D-number-issue">
+  <td><a href="https://github.com/litlfred/folio-assistant/blob/main/processes/process/dependency-escalation.bpmn#Create the D-number issue"><code>Create the D-number issue</code></a><br><span class="p">processes/process/dependency-escalation.bpmn#Create the D-number issue</span></td>
+  <td>task in dependency-escalation</td>
+</tr>
+<tr id="a-processes-process-dependency-escalation-bpmn-Link-the-issues-with-quot-blocked-by-quot-">
+  <td><a href="https://github.com/litlfred/folio-assistant/blob/main/processes/process/dependency-escalation.bpmn#Link the issues with &amp;quot;blocked by&amp;quot;"><code>Link the issues with &amp;quot;blocked by&amp;quot;</code></a><br><span class="p">processes/process/dependency-escalation.bpmn#Link the issues with &amp;quot;blocked by&amp;quot;</span></td>
+  <td>task in dependency-escalation</td>
+</tr>
+<tr id="a-processes-process-dependency-escalation-bpmn-Link-the-two-epics-with-quot-blocked-by-quot-">
+  <td><a href="https://github.com/litlfred/folio-assistant/blob/main/processes/process/dependency-escalation.bpmn#Link the two epics with &amp;quot;blocked by&amp;quot;"><code>Link the two epics with &amp;quot;blocked by&amp;quot;</code></a><br><span class="p">processes/process/dependency-escalation.bpmn#Link the two epics with &amp;quot;blocked by&amp;quot;</span></td>
+  <td>task in dependency-escalation</td>
+</tr>
+<tr id="a-processes-process-dependency-escalation-bpmn-Raise-it-with-the-PM">
+  <td><a href="https://github.com/litlfred/folio-assistant/blob/main/processes/process/dependency-escalation.bpmn#Raise it with the PM"><code>Raise it with the PM</code></a><br><span class="p">processes/process/dependency-escalation.bpmn#Raise it with the PM</span></td>
+  <td>task in dependency-escalation</td>
+</tr>
+<tr id="a-processes-process-dependency-escalation-bpmn-Write-the-Next-action">
+  <td><a href="https://github.com/litlfred/folio-assistant/blob/main/processes/process/dependency-escalation.bpmn#Write the Next action"><code>Write the Next action</code></a><br><span class="p">processes/process/dependency-escalation.bpmn#Write the Next action</span></td>
+  <td>task in dependency-escalation</td>
+</tr>
+<tr id="a-processes-process-epic-proposal-bpmn-Add-features-under-the-epic">
+  <td><a href="https://github.com/litlfred/folio-assistant/blob/main/processes/process/epic-proposal.bpmn#Add features under the epic"><code>Add features under the epic</code></a><br><span class="p">processes/process/epic-proposal.bpmn#Add features under the epic</span></td>
+  <td>task in epic-proposal</td>
+</tr>
+<tr id="a-processes-process-epic-proposal-bpmn-Create-or-change-the-epic">
+  <td><a href="https://github.com/litlfred/folio-assistant/blob/main/processes/process/epic-proposal.bpmn#Create or change the epic"><code>Create or change the epic</code></a><br><span class="p">processes/process/epic-proposal.bpmn#Create or change the epic</span></td>
+  <td>task in epic-proposal</td>
+</tr>
+<tr id="a-processes-process-epic-proposal-bpmn-Open-a-proposal-issue-in-aai-programme">
+  <td><a href="https://github.com/litlfred/folio-assistant/blob/main/processes/process/epic-proposal.bpmn#Open a proposal issue in aai-programme"><code>Open a proposal issue in aai-programme</code></a><br><span class="p">processes/process/epic-proposal.bpmn#Open a proposal issue in aai-programme</span></td>
+  <td>task in epic-proposal</td>
+</tr>
+<tr id="a-processes-process-epic-proposal-bpmn-Review-the-proposal">
+  <td><a href="https://github.com/litlfred/folio-assistant/blob/main/processes/process/epic-proposal.bpmn#Review the proposal"><code>Review the proposal</code></a><br><span class="p">processes/process/epic-proposal.bpmn#Review the proposal</span></td>
+  <td>task in epic-proposal</td>
+</tr>
+<tr id="a-processes-process-epic-proposal-bpmn-Revise-the-proposal">
+  <td><a href="https://github.com/litlfred/folio-assistant/blob/main/processes/process/epic-proposal.bpmn#Revise the proposal"><code>Revise the proposal</code></a><br><span class="p">processes/process/epic-proposal.bpmn#Revise the proposal</span></td>
+  <td>task in epic-proposal</td>
+</tr>
+<tr id="a-processes-process-integration-validation-bpmn-Check-the-evidence">
+  <td><a href="https://github.com/litlfred/folio-assistant/blob/main/processes/process/integration-validation.bpmn#Check the evidence"><code>Check the evidence</code></a><br><span class="p">processes/process/integration-validation.bpmn#Check the evidence</span></td>
+  <td>task in integration-validation</td>
+</tr>
+<tr id="a-processes-process-integration-validation-bpmn-Post-Validation-confirmed-and-set-Validated">
+  <td><a href="https://github.com/litlfred/folio-assistant/blob/main/processes/process/integration-validation.bpmn#Post Validation confirmed: and set Validated"><code>Post Validation confirmed: and set Validated</code></a><br><span class="p">processes/process/integration-validation.bpmn#Post Validation confirmed: and set Validated</span></td>
+  <td>task in integration-validation</td>
+</tr>
+<tr id="a-processes-process-integration-validation-bpmn-Set-Integration-readiness-to-Ready-to-integrate">
+  <td><a href="https://github.com/litlfred/folio-assistant/blob/main/processes/process/integration-validation.bpmn#Set Integration readiness to Ready to integrate"><code>Set Integration readiness to Ready to integrate</code></a><br><span class="p">processes/process/integration-validation.bpmn#Set Integration readiness to Ready to integrate</span></td>
+  <td>task in integration-validation</td>
+</tr>
 <tr id="a-processes-process-programme-build-bpmn-Answer-the-open-BD-decisions">
   <td><a href="https://github.com/litlfred/folio-assistant/blob/main/processes/process/programme-build.bpmn#Answer the open BD decisions"><code>Answer the open BD decisions</code></a><br><span class="p">processes/process/programme-build.bpmn#Answer the open BD decisions</span></td>
-  <td>task in programme-build</td>
-</tr>
-<tr id="a-processes-process-programme-build-bpmn-Confirm-validation-on-the-pilot-item">
-  <td><a href="https://github.com/litlfred/folio-assistant/blob/main/processes/process/programme-build.bpmn#Confirm validation on the pilot item"><code>Confirm validation on the pilot item</code></a><br><span class="p">processes/process/programme-build.bpmn#Confirm validation on the pilot item</span></td>
   <td>task in programme-build</td>
 </tr>
 <tr id="a-processes-process-programme-build-bpmn-Provide-the-section-14-inputs">
@@ -3507,9 +3555,9 @@
   <td><a href="https://github.com/litlfred/folio-assistant/blob/main/processes/process/programme-build.bpmn#Step 6: automations AUTO-01 to AUTO-11"><code>Step 6: automations AUTO-01 to AUTO-11</code></a><br><span class="p">processes/process/programme-build.bpmn#Step 6: automations AUTO-01 to AUTO-11</span></td>
   <td>task in programme-build</td>
 </tr>
-<tr id="a-processes-process-programme-build-bpmn-Step-7-pilot-build">
-  <td><a href="https://github.com/litlfred/folio-assistant/blob/main/processes/process/programme-build.bpmn#Step 7: pilot build"><code>Step 7: pilot build</code></a><br><span class="p">processes/process/programme-build.bpmn#Step 7: pilot build</span></td>
-  <td>task in programme-build</td>
+<tr id="a-processes-process-programme-build-bpmn-Step-7-the-pilot">
+  <td><a href="https://github.com/litlfred/folio-assistant/blob/main/processes/process/programme-build.bpmn#Step 7: the pilot"><code>Step 7: the pilot</code></a><br><span class="p">processes/process/programme-build.bpmn#Step 7: the pilot</span></td>
+  <td>callActivity in programme-build</td>
 </tr>
 <tr id="a-processes-process-programme-build-bpmn-Step-8-bulk-import-and-backfill">
   <td><a href="https://github.com/litlfred/folio-assistant/blob/main/processes/process/programme-build.bpmn#Step 8: bulk import and backfill"><code>Step 8: bulk import and backfill</code></a><br><span class="p">processes/process/programme-build.bpmn#Step 8: bulk import and backfill</span></td>
@@ -3518,6 +3566,34 @@
 <tr id="a-processes-process-programme-build-bpmn-Step-9-charts-and-acceptance-checks">
   <td><a href="https://github.com/litlfred/folio-assistant/blob/main/processes/process/programme-build.bpmn#Step 9: charts and acceptance checks"><code>Step 9: charts and acceptance checks</code></a><br><span class="p">processes/process/programme-build.bpmn#Step 9: charts and acceptance checks</span></td>
   <td>task in programme-build</td>
+</tr>
+<tr id="a-processes-process-programme-pilot-bpmn-Agree-to-the-bulk-import">
+  <td><a href="https://github.com/litlfred/folio-assistant/blob/main/processes/process/programme-pilot.bpmn#Agree to the bulk import"><code>Agree to the bulk import</code></a><br><span class="p">processes/process/programme-pilot.bpmn#Agree to the bulk import</span></td>
+  <td>task in programme-pilot</td>
+</tr>
+<tr id="a-processes-process-programme-pilot-bpmn-Confirm-validation-on-the-pilot-item">
+  <td><a href="https://github.com/litlfred/folio-assistant/blob/main/processes/process/programme-pilot.bpmn#Confirm validation on the pilot item"><code>Confirm validation on the pilot item</code></a><br><span class="p">processes/process/programme-pilot.bpmn#Confirm validation on the pilot item</span></td>
+  <td>task in programme-pilot</td>
+</tr>
+<tr id="a-processes-process-programme-pilot-bpmn-Create-the-pilot-set-each-item-marked-pilot">
+  <td><a href="https://github.com/litlfred/folio-assistant/blob/main/processes/process/programme-pilot.bpmn#Create the pilot set, each item marked pilot"><code>Create the pilot set, each item marked pilot</code></a><br><span class="p">processes/process/programme-pilot.bpmn#Create the pilot set, each item marked pilot</span></td>
+  <td>task in programme-pilot</td>
+</tr>
+<tr id="a-processes-process-programme-pilot-bpmn-Provide-the-test-partner-account">
+  <td><a href="https://github.com/litlfred/folio-assistant/blob/main/processes/process/programme-pilot.bpmn#Provide the test partner account"><code>Provide the test partner account</code></a><br><span class="p">processes/process/programme-pilot.bpmn#Provide the test partner account</span></td>
+  <td>task in programme-pilot</td>
+</tr>
+<tr id="a-processes-process-programme-pilot-bpmn-Report-the-results-on-the-programme-issue">
+  <td><a href="https://github.com/litlfred/folio-assistant/blob/main/processes/process/programme-pilot.bpmn#Report the results on the programme issue"><code>Report the results on the programme issue</code></a><br><span class="p">processes/process/programme-pilot.bpmn#Report the results on the programme issue</span></td>
+  <td>task in programme-pilot</td>
+</tr>
+<tr id="a-processes-process-programme-pilot-bpmn-Run-PIL-07-as-the-test-partner">
+  <td><a href="https://github.com/litlfred/folio-assistant/blob/main/processes/process/programme-pilot.bpmn#Run PIL-07 as the test partner"><code>Run PIL-07 as the test partner</code></a><br><span class="p">processes/process/programme-pilot.bpmn#Run PIL-07 as the test partner</span></td>
+  <td>task in programme-pilot</td>
+</tr>
+<tr id="a-processes-process-programme-pilot-bpmn-Run-the-pilot-tests">
+  <td><a href="https://github.com/litlfred/folio-assistant/blob/main/processes/process/programme-pilot.bpmn#Run the pilot tests"><code>Run the pilot tests</code></a><br><span class="p">processes/process/programme-pilot.bpmn#Run the pilot tests</span></td>
+  <td>task in programme-pilot</td>
 </tr>
 </tbody>
 </table></div>

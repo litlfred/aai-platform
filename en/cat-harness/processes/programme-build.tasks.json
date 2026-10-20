@@ -58,20 +58,16 @@
    "skills": [],
    "binding": "dangling"
   },
-  "A_Pilot": {
-   "id": "A_Pilot",
-   "name": "Step 7: pilot build",
-   "type": "bpmn:Task",
+  "Call_Pilot": {
+   "id": "Call_Pilot",
+   "name": "Step 7: the pilot",
+   "type": "bpmn:CallActivity",
    "lane": "Build agent",
    "skills": [],
-   "binding": "dangling"
-  },
-  "A_Validate": {
-   "id": "A_Validate",
-   "name": "Confirm validation on the pilot item",
-   "type": "bpmn:Task",
-   "lane": "Technical Integration Lead",
-   "skills": [],
+   "calls": {
+    "name": "Assured AI programme: the pilot",
+    "href": "programme-pilot.html"
+   },
    "binding": "dangling"
   },
   "A_Inputs": {

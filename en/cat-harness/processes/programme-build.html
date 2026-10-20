@@ -560,33 +560,33 @@
   them: those are versioned in their own URLs already.
 -->
 <!-- The harness icon row's own style, which railed pages load without docs-ui.css (beans `lhvt`, `9rq1`). -->
-<link rel="stylesheet" href="/aai-programme/assets/css/navbar-row.css?v=1792515615">
-<link rel="stylesheet" href="/aai-programme/assets/css/docs-ui.css?v=1792515615">
+<link rel="stylesheet" href="/aai-programme/assets/css/navbar-row.css?v=1792515917">
+<link rel="stylesheet" href="/aai-programme/assets/css/docs-ui.css?v=1792515917">
 <!-- Narrow viewports: wide content scrolls in its own box, never the page
      (bean `2r2n`). The standalone viewers inline the same file through
      `withViewerNav`, so both kinds of page read one set of rules. -->
-<link rel="stylesheet" href="/aai-programme/assets/css/narrow-viewport.css?v=1792515615">
+<link rel="stylesheet" href="/aai-programme/assets/css/narrow-viewport.css?v=1792515917">
 
 <!--
   The work-plan dashboard's styles, split from docs-ui.css so that
   `state-visualizer.ts` can inline exactly these bytes into the generated
   `<base>/<stub>/state-visualizer/` pages. One rule, two surfaces.
 -->
-<link rel="stylesheet" href="/aai-programme/assets/css/work-plan.css?v=1792515615">
+<link rel="stylesheet" href="/aai-programme/assets/css/work-plan.css?v=1792515917">
 <!-- Sticky themes. GENERATED from the theme nodes in `schemas/themes.ts` by
      `bun run cat themes:css`; `themes:css:check` fails the build when it is stale.
      Loaded AFTER docs-ui.css deliberately: it supplies the `--fa-sticky-*`
      roles that docs-ui.css consumes, and a custom property has to be set on a
      matching element before the rule reading it takes effect. -->
-<link rel="stylesheet" href="/aai-programme/assets/css/themes.css?v=1792515615">
+<link rel="stylesheet" href="/aai-programme/assets/css/themes.css?v=1792515917">
 <!-- UML overview colours: one class per graph typology, set on the Mermaid nodes
      that `scripts/gen-uml-overview.ts` writes into docs/uml/overview/. -->
-<link rel="stylesheet" href="/aai-programme/assets/css/uml.css?v=1792515615">
+<link rel="stylesheet" href="/aai-programme/assets/css/uml.css?v=1792515917">
 <!-- Kind avatars. GENERATED from `schemas/avatars.ts` by `bun run cat avatars:css`;
      `avatars:css:check` fails the build when it is stale. One stylesheet
      rather than 68 assets: the glyph is a mask and the colour is a property,
      so a scheme swap is a custom property and the trash state is a selector. -->
-<link rel="stylesheet" href="/aai-programme/assets/css/avatars.css?v=1792515615">
+<link rel="stylesheet" href="/aai-programme/assets/css/avatars.css?v=1792515917">
 
 <!--
   The kinds THIS INSTANCE DECLARES, for the avatar fan.
@@ -607,12 +607,12 @@
 <!-- BEFORE docs-ui.js and work-plan.js: both read window.faRender. -->
 <script src="/aai-programme/assets/js/kg-render.js" defer></script>
 <!-- BEFORE docs-ui.js, which calls it: the one drawing of the harness icon row (beans `lhvt`, `9rq1`). -->
-<script src="/aai-programme/assets/js/navbar-row.js?v=1792515615" defer></script>
-<script src="/aai-programme/assets/js/docs-ui.js?v=1792515615" defer></script>
+<script src="/aai-programme/assets/js/navbar-row.js?v=1792515917" defer></script>
+<script src="/aai-programme/assets/js/docs-ui.js?v=1792515917" defer></script>
 <!-- The edit, source and feedback links of every page, from the platform's one
   recipe (cat-harness-tools/src/core/edit-links.ts, bean v433): links carry their
   facts and this builds the hrefs. -->
-<script src="/aai-programme/assets/js/edit-links.js?v=1792515615" defer></script>
+<script src="/aai-programme/assets/js/edit-links.js?v=1792515917" defer></script>
 
 <!--
   The work-plan dashboard. SELF-MOUNTING on any page carrying
@@ -808,26 +808,25 @@
 </h1>
     
 
-<p><code class="language-plaintext highlighter-rouge">Process_AAI_Build</code> · strict · 13 step(s)</p>
+<p><code class="language-plaintext highlighter-rouge">Process_AAI_Build</code> · strict · 12 step(s)</p>
 
 <p>Build the shared programme project, its repositories and automations in the order section 13 of the programme requirements sets, stopping wherever a decision, a credential or a pilot test is missing. Nothing past pre-flight is created until the decisions for that step are confirmed, and nothing is bulk-imported until every pilot test passes.</p>
 <style>.pt-diagram{position:relative;width:100%}.pt-diagram>img{display:block;width:100%;height:auto}.pt-mark{position:absolute;transform:translate(-50%,-50%);width:1.35em;height:1.35em;padding:0;border-radius:50%;border:1px solid #1f6feb;background:#fff;color:#1f6feb;font:bold 0.8em/1 sans-serif;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 2px rgba(0,0,0,.25)}.pt-mark:hover,.pt-mark[aria-expanded=true]{background:#1f6feb;color:#fff}.pt-mark:focus-visible{outline:2px solid #1f6feb;outline-offset:2px}.pt-panel{position:absolute;z-index:5;margin:0.9em 0 0 -0.6em;max-width:min(26em,90vw);min-width:14em;padding:0.6em 0.7em;background:#fff;color:#1b1f24;border:1px solid #8c959f;border-radius:6px;box-shadow:0 4px 14px rgba(0,0,0,.18);font-size:0.85em;line-height:1.35}.pt-close{position:absolute;top:0.2em;right:0.35em;border:0;background:none;font-size:1.2em;cursor:pointer;color:inherit}.pt-obj{border:1px solid #57606a;border-radius:3px;margin:0.15em 0}.pt-head{border-bottom:1px solid #57606a;padding:0.15em 0.45em;background:#f6f8fa;text-decoration:underline}.pt-head .pt-st{text-decoration:none;display:inline-block;margin-right:0.35em}.pt-attr{padding:0.1em 0.45em}.pt-st,.pt-via{color:#57606a;font-size:0.9em}.pt-edge{color:#57606a;font-size:0.85em;padding-left:1em}.pt-role .pt-head{background:#fff8c5}.pt-skill .pt-head{background:#ddf4ff}.pt-task .pt-head{background:#f6f8fa}.pt-none{color:#57606a;font-style:italic;margin-top:0.3em}</style>
 
 <div class="pt-diagram" data-panel="programme-build.tasks.json">
 <img src="../../../assets/img/workflows/programme-build.svg" alt="BPMN diagram: Assured AI programme: build the GitHub set-up" />
-<button type="button" class="pt-mark" data-task="A_Preflight" style="left:13.79%;top:56.52%" aria-expanded="false" aria-label="About step: Step 1: pre-flight" title="About: Step 1: pre-flight">i</button>
-<button type="button" class="pt-mark" data-task="A_Decide" style="left:19.3%;top:31.88%" aria-expanded="false" aria-label="About step: Answer the open BD decisions" title="About: Answer the open BD decisions">i</button>
-<button type="button" class="pt-mark" data-task="A_OrgSetup" style="left:24.82%;top:31.88%" aria-expanded="false" aria-label="About step: Step 2: create or reuse issue types and fields" title="About: Step 2: create or reuse issue types and fields">i</button>
-<button type="button" class="pt-mark" data-task="A_Repos" style="left:30.33%;top:56.52%" aria-expanded="false" aria-label="About step: Step 3: repositories, roles and labels" title="About: Step 3: repositories, roles and labels">i</button>
-<button type="button" class="pt-mark" data-task="A_Projects" style="left:35.85%;top:56.52%" aria-expanded="false" aria-label="About step: Step 4: programme project and template" title="About: Step 4: programme project and template">i</button>
-<button type="button" class="pt-mark" data-task="A_Readmes" style="left:41.36%;top:56.52%" aria-expanded="false" aria-label="About step: Step 5: READMEs and directory" title="About: Step 5: READMEs and directory">i</button>
-<button type="button" class="pt-mark" data-task="A_Automations" style="left:52.39%;top:56.52%" aria-expanded="false" aria-label="About step: Step 6: automations AUTO-01 to AUTO-11" title="About: Step 6: automations AUTO-01 to AUTO-11">i</button>
-<button type="button" class="pt-mark" data-task="A_Pilot" style="left:57.9%;top:56.52%" aria-expanded="false" aria-label="About step: Step 7: pilot build" title="About: Step 7: pilot build">i</button>
-<button type="button" class="pt-mark" data-task="A_Validate" style="left:63.42%;top:81.16%" aria-expanded="false" aria-label="About step: Confirm validation on the pilot item" title="About: Confirm validation on the pilot item">i</button>
-<button type="button" class="pt-mark" data-task="A_Inputs" style="left:74.45%;top:7.25%" aria-expanded="false" aria-label="About step: Provide the section 14 inputs" title="About: Provide the section 14 inputs">i</button>
-<button type="button" class="pt-mark" data-task="A_Import" style="left:79.96%;top:56.52%" aria-expanded="false" aria-label="About step: Step 8: bulk import and backfill" title="About: Step 8: bulk import and backfill">i</button>
-<button type="button" class="pt-mark" data-task="A_Charts" style="left:85.48%;top:56.52%" aria-expanded="false" aria-label="About step: Step 9: charts and acceptance checks" title="About: Step 9: charts and acceptance checks">i</button>
-<button type="button" class="pt-mark" data-task="A_Report" style="left:90.99%;top:56.52%" aria-expanded="false" aria-label="About step: Step 10: build report" title="About: Step 10: build report">i</button>
+<button type="button" class="pt-mark" data-task="A_Preflight" style="left:14.59%;top:56.52%" aria-expanded="false" aria-label="About step: Step 1: pre-flight" title="About: Step 1: pre-flight">i</button>
+<button type="button" class="pt-mark" data-task="A_Decide" style="left:20.43%;top:31.88%" aria-expanded="false" aria-label="About step: Answer the open BD decisions" title="About: Answer the open BD decisions">i</button>
+<button type="button" class="pt-mark" data-task="A_OrgSetup" style="left:26.26%;top:31.88%" aria-expanded="false" aria-label="About step: Step 2: create or reuse issue types and fields" title="About: Step 2: create or reuse issue types and fields">i</button>
+<button type="button" class="pt-mark" data-task="A_Repos" style="left:32.1%;top:56.52%" aria-expanded="false" aria-label="About step: Step 3: repositories, roles and labels" title="About: Step 3: repositories, roles and labels">i</button>
+<button type="button" class="pt-mark" data-task="A_Projects" style="left:37.94%;top:56.52%" aria-expanded="false" aria-label="About step: Step 4: programme project and template" title="About: Step 4: programme project and template">i</button>
+<button type="button" class="pt-mark" data-task="A_Readmes" style="left:43.77%;top:56.52%" aria-expanded="false" aria-label="About step: Step 5: READMEs and directory" title="About: Step 5: READMEs and directory">i</button>
+<button type="button" class="pt-mark" data-task="A_Automations" style="left:55.45%;top:56.52%" aria-expanded="false" aria-label="About step: Step 6: automations AUTO-01 to AUTO-11" title="About: Step 6: automations AUTO-01 to AUTO-11">i</button>
+<button type="button" class="pt-mark" data-task="Call_Pilot" style="left:61.28%;top:56.52%" aria-expanded="false" aria-label="About step: Step 7: the pilot" title="About: Step 7: the pilot">i</button>
+<button type="button" class="pt-mark" data-task="A_Inputs" style="left:72.96%;top:7.25%" aria-expanded="false" aria-label="About step: Provide the section 14 inputs" title="About: Provide the section 14 inputs">i</button>
+<button type="button" class="pt-mark" data-task="A_Import" style="left:78.79%;top:56.52%" aria-expanded="false" aria-label="About step: Step 8: bulk import and backfill" title="About: Step 8: bulk import and backfill">i</button>
+<button type="button" class="pt-mark" data-task="A_Charts" style="left:84.63%;top:56.52%" aria-expanded="false" aria-label="About step: Step 9: charts and acceptance checks" title="About: Step 9: charts and acceptance checks">i</button>
+<button type="button" class="pt-mark" data-task="A_Report" style="left:90.47%;top:56.52%" aria-expanded="false" aria-label="About step: Step 10: build report" title="About: Step 10: build report">i</button>
 <div class="pt-panel" role="dialog" aria-label="Task details" hidden=""></div>
 </div>
 <script>(function () {
@@ -921,7 +920,7 @@
 
 <ul>
   <li><strong>Called by:</strong> no call activity names this process</li>
-  <li><strong>Calls:</strong> none</li>
+  <li><strong>Calls:</strong> <a href="programme-pilot.html">Assured AI programme: the pilot</a></li>
   <li><strong>Presented on:</strong> no docs page section shows this diagram</li>
 </ul>
 <h2 id="lanes--who-acts">
@@ -945,22 +944,22 @@
     <tr>
       <td>PM &amp; Architecture Integration</td>
       <td><code class="language-plaintext highlighter-rouge">pm-architecture-integration</code></td>
-      <td>Owns sequencing, dates, dependencies, evidence and escalation, and supplies the section 14 inputs. Does not make technical readiness judgements (DP-05).</td>
+      <td>Owns sequencing, dates, dependencies, evidence and escalation. Does not make technical readiness judgements (req:aai-design-principles#DP-05).</td>
     </tr>
     <tr>
       <td>WHO GitHub owner</td>
       <td><code class="language-plaintext highlighter-rouge">who-github-owner</code></td>
-      <td>Answers the section 3 decisions and runs organisation-level changes only an owner can make: issue types, issue fields and credentials (BD-05, BD-08).</td>
+      <td>Answers the section 3 decisions and makes the organisation-level changes only an owner can make (req:aai-decisions#BD-05, #BD-08).</td>
     </tr>
     <tr>
       <td>Build agent</td>
       <td><code class="language-plaintext highlighter-rouge">build-agent</code></td>
-      <td>Builds what the decisions allow and stops where the requirements say to stop. Never invents users, teams, repositories, dates or field values (section 14).</td>
+      <td>Builds what the decisions allow and stops where the requirements say to stop. Never invents users, teams, repositories, dates or field values.</td>
     </tr>
     <tr>
       <td>Technical Integration Lead</td>
       <td><code class="language-plaintext highlighter-rouge">technical-integration-lead</code></td>
-      <td>Confirms validation with a comment starting <code class="language-plaintext highlighter-rouge">Validation confirmed:</code> (DP-05, AUTO-10). Automation never sets Validated.</td>
+      <td>Confirms validation with a comment starting <code class="language-plaintext highlighter-rouge">Validation confirmed:</code> and the evidence (req:aai-design-principles#DP-05, req:aai-automation#AUTO-10).</td>
     </tr>
   </tbody>
 </table></div>
@@ -973,7 +972,7 @@
 </h2>
     
 
-<p>Every one of the 13 step(s) is documented.</p>
+<p>Every one of the 12 step(s) is documented.</p>
 
 <div class="table-wrapper"><table>
   <thead>
@@ -989,7 +988,7 @@
       <td><strong>Step 1: pre-flight</strong><br /><code class="language-plaintext highlighter-rouge">A_Preflight</code></td>
       <td>Build agent</td>
       <td>—</td>
-      <td>Inspect the organisation read-only: issue types, issue fields and headroom, project field counts, projects, teams, repository policies, SSO or EMU, and permissions. Reuse compatible configuration; create nothing that duplicates it (section 13 step 1).</td>
+      <td>Inspect the organisation read-only: issue types, issue fields and headroom, project field counts, projects, teams, repository policies, SSO or EMU, and permissions. Reuse compatible configuration; create nothing that duplicates it.</td>
     </tr>
     <tr>
       <td><strong>Answer the open BD decisions</strong><br /><code class="language-plaintext highlighter-rouge">A_Decide</code></td>
@@ -1001,49 +1000,43 @@
       <td><strong>Step 2: create or reuse issue types and fields</strong><br /><code class="language-plaintext highlighter-rouge">A_OrgSetup</code></td>
       <td>WHO GitHub owner</td>
       <td>—</td>
-      <td>Create or reuse the section 5.1 issue types (<code class="language-plaintext highlighter-rouge">AAI</code> prefix where new) and the section 7.1 issue fields, and pin them as section 5.3 says. If issue fields cannot be used, apply the section 7.4 fallback and record it.</td>
+      <td>Create or reuse the section 5.1 issue types and the section 7.1 issue fields, and pin them as section 5.3 says. If issue fields cannot be used, apply the section 7.4 fallback and record it.</td>
     </tr>
     <tr>
       <td><strong>Step 3: repositories, roles and labels</strong><br /><code class="language-plaintext highlighter-rouge">A_Repos</code></td>
       <td>Build agent</td>
       <td>—</td>
-      <td>Create <code class="language-plaintext highlighter-rouge">aai-programme</code>, <code class="language-plaintext highlighter-rouge">aai-pm</code> and the two workstream repositories the pilot needs, with the BD-04 roles and the section 7.3 labels. A workstream repository is created only once its lead is confirmed.</td>
+      <td>Create <code class="language-plaintext highlighter-rouge">aai-programme</code> and the two workstream repositories the pilot needs, public, with the BD-04 roles and the section 7.3 labels (req:aai-information#SEC-04).</td>
     </tr>
     <tr>
       <td><strong>Step 4: programme project and template</strong><br /><code class="language-plaintext highlighter-rouge">A_Projects</code></td>
       <td>Build agent</td>
       <td>—</td>
-      <td>Create the programme project with views V1 to V13 in the listed order, and the workstream template from section 8.3.</td>
+      <td>Create the programme project with views V1 to V13 in the listed order (req:aai-views), and the workstream template from section 8.3.</td>
     </tr>
     <tr>
       <td><strong>Step 5: READMEs and directory</strong><br /><code class="language-plaintext highlighter-rouge">A_Readmes</code></td>
       <td>Build agent</td>
       <td>—</td>
-      <td>Write the READMEs (AC-10, AUTO-07, LINK-02, LINK-03, LINK-07) and create the pinned Workstream directory issue (LINK-01).</td>
+      <td>Write the READMEs (req:aai-acceptance#AC-10, req:aai-automation#AUTO-07) and create the pinned Workstream directory issue (req:aai-linking#LINK-01).</td>
     </tr>
     <tr>
       <td><strong>Step 6: automations AUTO-01 to AUTO-11</strong><br /><code class="language-plaintext highlighter-rouge">A_Automations</code></td>
       <td>Build agent</td>
       <td>—</td>
-      <td>Set up the automations. Every script reruns safely and has <code class="language-plaintext highlighter-rouge">--dry-run</code> (AUTO-08). None sets readiness, review status, risk category, impact, a decision or risk acceptance (AUTO-05).</td>
+      <td>Set up the automations (req:aai-automation). Every script reruns safely and has <code class="language-plaintext highlighter-rouge">--dry-run</code>. None makes a judgement (req:aai-automation#AUTO-05).</td>
     </tr>
     <tr>
-      <td><strong>Step 7: pilot build</strong><br /><code class="language-plaintext highlighter-rouge">A_Pilot</code></td>
+      <td><strong>Step 7: the pilot</strong><br /><code class="language-plaintext highlighter-rouge">Call_Pilot</code></td>
       <td>Build agent</td>
-      <td>—</td>
-      <td>Build the section 12 pilot set from representative Assured AI items, each marked as a pilot, and run PIL-01 to PIL-11.</td>
-    </tr>
-    <tr>
-      <td><strong>Confirm validation on the pilot item</strong><br /><code class="language-plaintext highlighter-rouge">A_Validate</code></td>
-      <td>Technical Integration Lead</td>
-      <td>—</td>
-      <td>For PIL-07: post <code class="language-plaintext highlighter-rouge">Validation confirmed:</code> with the evidence on the pilot item, so AUTO-10 removes the <code class="language-plaintext highlighter-rouge">validation-exception</code> label.</td>
+      <td>calls <a href="programme-pilot.html">Assured AI programme: the pilot</a></td>
+      <td>Build and test the section 12 pilot set; see the pilot process.</td>
     </tr>
     <tr>
       <td><strong>Provide the section 14 inputs</strong><br /><code class="language-plaintext highlighter-rouge">A_Inputs</code></td>
       <td>PM &amp; Architecture Integration</td>
       <td>—</td>
-      <td>The epics CSV reviewed by each lead, the Gates output list, R1 to R7, the dependency register with restricted content removed, the directory details, and the needed GitHub usernames.</td>
+      <td>The epics CSV reviewed by each lead, the Gates output list, R1 to R7, the dependency register with anything section 6 keeps off GitHub removed, the directory details, and the needed GitHub usernames.</td>
     </tr>
     <tr>
       <td><strong>Step 8: bulk import and backfill</strong><br /><code class="language-plaintext highlighter-rouge">A_Import</code></td>
@@ -1055,7 +1048,7 @@
       <td><strong>Step 9: charts and acceptance checks</strong><br /><code class="language-plaintext highlighter-rouge">A_Charts</code></td>
       <td>Build agent</td>
       <td>—</td>
-      <td>Build charts M1 to M5, or record which cannot be built natively, and check AC-01 to AC-19.</td>
+      <td>Build charts M1 to M5 (req:aai-metrics), or record which cannot be built natively, and check AC-01 to AC-19 (req:aai-acceptance).</td>
     </tr>
     <tr>
       <td><strong>Step 10: build report</strong><br /><code class="language-plaintext highlighter-rouge">A_Report</code></td>
@@ -1087,17 +1080,17 @@
   <tbody>
     <tr>
       <td><strong>Decisions for the next step confirmed?</strong><br /><code class="language-plaintext highlighter-rouge">GW_Decided</code></td>
-      <td>Answered from the section 3 decision record: is every decision that step 2 onward depends on confirmed? <code class="language-plaintext highlighter-rouge">no</code> sends the open ones to the owner; nothing past pre-flight is built until they are.</td>
+      <td>Answered from the section 3 decision record (req:aai-decisions): is every decision that step 2 onward depends on confirmed? <code class="language-plaintext highlighter-rouge">no</code> sends the open ones to the owner.</td>
       <td><strong>no</strong> → Answer the open BD decisions<br /><strong>yes</strong> → Step 2: create or reuse issue types and fields</td>
     </tr>
     <tr>
       <td><strong>Automation credentials in place?</strong><br /><code class="language-plaintext highlighter-rouge">GW_Creds</code></td>
-      <td>Answered by whether the BD-08 credentials exist as an organisation secret. <code class="language-plaintext highlighter-rouge">no</code> stops and reports exactly which permission is needed (AUTO-09); the agent never creates credentials itself.</td>
+      <td>Answered by whether the BD-08 credentials exist as an organisation secret. <code class="language-plaintext highlighter-rouge">no</code> stops and reports exactly which permission is needed (req:aai-automation#AUTO-09).</td>
       <td><strong>no</strong> → Stopped: credentials needed<br /><strong>yes</strong> → Step 6: automations AUTO-01 to AUTO-11</td>
     </tr>
     <tr>
       <td><strong>Every pilot test passed?</strong><br /><code class="language-plaintext highlighter-rouge">GW_Pilot</code></td>
-      <td>Answered by the PIL-01 to PIL-11 results. <code class="language-plaintext highlighter-rouge">no</code> stops the build and reports the failure; there is no bulk import after a failed pilot.</td>
+      <td>Answered by the pilot’s results (req:aai-pilot). <code class="language-plaintext highlighter-rouge">no</code> stops the build and reports the failure; there is no bulk import after a failed pilot.</td>
       <td><strong>no</strong> → Stopped: a pilot test failed<br /><strong>yes</strong> → Provide the section 14 inputs</td>
     </tr>
   </tbody>
