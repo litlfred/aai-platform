@@ -2860,6 +2860,49 @@
       "view": "/en/cat-harness/library/folio-assistant-core/arxiv-2510.21603v1/"
     },
     {
+      "id": "assured-ai-github-programme-requirements-v036",
+      "instance": "aai-programme",
+      "dir": "library/assured-ai-github-programme-requirements-v036",
+      "title": "Assured AI: requirements for the programme GitHub projects",
+      "provenance": "ingested",
+      "rung": "paged",
+      "docId": "assured-ai-github-programme-requirements-v036",
+      "sourceFile": "Assured_AI_GitHub_Programme_Requirements_v0.3.6.md",
+      "sourceSha256": "a0519ae9be127861f00689b0b4a5cb4f64bdba21caf7a6b256bd9d771a403b8e",
+      "arxiv": "",
+      "doi": "",
+      "documentClass": "",
+      "sections": 30,
+      "blocks": 30,
+      "images": 0,
+      "ocrPages": 0,
+      "hasOcr": false,
+      "hasManifest": true,
+      "hasStructure": true,
+      "hasImagesJson": true,
+      "pageStart": null,
+      "pageEnd": null,
+      "words": 6558,
+      "chars": 39796,
+      "bytes": 117006,
+      "upload": "match",
+      "uploadInstance": "aai-programme",
+      "referencedBy": [],
+      "summaries": {
+        "prose": 30,
+        "summarised": 0,
+        "backlog": 30,
+        "draft": 0,
+        "confirmed": 0,
+        "stale": 0,
+        "rejected": 0,
+        "notSummarised": 30,
+        "unreadable": 0,
+        "empty": 0
+      },
+      "view": "/en/cat-harness/library/aai-programme/assured-ai-github-programme-requirements-v036/"
+    },
+    {
       "id": "assured-ai-github-programme-requirements-v041",
       "instance": "aai-programme",
       "dir": "library/assured-ai-github-programme-requirements-v041",
@@ -2944,6 +2987,49 @@
         "empty": 0
       },
       "view": "/en/cat-harness/library/aai-programme/assured-ai-github-programme-requirements-v042/"
+    },
+    {
+      "id": "assured-ai-github-programme-requirements-v05",
+      "instance": "aai-programme",
+      "dir": "library/assured-ai-github-programme-requirements-v05",
+      "title": "Assured AI: requirements for the programme GitHub project",
+      "provenance": "ingested",
+      "rung": "paged",
+      "docId": "assured-ai-github-programme-requirements-v05",
+      "sourceFile": "Assured_AI_GitHub_Programme_Requirements_v0.5.md",
+      "sourceSha256": "6be31bf530ba67cffdae8ecc61c82298b1dec4616aee122ca1fa441cedc5d39b",
+      "arxiv": "",
+      "doi": "",
+      "documentClass": "",
+      "sections": 32,
+      "blocks": 32,
+      "images": 0,
+      "ocrPages": 0,
+      "hasOcr": false,
+      "hasManifest": true,
+      "hasStructure": true,
+      "hasImagesJson": true,
+      "pageStart": null,
+      "pageEnd": null,
+      "words": 7892,
+      "chars": 48136,
+      "bytes": 129355,
+      "upload": "match",
+      "uploadInstance": "aai-programme",
+      "referencedBy": [],
+      "summaries": {
+        "prose": 32,
+        "summarised": 0,
+        "backlog": 32,
+        "draft": 0,
+        "confirmed": 0,
+        "stale": 0,
+        "rejected": 0,
+        "notSummarised": 32,
+        "unreadable": 0,
+        "empty": 0
+      },
+      "view": "/en/cat-harness/library/aai-programme/assured-ai-github-programme-requirements-v05/"
     }
   ],
   "uploads": [
@@ -2972,6 +3058,18 @@
       "declaredFiles": 0
     },
     {
+      "file": "Assured_AI_GitHub_Programme_Requirements_v0.3.6.md",
+      "kind": "file",
+      "instance": "aai-programme",
+      "path": "uploads/Assured_AI_GitHub_Programme_Requirements_v0.3.6.md",
+      "bytes": 39914,
+      "ext": "md",
+      "ingestedBy": "assured-ai-github-programme-requirements-v036",
+      "docId": "",
+      "title": "",
+      "declaredFiles": 0
+    },
+    {
       "file": "Assured_AI_GitHub_Programme_Requirements_v0.4.1.md",
       "kind": "file",
       "instance": "aai-programme",
@@ -2994,6 +3092,18 @@
       "docId": "",
       "title": "",
       "declaredFiles": 0
+    },
+    {
+      "file": "Assured_AI_GitHub_Programme_Requirements_v0.5.md",
+      "kind": "file",
+      "instance": "aai-programme",
+      "path": "uploads/Assured_AI_GitHub_Programme_Requirements_v0.5.md",
+      "bytes": 48250,
+      "ext": "md",
+      "ingestedBy": "assured-ai-github-programme-requirements-v05",
+      "docId": "",
+      "title": "",
+      "declaredFiles": 0
     }
   ],
   "queues": [
@@ -3007,8 +3117,8 @@
     {
       "instance": "aai-programme",
       "dir": "uploads",
-      "total": 2,
-      "ingested": 2,
+      "total": 4,
+      "ingested": 4,
       "uningested": 0
     }
   ],
