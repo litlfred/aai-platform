@@ -36,8 +36,8 @@
 <meta name="generator" content="Jekyll v4.4.1" />
 <meta property="og:title" content="术语表" />
 <meta property="og:locale" content="zh" />
-<meta name="description" content="zh: 28/37 — 个人工编写的术语已完整翻译" />
-<meta name="twitter:description" property="og:description" content="zh: 28/37 — 个人工编写的术语已完整翻译" />
+<meta name="description" content="zh: 28/40 — 个人工编写的术语已完整翻译" />
+<meta name="twitter:description" property="og:description" content="zh: 28/40 — 个人工编写的术语已完整翻译" />
 <link rel="canonical" href="https://litlfred.github.io/aai-programme/zh/folio-assistant-core/glossary/" />
 <meta property="og:url" content="https://litlfred.github.io/aai-programme/zh/folio-assistant-core/glossary/" />
 <meta property="og:site_name" content="Assured AI programme" />
@@ -45,7 +45,7 @@
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="术语表" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"zh: 28/37 — 个人工编写的术语已完整翻译","headline":"术语表","url":"https://litlfred.github.io/aai-programme/zh/folio-assistant-core/glossary/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"zh: 28/40 — 个人工编写的术语已完整翻译","headline":"术语表","url":"https://litlfred.github.io/aai-programme/zh/folio-assistant-core/glossary/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -280,7 +280,8 @@
     "totalPages": 0,
     "pagesWithTranslations": 0,
     "complete": false
-  }
+  },
+  "statusSrc":"/aai-programme/assets/translation-status/index.json"
 }</script>
 <!--
   Where the action tiles point.
@@ -560,33 +561,33 @@
   them: those are versioned in their own URLs already.
 -->
 <!-- The harness icon row's own style, which railed pages load without docs-ui.css (beans `lhvt`, `9rq1`). -->
-<link rel="stylesheet" href="/aai-programme/assets/css/navbar-row.css?v=1792522159">
-<link rel="stylesheet" href="/aai-programme/assets/css/docs-ui.css?v=1792522159">
+<link rel="stylesheet" href="/aai-programme/assets/css/navbar-row.css?v=1792522781">
+<link rel="stylesheet" href="/aai-programme/assets/css/docs-ui.css?v=1792522781">
 <!-- Narrow viewports: wide content scrolls in its own box, never the page
      (bean `2r2n`). The standalone viewers inline the same file through
      `withViewerNav`, so both kinds of page read one set of rules. -->
-<link rel="stylesheet" href="/aai-programme/assets/css/narrow-viewport.css?v=1792522159">
+<link rel="stylesheet" href="/aai-programme/assets/css/narrow-viewport.css?v=1792522781">
 
 <!--
   The work-plan dashboard's styles, split from docs-ui.css so that
   `state-visualizer.ts` can inline exactly these bytes into the generated
   `<base>/<stub>/state-visualizer/` pages. One rule, two surfaces.
 -->
-<link rel="stylesheet" href="/aai-programme/assets/css/work-plan.css?v=1792522159">
+<link rel="stylesheet" href="/aai-programme/assets/css/work-plan.css?v=1792522781">
 <!-- Sticky themes. GENERATED from the theme nodes in `schemas/themes.ts` by
      `bun run cat themes:css`; `themes:css:check` fails the build when it is stale.
      Loaded AFTER docs-ui.css deliberately: it supplies the `--fa-sticky-*`
      roles that docs-ui.css consumes, and a custom property has to be set on a
      matching element before the rule reading it takes effect. -->
-<link rel="stylesheet" href="/aai-programme/assets/css/themes.css?v=1792522159">
+<link rel="stylesheet" href="/aai-programme/assets/css/themes.css?v=1792522781">
 <!-- UML overview colours: one class per graph typology, set on the Mermaid nodes
      that `scripts/gen-uml-overview.ts` writes into docs/uml/overview/. -->
-<link rel="stylesheet" href="/aai-programme/assets/css/uml.css?v=1792522159">
+<link rel="stylesheet" href="/aai-programme/assets/css/uml.css?v=1792522781">
 <!-- Kind avatars. GENERATED from `schemas/avatars.ts` by `bun run cat avatars:css`;
      `avatars:css:check` fails the build when it is stale. One stylesheet
      rather than 68 assets: the glyph is a mask and the colour is a property,
      so a scheme swap is a custom property and the trash state is a selector. -->
-<link rel="stylesheet" href="/aai-programme/assets/css/avatars.css?v=1792522159">
+<link rel="stylesheet" href="/aai-programme/assets/css/avatars.css?v=1792522781">
 
 <!--
   The kinds THIS INSTANCE DECLARES, for the avatar fan.
@@ -607,12 +608,12 @@
 <!-- BEFORE docs-ui.js and work-plan.js: both read window.faRender. -->
 <script src="/aai-programme/assets/js/kg-render.js" defer></script>
 <!-- BEFORE docs-ui.js, which calls it: the one drawing of the harness icon row (beans `lhvt`, `9rq1`). -->
-<script src="/aai-programme/assets/js/navbar-row.js?v=1792522159" defer></script>
-<script src="/aai-programme/assets/js/docs-ui.js?v=1792522159" defer></script>
+<script src="/aai-programme/assets/js/navbar-row.js?v=1792522781" defer></script>
+<script src="/aai-programme/assets/js/docs-ui.js?v=1792522781" defer></script>
 <!-- The edit, source and feedback links of every page, from the platform's one
   recipe (cat-harness-tools/src/core/edit-links.ts, bean v433): links carry their
   facts and this builds the hrefs. -->
-<script src="/aai-programme/assets/js/edit-links.js?v=1792522159" defer></script>
+<script src="/aai-programme/assets/js/edit-links.js?v=1792522781" defer></script>
 
 <!--
   The work-plan dashboard. SELF-MOUNTING on any page carrying
@@ -805,7 +806,7 @@
 </h1>
     
 
-<p><strong>28 / 37</strong> 个人工编写的术语已完整翻译. 这些译文并非正式译文：由智能体起草，尚未经人工审定（issue #206）。标记为未翻译的文本为原文，予以显示而非隐藏。</p>
+<p><strong>28 / 40</strong> 个人工编写的术语已完整翻译. 这些译文并非正式译文：由智能体起草，尚未经人工审定（issue #206）。标记为未翻译的文本为原文，予以显示而非隐藏。</p>
 <h2 id="already-somebody-elses-concept-未翻译">
   
   
@@ -1069,6 +1070,35 @@ be a term this corpus is right to coin.</p>
   </tbody>
 </table></div>
 
+<p><strong>Guideline domain</strong></p>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>术语</th>
+      <th>替代标签</th>
+      <th>定义</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>clinical <em>(未翻译)</em></strong></td>
+      <td>clinical guideline <em>(未翻译)</em>; clinical health <em>(未翻译)</em></td>
+      <td>A guideline whose recommendations address the care of individual patients by health workers: assessment, diagnosis, treatment and management of a condition in a person. <em>(未翻译)</em></td>
+    </tr>
+    <tr>
+      <td><strong>public health <em>(未翻译)</em></strong></td>
+      <td>public health guideline <em>(未翻译)</em></td>
+      <td>A guideline whose recommendations address the health of populations rather than of an individual patient: prevention, health promotion, immunization and screening programmes, surveillance, and policy or environmental measures. <em>(未翻译)</em></td>
+    </tr>
+    <tr>
+      <td><strong>health system strengthening <em>(未翻译)</em></strong></td>
+      <td>health systems strengthening <em>(未翻译)</em>; HSS <em>(未翻译)</em></td>
+      <td>A guideline whose recommendations address how the health system itself is organised and resourced — service delivery, health workforce, health information systems, access to medical products, financing, and leadership and governance — rather than a particular condition or population intervention. <em>(未翻译)</em></td>
+    </tr>
+  </tbody>
+</table></div>
+
 <p><strong>Folio Assistant platform terms</strong></p>
 
 <div class="table-wrapper"><table>
@@ -1107,6 +1137,7 @@ be a term this corpus is right to coin.</p>
 <ul>
   <li><code class="language-plaintext highlighter-rouge">bootstrap--terms</code> — bootstrap/schemas/graph.schema.json</li>
   <li><code class="language-plaintext highlighter-rouge">cat-harness--platform</code> — folio-assistant-core/glossary/cat-harness.glossary.json</li>
+  <li><code class="language-plaintext highlighter-rouge">folio-assistant-core--guideline-domain</code> — folio-assistant-core/glossary/guideline-domain.glossary.json</li>
   <li><code class="language-plaintext highlighter-rouge">folio-assistant-core--platform</code> — folio-assistant-core/glossary/folio-assistant-core.glossary.json</li>
 </ul>
 <h3 id="从知识图谱资产中提取">

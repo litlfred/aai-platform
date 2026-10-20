@@ -1175,6 +1175,14 @@
       "isTest": false
     },
     {
+      "module": "cat-harness/schemas/narrative.test.ts",
+      "instance": "cat-harness",
+      "name": "narrative.test",
+      "graphNode": "undeclared",
+      "summary": "One narrative per language, stage 1 (bean `cat-tools-e1lo`, owner ruling",
+      "isTest": true
+    },
+    {
       "module": "cat-harness/schemas/narrative.ts",
       "instance": "cat-harness",
       "name": "narrative",
@@ -1925,6 +1933,14 @@
       "isTest": false
     },
     {
+      "module": "cat-harness/schemas/tabular-csvw-provenance.test.ts",
+      "instance": "cat-harness",
+      "name": "tabular-csvw-provenance.test",
+      "graphNode": "undeclared",
+      "summary": "`source` and `narrative` on a CSVW record (bean `urat`): accepted, still",
+      "isTest": true
+    },
+    {
       "module": "cat-harness/schemas/tabular-csvw.ts",
       "instance": "cat-harness",
       "name": "tabular-csvw",
@@ -2230,6 +2246,22 @@
       "name": "types",
       "graphNode": "schema",
       "summary": "ALL types are inferred from Zod schemas in constraints.ts, which is the",
+      "isTest": false
+    },
+    {
+      "module": "cat-harness/schemas/url-space.test.ts",
+      "instance": "cat-harness",
+      "name": "url-space.test",
+      "graphNode": "undeclared",
+      "summary": "The three URL-space cases and the `enabled` default (bean `nbal`).",
+      "isTest": true
+    },
+    {
+      "module": "cat-harness/schemas/url-space.ts",
+      "instance": "cat-harness",
+      "name": "url-space",
+      "graphNode": "schema",
+      "summary": "Where a published thing is served: one resolver for the site's URL space",
       "isTest": false
     },
     {
@@ -12270,6 +12302,13 @@
           "type": "string",
           "optional": true,
           "array": false
+        },
+        {
+          "name": "enabled",
+          "type": "boolean",
+          "optional": true,
+          "array": false,
+          "doc": "Whether this instance is published on the site. Defaults to enabled; only"
         },
         {
           "name": "canonicalUrl",
@@ -31650,6 +31689,13 @@
           "doc": "The narrative itself, or null when nobody has written one."
         },
         {
+          "name": "lang",
+          "type": "z.string().regex(LANGUAGE_TAG).optional()",
+          "optional": true,
+          "array": false,
+          "doc": "The language of `text`, as a BCP 47 tag. Optional until stage 4 (see the"
+        },
+        {
           "name": "state",
           "type": "z.enum(NARRATIVE_STATES)",
           "optional": false,
@@ -31708,9 +31754,40 @@
       ],
       "unresolved": [],
       "external": [
+        "LANGUAGE_TAG",
         "NARRATIVE_STATES",
         "z"
       ],
+      "exported": true
+    },
+    {
+      "id": "cat-harness/schemas/narrative.ts#NarrativeSlot",
+      "name": "NarrativeSlot",
+      "module": "cat-harness/schemas/narrative.ts",
+      "kind": "type-alias",
+      "fields": [],
+      "extendsNames": [],
+      "values": [],
+      "refs": [],
+      "unresolved": [],
+      "external": [],
+      "exported": true
+    },
+    {
+      "id": "cat-harness/schemas/narrative.ts#NarrativeSlotSchema",
+      "name": "NarrativeSlotSchema",
+      "module": "cat-harness/schemas/narrative.ts",
+      "kind": "zod-union",
+      "doc": "Where a record keeps its narrative: the single narrative it has today, or a",
+      "fields": [],
+      "extendsNames": [],
+      "values": [
+        "every narrative in a list must name its `lang`",
+        "a language may appear only once in a narrative list"
+      ],
+      "refs": [],
+      "unresolved": [],
+      "external": [],
       "exported": true
     },
     {
@@ -43369,6 +43446,13 @@
           "doc": "The page that RENDERS this entry, site-root path with a leading `/` and"
         },
         {
+          "name": "viewable",
+          "type": "z.enum([\"pdf\", \"image\"]).optional()",
+          "optional": true,
+          "array": false,
+          "doc": "The kind of viewer the entry's held source opens in, set only when the"
+        },
+        {
           "name": "pageStart",
           "type": "PageNumber",
           "optional": false,
@@ -49354,11 +49438,26 @@
           "optional": false,
           "array": true,
           "doc": "One per sheet. A CSV has exactly one; a workbook is a `csvw:TableGroup`."
+        },
+        {
+          "name": "source",
+          "type": "z.record(z.string(), z.unknown()).optional()",
+          "optional": true,
+          "array": false,
+          "doc": "The technical-metadata block every ingest sidecar carries (`file`,"
+        },
+        {
+          "name": "narrative",
+          "type": "NarrativeSchema.optional()",
+          "optional": true,
+          "array": false,
+          "doc": "What the data is about, under bean `ju0u`'s state machine, the same"
         }
       ],
       "extendsNames": [],
       "values": [],
       "refs": [
+        "cat-harness/schemas/narrative.ts#NarrativeSchema",
         "cat-harness/schemas/tabular-csvw.ts#CsvwTableSchema"
       ],
       "unresolved": [],
@@ -58424,6 +58523,20 @@
       "refs": [
         "cat-harness/schemas/types.ts#ValidationIssue"
       ],
+      "unresolved": [],
+      "external": [],
+      "exported": true
+    },
+    {
+      "id": "cat-harness/schemas/url-space.ts#PublishedLocation",
+      "name": "PublishedLocation",
+      "module": "cat-harness/schemas/url-space.ts",
+      "kind": "type-alias",
+      "doc": "One published location, by case.",
+      "fields": [],
+      "extendsNames": [],
+      "values": [],
+      "refs": [],
       "unresolved": [],
       "external": [],
       "exported": true
@@ -74684,6 +74797,14 @@
       "from": "cat-harness/schemas/tabular-csvw.ts#CsvwTableSchema",
       "to": "cat-harness/schemas/tabular-csvw.ts#TabularStubSchema",
       "via": "fac:stub",
+      "kind": "field",
+      "optional": true,
+      "array": false
+    },
+    {
+      "from": "cat-harness/schemas/tabular-csvw.ts#TabularCsvwSchema",
+      "to": "cat-harness/schemas/narrative.ts#NarrativeSchema",
+      "via": "narrative",
       "kind": "field",
       "optional": true,
       "array": false
