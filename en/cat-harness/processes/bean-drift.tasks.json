@@ -1,0 +1,42 @@
+{
+ "$schema": "process-task-panel/v1",
+ "process": "Process_AAI_BeanDrift",
+ "tasks": {
+  "A_Pull": {
+   "id": "A_Pull",
+   "name": "Refresh the beans snapshot",
+   "type": "bpmn:Task",
+   "lane": "Programme automation",
+   "skills": [],
+   "binding": "dangling"
+  },
+  "A_Check": {
+   "id": "A_Check",
+   "name": "Check every linked issue against its beans",
+   "type": "bpmn:Task",
+   "lane": "Programme automation",
+   "skills": [],
+   "binding": "dangling"
+  },
+  "A_Review": {
+   "id": "A_Review",
+   "name": "Review each flag",
+   "type": "bpmn:Task",
+   "lane": "Workstream lead",
+   "skills": [],
+   "binding": "dangling"
+  },
+  "Call_Triage": {
+   "id": "Call_Triage",
+   "name": "Triage the untriaged beans",
+   "type": "bpmn:CallActivity",
+   "lane": "Workstream lead",
+   "skills": [],
+   "calls": {
+    "name": "Assured AI programme: triage a bean",
+    "href": "bean-triage.html"
+   },
+   "binding": "dangling"
+  }
+ }
+}

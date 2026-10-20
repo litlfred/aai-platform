@@ -477,7 +477,7 @@
   "checks": {},
   "withheld": false,
   "links": {
-    "repo": "litlfred/aai-programme",
+    "repo": "litlfred/aai-platform",
     "branch": "main",
     "dir": "library/assured-ai-github-programme-requirements-v042"
   }
