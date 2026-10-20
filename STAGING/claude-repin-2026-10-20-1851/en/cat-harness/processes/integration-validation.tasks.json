@@ -1,0 +1,30 @@
+{
+ "$schema": "process-task-panel/v1",
+ "process": "Process_AAI_Validation",
+ "tasks": {
+  "A_Ready": {
+   "id": "A_Ready",
+   "name": "Set Integration readiness to Ready to integrate",
+   "type": "bpmn:Task",
+   "lane": "Workstream lead",
+   "skills": [],
+   "binding": "dangling"
+  },
+  "A_Check": {
+   "id": "A_Check",
+   "name": "Check the evidence",
+   "type": "bpmn:Task",
+   "lane": "Technical Integration Lead",
+   "skills": [],
+   "binding": "dangling"
+  },
+  "A_Confirm": {
+   "id": "A_Confirm",
+   "name": "Post Validation confirmed: and set Validated",
+   "type": "bpmn:Task",
+   "lane": "Technical Integration Lead",
+   "skills": [],
+   "binding": "dangling"
+  }
+ }
+}

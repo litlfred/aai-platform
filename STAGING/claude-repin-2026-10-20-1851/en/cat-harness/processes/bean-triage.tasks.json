@@ -1,0 +1,26 @@
+{
+ "$schema": "process-task-panel/v1",
+ "process": "Process_AAI_BeanTriage",
+ "tasks": {
+  "Call_Propose": {
+   "id": "Call_Propose",
+   "name": "Propose an epic",
+   "type": "bpmn:CallActivity",
+   "lane": "PM & Architecture Integration",
+   "skills": [],
+   "calls": {
+    "name": "Assured AI programme: propose a new or changed epic",
+    "href": "epic-proposal.html"
+   },
+   "binding": "dangling"
+  },
+  "A_Issue": {
+   "id": "A_Issue",
+   "name": "Open the issue with its bean line",
+   "type": "bpmn:Task",
+   "lane": "Workstream lead",
+   "skills": [],
+   "binding": "dangling"
+  }
+ }
+}

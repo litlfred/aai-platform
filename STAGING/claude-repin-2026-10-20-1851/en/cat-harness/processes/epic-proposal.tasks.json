@@ -1,0 +1,46 @@
+{
+ "$schema": "process-task-panel/v1",
+ "process": "Process_AAI_Epic",
+ "tasks": {
+  "A_Propose": {
+   "id": "A_Propose",
+   "name": "Open a proposal issue in aai-programme",
+   "type": "bpmn:Task",
+   "lane": "Workstream lead",
+   "skills": [],
+   "binding": "dangling"
+  },
+  "A_Review": {
+   "id": "A_Review",
+   "name": "Review the proposal",
+   "type": "bpmn:Task",
+   "lane": "PM & Architecture Integration",
+   "skills": [],
+   "binding": "dangling"
+  },
+  "A_Revise": {
+   "id": "A_Revise",
+   "name": "Revise the proposal",
+   "type": "bpmn:Task",
+   "lane": "Workstream lead",
+   "skills": [],
+   "binding": "dangling"
+  },
+  "A_Create": {
+   "id": "A_Create",
+   "name": "Create or change the epic",
+   "type": "bpmn:Task",
+   "lane": "PM & Architecture Integration",
+   "skills": [],
+   "binding": "dangling"
+  },
+  "A_Features": {
+   "id": "A_Features",
+   "name": "Add features under the epic",
+   "type": "bpmn:Task",
+   "lane": "Workstream lead",
+   "skills": [],
+   "binding": "dangling"
+  }
+ }
+}
