@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Library · Assured AI programme</title>
+<style>
+:root { --fg:#1f2328; --bg:#fff; --muted:#59636e; --line:#d1d9e0; --link:#0969da; --code:#f6f8fa; --banner:#fff8c5; }
+@media (prefers-color-scheme: dark) { :root { --fg:#e6edf3; --bg:#0d1117; --muted:#9198a1; --line:#3d444d; --link:#4493f8; --code:#151b23; --banner:#3b2e00; } }
+body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif; }
+header { border-bottom:1px solid var(--line); padding:12px 16px; display:flex; flex-wrap:wrap; gap:6px 18px; align-items:baseline; }
+header strong { margin-right:8px; }
+header a { color:var(--link); text-decoration:none; }
+main { max-width:980px; margin:0 auto; padding:16px; overflow-wrap:anywhere; }
+a { color:var(--link); }
+code { background:var(--code); padding:0 4px; border-radius:4px; font-size:.92em; }
+pre { background:var(--code); padding:12px; overflow:auto; border-radius:6px; }
+pre code { padding:0; }
+table { border-collapse:collapse; display:block; overflow:auto; margin:12px 0; }
+th, td { border:1px solid var(--line); padding:6px 10px; vertical-align:top; text-align:left; }
+img { max-width:100%; background:#fff; }
+.banner { background:var(--banner); padding:8px 16px; border-bottom:1px solid var(--line); }
+footer { color:var(--muted); font-size:.85em; max-width:980px; margin:24px auto; padding:0 16px; }
+</style>
+</head>
+<body>
+<header><strong>Assured AI programme</strong><a href="../index.html">Home</a><a href="../pulled/index.html">Board</a><a href="../processes/index.html">Processes</a><a href="../docs/requirements-v0.4.2.html">Requirements v0.4.2</a><a href="../library/index.html">Library</a></header>
+<main>
+<h1>Library</h1>
+<p>The programme requirements, ingested from <code>uploads/</code>. Each section is also a JSON-LD node.</p>
+<h2>Assured AI: requirements for the programme GitHub project</h2>
+<p><code>assured-ai-github-programme-requirements-v041</code></p>
+<ul>
+<li><a href="assured-ai-github-programme-requirements-v041/sections/s001-assured-ai-requirements-for-the-programme-github.html">Assured AI: requirements for the programme GitHub project</a></li>
+<li><a href="assured-ai-github-programme-requirements-v041/sections/s002-1-what-the-build-must-achieve.html">1. What the build must achieve</a></li>
+<li><a href="assured-ai-github-programme-requirements-v041/sections/s003-1-1-terms-used-in-this-document.html">1.1 Terms used in this document</a></li>
+<li><a href="assured-ai-github-programme-requirements-v041/sections/s004-2-design-principles.html">2. Design principles</a></li>
+<li><a href="assured-ai-github-programme-requirements-v041/sections/s005-3-decisions-needed-before-the-build.html">3. Decisions needed before the build</a></li>
+<li><a href="assured-ai-github-programme-requirements-v041/sections/s006-4-structure.html">4. Structure</a></li>
+<li><a href="assured-ai-github-programme-requirements-v041/sections/s007-5-work-item-taxonomy.html">5. Work item taxonomy</a></li>
+<li><a href="assured-ai-github-programme-requirements-v041/sections/s008-5-1-issue-types.html">5.1 Issue types</a></li>
+<li><a href="assured-ai-github-programme-requirements-v041/sections/s009-5-2-hierarchy.html">5.2 Hierarchy</a></li>
+<li><a href="assured-ai-github-programme-requirements-v041/sections/s010-5-3-fields-shown-on-each-issue-type.html">5.3 Fields shown on each issue type</a></li>
+<li><a href="assured-ai-github-programme-requirements-v041/sections/s011-6-information-classification.html">6. Information classification</a></li>
+<li><a href="assured-ai-github-programme-requirements-v041/sections/s012-7-fields.html">7. Fields</a></li>
+<li><a href="assured-ai-github-programme-requirements-v041/sections/s013-7-1-organisation-issue-fields.html">7.1 Organisation issue fields</a></li>
+<li><a href="assured-ai-github-programme-requirements-v041/sections/s014-7-2-project-fields.html">7.2 Project fields</a></li>
+<li><a href="assured-ai-github-programme-requirements-v041/sections/s015-7-3-labels.html">7.3 Labels</a></li>
+<li><a href="assured-ai-github-programme-requirements-v041/sections/s016-7-4-fallback-if-issue-fields-are-unavailable.html">7.4 Fallback if issue fields are unavailable</a></li>
+<li><a href="assured-ai-github-programme-requirements-v041/sections/s017-8-views-and-metrics.html">8. Views and metrics</a></li>
+<li><a href="assured-ai-github-programme-requirements-v041/sections/s018-8-1-assured-ai-programme-views.html">8.1 Assured AI Programme views</a></li>
+<li><a href="assured-ai-github-programme-requirements-v041/sections/s019-8-2-metrics.html">8.2 Metrics</a></li>
+<li><a href="assured-ai-github-programme-requirements-v041/sections/s020-8-3-assured-ai-workstream-template.html">8.3 Assured AI Workstream Template</a></li>
+<li><a href="assured-ai-github-programme-requirements-v041/sections/s021-9-dependencies.html">9. Dependencies</a></li>
+<li><a href="assured-ai-github-programme-requirements-v041/sections/s022-10-linking-to-workstream-projects.html">10. Linking to workstream projects</a></li>
+<li><a href="assured-ai-github-programme-requirements-v041/sections/s023-11-automation.html">11. Automation</a></li>
+<li><a href="assured-ai-github-programme-requirements-v041/sections/s024-12-pilot-build.html">12. Pilot build</a></li>
+<li><a href="assured-ai-github-programme-requirements-v041/sections/s025-13-build-sequence.html">13. Build sequence</a></li>
+<li><a href="assured-ai-github-programme-requirements-v041/sections/s026-14-inputs-the-pm-will-provide.html">14. Inputs the PM will provide</a></li>
+<li><a href="assured-ai-github-programme-requirements-v041/sections/s027-15-acceptance-criteria.html">15. Acceptance criteria</a></li>
+<li><a href="assured-ai-github-programme-requirements-v041/sections/s028-16-build-report.html">16. Build report</a></li>
+<li><a href="assured-ai-github-programme-requirements-v041/sections/s029-17-open-points-to-be-confirmed-by-the-pm.html">17. Open points to be confirmed by the PM</a></li>
+<li><a href="assured-ai-github-programme-requirements-v041/sections/s030-18-out-of-scope.html">18. Out of scope</a></li>
+</ul>
+<h2>Assured AI: requirements for the programme GitHub project</h2>
+<p><code>assured-ai-github-programme-requirements-v042</code></p>
+<ul>
+<li><a href="assured-ai-github-programme-requirements-v042/sections/s001-assured-ai-requirements-for-the-programme-github.html">Assured AI: requirements for the programme GitHub project</a></li>
+<li><a href="assured-ai-github-programme-requirements-v042/sections/s002-0-what-changed-from-v0-4-1.html">0. What changed from v0.4.1</a></li>
+<li><a href="assured-ai-github-programme-requirements-v042/sections/s003-1-what-the-build-must-achieve.html">1. What the build must achieve</a></li>
+<li><a href="assured-ai-github-programme-requirements-v042/sections/s004-1-1-terms-used-in-this-document.html">1.1 Terms used in this document</a></li>
+<li><a href="assured-ai-github-programme-requirements-v042/sections/s005-2-design-principles.html">2. Design principles</a></li>
+<li><a href="assured-ai-github-programme-requirements-v042/sections/s006-3-decisions-needed-before-the-build.html">3. Decisions needed before the build</a></li>
+<li><a href="assured-ai-github-programme-requirements-v042/sections/s007-4-structure.html">4. Structure</a></li>
+<li><a href="assured-ai-github-programme-requirements-v042/sections/s008-5-work-item-taxonomy.html">5. Work item taxonomy</a></li>
+<li><a href="assured-ai-github-programme-requirements-v042/sections/s009-5-1-issue-types.html">5.1 Issue types</a></li>
+<li><a href="assured-ai-github-programme-requirements-v042/sections/s010-5-2-hierarchy.html">5.2 Hierarchy</a></li>
+<li><a href="assured-ai-github-programme-requirements-v042/sections/s011-5-3-fields-shown-on-each-issue-type.html">5.3 Fields shown on each issue type</a></li>
+<li><a href="assured-ai-github-programme-requirements-v042/sections/s012-6-information-classification.html">6. Information classification</a></li>
+<li><a href="assured-ai-github-programme-requirements-v042/sections/s013-7-fields.html">7. Fields</a></li>
+<li><a href="assured-ai-github-programme-requirements-v042/sections/s014-7-1-organisation-issue-fields.html">7.1 Organisation issue fields</a></li>
+<li><a href="assured-ai-github-programme-requirements-v042/sections/s015-7-2-project-fields.html">7.2 Project fields</a></li>
+<li><a href="assured-ai-github-programme-requirements-v042/sections/s016-7-3-labels.html">7.3 Labels</a></li>
+<li><a href="assured-ai-github-programme-requirements-v042/sections/s017-7-4-fallback-if-issue-fields-are-unavailable.html">7.4 Fallback if issue fields are unavailable</a></li>
+<li><a href="assured-ai-github-programme-requirements-v042/sections/s018-8-views-and-metrics.html">8. Views and metrics</a></li>
+<li><a href="assured-ai-github-programme-requirements-v042/sections/s019-8-1-assured-ai-programme-views.html">8.1 Assured AI Programme views</a></li>
+<li><a href="assured-ai-github-programme-requirements-v042/sections/s020-8-2-metrics.html">8.2 Metrics</a></li>
+<li><a href="assured-ai-github-programme-requirements-v042/sections/s021-8-3-assured-ai-workstream-template.html">8.3 Assured AI Workstream Template</a></li>
+<li><a href="assured-ai-github-programme-requirements-v042/sections/s022-9-dependencies.html">9. Dependencies</a></li>
+<li><a href="assured-ai-github-programme-requirements-v042/sections/s023-10-linking-to-workstream-projects.html">10. Linking to workstream projects</a></li>
+<li><a href="assured-ai-github-programme-requirements-v042/sections/s024-11-automation.html">11. Automation</a></li>
+<li><a href="assured-ai-github-programme-requirements-v042/sections/s025-12-pilot-build.html">12. Pilot build</a></li>
+<li><a href="assured-ai-github-programme-requirements-v042/sections/s026-13-build-sequence.html">13. Build sequence</a></li>
+<li><a href="assured-ai-github-programme-requirements-v042/sections/s027-14-inputs-the-pm-will-provide.html">14. Inputs the PM will provide</a></li>
+<li><a href="assured-ai-github-programme-requirements-v042/sections/s028-15-acceptance-criteria.html">15. Acceptance criteria</a></li>
+<li><a href="assured-ai-github-programme-requirements-v042/sections/s029-16-build-report.html">16. Build report</a></li>
+<li><a href="assured-ai-github-programme-requirements-v042/sections/s030-17-open-points-to-be-confirmed-by-the-pm.html">17. Open points to be confirmed by the PM</a></li>
+<li><a href="assured-ai-github-programme-requirements-v042/sections/s031-18-out-of-scope.html">18. Out of scope</a></li>
+</ul>
+
+</main>
+<footer>Built from <a href="https://github.com/litlfred/aai-programme/tree/21de491990fa80fbd44bc47d9e1c81339df437fb">litlfred/aai-programme@21de491</a>.</footer>
+</body>
+</html>

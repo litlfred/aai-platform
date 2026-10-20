@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>library/assured-ai-github-programme-requirements-v042/sections/s014-7-1-organisation-issue-fields.md · Assured AI programme</title>
+<style>
+:root { --fg:#1f2328; --bg:#fff; --muted:#59636e; --line:#d1d9e0; --link:#0969da; --code:#f6f8fa; --banner:#fff8c5; }
+@media (prefers-color-scheme: dark) { :root { --fg:#e6edf3; --bg:#0d1117; --muted:#9198a1; --line:#3d444d; --link:#4493f8; --code:#151b23; --banner:#3b2e00; } }
+body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif; }
+header { border-bottom:1px solid var(--line); padding:12px 16px; display:flex; flex-wrap:wrap; gap:6px 18px; align-items:baseline; }
+header strong { margin-right:8px; }
+header a { color:var(--link); text-decoration:none; }
+main { max-width:980px; margin:0 auto; padding:16px; overflow-wrap:anywhere; }
+a { color:var(--link); }
+code { background:var(--code); padding:0 4px; border-radius:4px; font-size:.92em; }
+pre { background:var(--code); padding:12px; overflow:auto; border-radius:6px; }
+pre code { padding:0; }
+table { border-collapse:collapse; display:block; overflow:auto; margin:12px 0; }
+th, td { border:1px solid var(--line); padding:6px 10px; vertical-align:top; text-align:left; }
+img { max-width:100%; background:#fff; }
+.banner { background:var(--banner); padding:8px 16px; border-bottom:1px solid var(--line); }
+footer { color:var(--muted); font-size:.85em; max-width:980px; margin:24px auto; padding:0 16px; }
+</style>
+</head>
+<body>
+<header><strong>Assured AI programme</strong><a href="../../../index.html">Home</a><a href="../../../pulled/index.html">Board</a><a href="../../../processes/index.html">Processes</a><a href="../../../docs/requirements-v0.4.2.html">Requirements v0.4.2</a><a href="../../../library/index.html">Library</a></header>
+<main>
+<hr />
+<h2>doc_id: assured-ai-github-programme-requirements-v042
+doc_title: &quot;Assured AI: requirements for the programme GitHub project&quot;
+section_id: s014-7-1-organisation-issue-fields
+section_title: &quot;7.1 Organisation issue fields&quot;
+file: &quot;Assured_AI_GitHub_Programme_Requirements_v0.4.2.md&quot;
+lines: 201-234
+source_sha256: 74634ec34e62b978
+granularity: heading</h2>
+<h3>7.1 Organisation issue fields</h3>
+<p>Shared values. Each one is set once on the issue and shows the same value in every project.</p>
+<table>
+<thead>
+<tr><th>Field</th><th>Type</th><th>Options or format</th></tr>
+</thead>
+<tbody>
+<tr><td>Workstream</td><td>Single select</td><td>WS1 Knowledge graph, WS2 Authoring, WS3 Evaluation, WS4 Localization, WS5 Governance and stewardship, Platform, Cross-workstream</td></tr>
+<tr><td>Programme status</td><td>Single select</td><td>Not started, In progress, In review, Done, Cancelled</td></tr>
+<tr><td>Delivery health</td><td>Single select</td><td>On track, At risk, Blocked</td></tr>
+<tr><td>Risk category</td><td>Single select</td><td>Dependency, Schedule, Technical, Resource, Review, External, Governance</td></tr>
+<tr><td>Impact</td><td>Single select</td><td>Low, Medium, High</td></tr>
+<tr><td>Pipeline stage</td><td>Single select</td><td>L1 Corpus, KG Knowledge graph, L2 Operational (DAK), L3 Computable (FHIR/CQL), L5 Health skills + MCP, EVAL Evaluation, LOC Localization, Cross-cutting / N/A</td></tr>
+<tr><td>Integration readiness</td><td>Single select</td><td>Not assessed, Not ready, Partly ready, Ready to integrate, Validated</td></tr>
+<tr><td>Review type</td><td>Single select</td><td>Not needed, SME sign-off, Validation packet adjudication, Science Division publication clearance</td></tr>
+<tr><td>Review status</td><td>Single select</td><td>Not submitted, Submitted, Under WHO review, Feedback issued, Resubmitted, Approved, Closed</td></tr>
+<tr><td>Gates output</td><td>Single select</td><td>One option per Gates output from the input list, plus None</td></tr>
+<tr><td>Primary research question</td><td>Single select</td><td>R1 to R7, plus None</td></tr>
+<tr><td>Start date</td><td>Date</td><td></td></tr>
+<tr><td>Target date</td><td>Date</td><td>For a review item, the date the review is due. For a dependency, the date it is needed by</td></tr>
+<tr><td>Backlog ref</td><td>Text</td><td>Epic code, for example WS1-E2</td></tr>
+</tbody>
+</table>
+<p>That uses up to 14 organisation issue fields. Before creating any of them, the agent must inspect the organisation's existing issue fields, reuse any compatible fields, and confirm that creating the remainder will not exceed the organisation limit or consume unreasonable shared capacity. If headroom is short, the PM decides which fields to drop; the agent does not choose.</p>
+<p>Each project has a limit of 50 fields in total, including system fields and issue fields. Workstream leads can add fields to their own projects, so pre-flight and validation must check both limits.</p>
+<p>Notes on meaning:</p>
+<ul>
+<li><strong>Delivery health</strong> describes where the work stands. It is not a WHO judgement of a partner. Risk category and Impact are set only when Delivery health is At risk or Blocked.</li>
+<li><strong>Next action.</strong> When Delivery health is At risk or Blocked, the issue body carries a short &quot;Next action&quot; line: what will happen, who will do it, and by when. It is kept in the body rather than as a field, to save field capacity.</li>
+<li><strong>Integration readiness</strong> is a shared technical delivery status, not an internal WHO assurance judgement.</li>
+<li><strong>Review status</strong> is shared, so partners can see where a review stands. Reviewer details, comments and adjudication reasoning are restricted (section 6).</li>
+<li><strong>Pipeline stage</strong> describes the end-to-end technical flow. Governance and stewardship are cross-cutting; WS5 work uses <code>Cross-cutting / N/A</code> where no pipeline stage applies.</li>
+<li><strong>Programme status.</strong> Programme views use Programme status, not the built-in Status field. The built-in Status is stored separately in each project, so it will differ between projects. Workstream projects keep the built-in Status for their own boards. Do not automatically mirror a workstream project's built-in Status into Programme status.</li>
+</ul>
+
+</main>
+<footer>Built from <a href="https://github.com/litlfred/aai-programme/tree/21de491990fa80fbd44bc47d9e1c81339df437fb">litlfred/aai-programme@21de491</a>.</footer>
+</body>
+</html>

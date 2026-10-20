@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Checklist — Assured AI programme: build the GitHub set-up · Assured AI programme</title>
+<style>
+:root { --fg:#1f2328; --bg:#fff; --muted:#59636e; --line:#d1d9e0; --link:#0969da; --code:#f6f8fa; --banner:#fff8c5; }
+@media (prefers-color-scheme: dark) { :root { --fg:#e6edf3; --bg:#0d1117; --muted:#9198a1; --line:#3d444d; --link:#4493f8; --code:#151b23; --banner:#3b2e00; } }
+body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif; }
+header { border-bottom:1px solid var(--line); padding:12px 16px; display:flex; flex-wrap:wrap; gap:6px 18px; align-items:baseline; }
+header strong { margin-right:8px; }
+header a { color:var(--link); text-decoration:none; }
+main { max-width:980px; margin:0 auto; padding:16px; overflow-wrap:anywhere; }
+a { color:var(--link); }
+code { background:var(--code); padding:0 4px; border-radius:4px; font-size:.92em; }
+pre { background:var(--code); padding:12px; overflow:auto; border-radius:6px; }
+pre code { padding:0; }
+table { border-collapse:collapse; display:block; overflow:auto; margin:12px 0; }
+th, td { border:1px solid var(--line); padding:6px 10px; vertical-align:top; text-align:left; }
+img { max-width:100%; background:#fff; }
+.banner { background:var(--banner); padding:8px 16px; border-bottom:1px solid var(--line); }
+footer { color:var(--muted); font-size:.85em; max-width:980px; margin:24px auto; padding:0 16px; }
+</style>
+</head>
+<body>
+<header><strong>Assured AI programme</strong><a href="../../index.html">Home</a><a href="../../pulled/index.html">Board</a><a href="../../processes/index.html">Processes</a><a href="../../docs/requirements-v0.4.2.html">Requirements v0.4.2</a><a href="../../library/index.html">Library</a></header>
+<main>
+<!-- GENERATED from aai-programme/processes/process/programme-build.bpmn by cat-harness-tools/scripts/bpmn-checklist.ts. Do not edit: change the diagram and regenerate (bun run cat bpmn:checklist). -->
+<h1>Checklist — Assured AI programme: build the GitHub set-up</h1>
+<blockquote>
+<p><strong>Generated, and not the authority.</strong> This is <code>aai-programme/processes/process/programme-build.bpmn</code> (process <code>Process_AAI_Build</code>) walked as a state machine. The diagram and the workflow engine decide; this list only reads them. Follow the <code>next:</code> line of each step rather than the order on the page, and record each step with the call it names, so the engine's committed state — not this list — says which edge was taken.</p>
+</blockquote>
+<p>Build the shared programme project, its repositories and automations in the order section 13 of the programme requirements sets, stopping wherever a decision, a credential or a pilot test is missing.</p>
+<h2>Begin — Build requested (<code>Start_AAI_Build</code>)</h2>
+<ul>
+<li>Begin here.</li>
+<li>Call <code>workflow_start</code> with <code>process: &quot;Process_AAI_Build&quot;</code> and the subject this run is about; keep the instance id it returns.</li>
+<li>next: → <code>A_Preflight</code> (Step 1: pre-flight)</li>
+</ul>
+<h3>1. Step 1: pre-flight (<code>A_Preflight</code>)</h3>
+<ul>
+<li>Who: the <code>Build agent</code> lane (role <code>build-agent</code>).</li>
+<li>What: Inspect the organisation read-only: issue types, issue fields and headroom, project field counts, projects, teams, repository policies, SSO or EMU, and permissions.</li>
+<li>Record it: <code>workflow_complete</code> with <code>node: &quot;A_Preflight&quot;</code>.</li>
+<li>next: → <code>GW_Decided</code> (Decisions for the next step confirmed?)</li>
+</ul>
+<h3>Decide — Decisions for the next step confirmed? (<code>GW_Decided</code>)</h3>
+<ul>
+<li>Answered from the section 3 decision record: is every decision that step 2 onward depends on confirmed?</li>
+<li>Call <code>workflow_complete</code> with <code>node: &quot;GW_Decided&quot;</code> and <code>outcome</code> set to the label that holds:
+<ul>
+<li>«no» → <code>A_Decide</code> (Answer the open BD decisions)</li>
+<li>«yes» → <code>A_OrgSetup</code> (Step 2: create or reuse issue types and fields)</li>
+</ul>
+</li>
+</ul>
+<h3>2. Answer the open BD decisions (<code>A_Decide</code>)</h3>
+<ul>
+<li>Who: the <code>WHO GitHub owner</code> lane (role <code>who-github-owner</code>).</li>
+<li>What: BD-01a, BD-03a, BD-03b, BD-05, BD-06 and BD-08, each with its recommended default unless the owner says otherwise.</li>
+<li>Record it: <code>workflow_complete</code> with <code>node: &quot;A_Decide&quot;</code>.</li>
+<li>next: → <code>A_Preflight</code> (Step 1: pre-flight)</li>
+</ul>
+<h3>3. Step 2: create or reuse issue types and fields (<code>A_OrgSetup</code>)</h3>
+<ul>
+<li>Who: the <code>WHO GitHub owner</code> lane (role <code>who-github-owner</code>).</li>
+<li>What: Create or reuse the section 5.1 issue types (<code>AAI</code> prefix where new) and the section 7.1 issue fields, and pin them as section 5.3 says.</li>
+<li>Record it: <code>workflow_complete</code> with <code>node: &quot;A_OrgSetup&quot;</code>.</li>
+<li>next: → <code>A_Repos</code> (Step 3: repositories, roles and labels)</li>
+</ul>
+<h3>4. Step 3: repositories, roles and labels (<code>A_Repos</code>)</h3>
+<ul>
+<li>Who: the <code>Build agent</code> lane (role <code>build-agent</code>).</li>
+<li>What: Create <code>aai-programme</code>, <code>aai-pm</code> and the two workstream repositories the pilot needs, with the BD-04 roles and the section 7.3 labels.</li>
+<li>Record it: <code>workflow_complete</code> with <code>node: &quot;A_Repos&quot;</code>.</li>
+<li>next: → <code>A_Projects</code> (Step 4: programme project and template)</li>
+</ul>
+<h3>5. Step 4: programme project and template (<code>A_Projects</code>)</h3>
+<ul>
+<li>Who: the <code>Build agent</code> lane (role <code>build-agent</code>).</li>
+<li>What: Create the programme project with views V1 to V13 in the listed order, and the workstream template from section 8.3.</li>
+<li>Record it: <code>workflow_complete</code> with <code>node: &quot;A_Projects&quot;</code>.</li>
+<li>next: → <code>A_Readmes</code> (Step 5: READMEs and directory)</li>
+</ul>
+<h3>6. Step 5: READMEs and directory (<code>A_Readmes</code>)</h3>
+<ul>
+<li>Who: the <code>Build agent</code> lane (role <code>build-agent</code>).</li>
+<li>What: Write the READMEs (AC-10, AUTO-07, LINK-02, LINK-03, LINK-07) and create the pinned Workstream directory issue (LINK-01).</li>
+<li>Record it: <code>workflow_complete</code> with <code>node: &quot;A_Readmes&quot;</code>.</li>
+<li>next: → <code>GW_Creds</code> (Automation credentials in place?)</li>
+</ul>
+<h3>Decide — Automation credentials in place? (<code>GW_Creds</code>)</h3>
+<ul>
+<li>Answered by whether the BD-08 credentials exist as an organisation secret.</li>
+<li>Call <code>workflow_complete</code> with <code>node: &quot;GW_Creds&quot;</code> and <code>outcome</code> set to the label that holds:
+<ul>
+<li>«no» → <code>End_StopCreds</code> (Stopped: credentials needed)</li>
+<li>«yes» → <code>A_Automations</code> (Step 6: automations AUTO-01 to AUTO-11)</li>
+</ul>
+</li>
+</ul>
+<h2>Done — Stopped: credentials needed (<code>End_StopCreds</code>)</h2>
+<ul>
+<li>The instance completes here: The build stops before step 6 and reports the permission it needs. <code>workflow_next</code> then reports nothing enabled — that, not this line, is the record of completion.</li>
+</ul>
+<h3>7. Step 6: automations AUTO-01 to AUTO-11 (<code>A_Automations</code>)</h3>
+<ul>
+<li>Who: the <code>Build agent</code> lane (role <code>build-agent</code>).</li>
+<li>What: Set up the automations.</li>
+<li>Record it: <code>workflow_complete</code> with <code>node: &quot;A_Automations&quot;</code>.</li>
+<li>next: → <code>A_Pilot</code> (Step 7: pilot build)</li>
+</ul>
+<h3>8. Step 7: pilot build (<code>A_Pilot</code>)</h3>
+<ul>
+<li>Who: the <code>Build agent</code> lane (role <code>build-agent</code>).</li>
+<li>What: Build the section 12 pilot set from representative Assured AI items, each marked as a pilot, and run PIL-01 to PIL-11.</li>
+<li>Record it: <code>workflow_complete</code> with <code>node: &quot;A_Pilot&quot;</code>.</li>
+<li>next: → <code>A_Validate</code> (Confirm validation on the pilot item)</li>
+</ul>
+<h3>9. Confirm validation on the pilot item (<code>A_Validate</code>)</h3>
+<ul>
+<li>Who: the <code>Technical Integration Lead</code> lane (role <code>technical-integration-lead</code>).</li>
+<li>What: For PIL-07: post <code>Validation confirmed:</code> with the evidence on the pilot item, so AUTO-10 removes the <code>validation-exception</code> label.</li>
+<li>Record it: <code>workflow_complete</code> with <code>node: &quot;A_Validate&quot;</code>.</li>
+<li>next: → <code>GW_Pilot</code> (Every pilot test passed?)</li>
+</ul>
+<h3>Decide — Every pilot test passed? (<code>GW_Pilot</code>)</h3>
+<ul>
+<li>Answered by the PIL-01 to PIL-11 results.</li>
+<li>Call <code>workflow_complete</code> with <code>node: &quot;GW_Pilot&quot;</code> and <code>outcome</code> set to the label that holds:
+<ul>
+<li>«no» → <code>End_StopPilot</code> (Stopped: a pilot test failed)</li>
+<li>«yes» → <code>A_Inputs</code> (Provide the section 14 inputs)</li>
+</ul>
+</li>
+</ul>
+<h2>Done — Stopped: a pilot test failed (<code>End_StopPilot</code>)</h2>
+<ul>
+<li>The instance completes here: The build stops and reports which pilot test failed. <code>workflow_next</code> then reports nothing enabled — that, not this line, is the record of completion.</li>
+</ul>
+<h3>10. Provide the section 14 inputs (<code>A_Inputs</code>)</h3>
+<ul>
+<li>Who: the <code>PM &amp; Architecture Integration</code> lane (role <code>pm-architecture-integration</code>).</li>
+<li>What: The epics CSV reviewed by each lead, the Gates output list, R1 to R7, the dependency register with restricted content removed, the directory details, and the needed GitHub usernames.</li>
+<li>Record it: <code>workflow_complete</code> with <code>node: &quot;A_Inputs&quot;</code>.</li>
+<li>next: → <code>A_Import</code> (Step 8: bulk import and backfill)</li>
+</ul>
+<h3>11. Step 8: bulk import and backfill (<code>A_Import</code>)</h3>
+<ul>
+<li>Who: the <code>Build agent</code> lane (role <code>build-agent</code>).</li>
+<li>What: Import the inputs, leaving missing values empty and listing them, then run the AUTO-11 backfill.</li>
+<li>Record it: <code>workflow_complete</code> with <code>node: &quot;A_Import&quot;</code>.</li>
+<li>next: → <code>A_Charts</code> (Step 9: charts and acceptance checks)</li>
+</ul>
+<h3>12. Step 9: charts and acceptance checks (<code>A_Charts</code>)</h3>
+<ul>
+<li>Who: the <code>Build agent</code> lane (role <code>build-agent</code>).</li>
+<li>What: Build charts M1 to M5, or record which cannot be built natively, and check AC-01 to AC-19.</li>
+<li>Record it: <code>workflow_complete</code> with <code>node: &quot;A_Charts&quot;</code>.</li>
+<li>next: → <code>A_Report</code> (Step 10: build report)</li>
+</ul>
+<h3>13. Step 10: build report (<code>A_Report</code>)</h3>
+<ul>
+<li>Who: the <code>Build agent</code> lane (role <code>build-agent</code>).</li>
+<li>What: Hand back the section 16 report.</li>
+<li>Record it: <code>workflow_complete</code> with <code>node: &quot;A_Report&quot;</code>.</li>
+<li>next: → <code>End_AAI_Build</code> (Build report handed back)</li>
+</ul>
+<h2>Done — Build report handed back (<code>End_AAI_Build</code>)</h2>
+<ul>
+<li>The instance completes here. <code>workflow_next</code> then reports nothing enabled — that, not this line, is the record of completion.</li>
+</ul>
+
+</main>
+<footer>Built from <a href="https://github.com/litlfred/aai-programme/tree/21de491990fa80fbd44bc47d9e1c81339df437fb">litlfred/aai-programme@21de491</a>.</footer>
+</body>
+</html>

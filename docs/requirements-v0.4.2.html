@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Assured AI: requirements for the programme GitHub project · Assured AI programme</title>
+<style>
+:root { --fg:#1f2328; --bg:#fff; --muted:#59636e; --line:#d1d9e0; --link:#0969da; --code:#f6f8fa; --banner:#fff8c5; }
+@media (prefers-color-scheme: dark) { :root { --fg:#e6edf3; --bg:#0d1117; --muted:#9198a1; --line:#3d444d; --link:#4493f8; --code:#151b23; --banner:#3b2e00; } }
+body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif; }
+header { border-bottom:1px solid var(--line); padding:12px 16px; display:flex; flex-wrap:wrap; gap:6px 18px; align-items:baseline; }
+header strong { margin-right:8px; }
+header a { color:var(--link); text-decoration:none; }
+main { max-width:980px; margin:0 auto; padding:16px; overflow-wrap:anywhere; }
+a { color:var(--link); }
+code { background:var(--code); padding:0 4px; border-radius:4px; font-size:.92em; }
+pre { background:var(--code); padding:12px; overflow:auto; border-radius:6px; }
+pre code { padding:0; }
+table { border-collapse:collapse; display:block; overflow:auto; margin:12px 0; }
+th, td { border:1px solid var(--line); padding:6px 10px; vertical-align:top; text-align:left; }
+img { max-width:100%; background:#fff; }
+.banner { background:var(--banner); padding:8px 16px; border-bottom:1px solid var(--line); }
+footer { color:var(--muted); font-size:.85em; max-width:980px; margin:24px auto; padding:0 16px; }
+</style>
+</head>
+<body>
+<header><strong>Assured AI programme</strong><a href="../index.html">Home</a><a href="../pulled/index.html">Board</a><a href="../processes/index.html">Processes</a><a href="../docs/requirements-v0.4.2.html">Requirements v0.4.2</a><a href="../library/index.html">Library</a></header>
+<main>
+<h1>Assured AI: requirements for the programme GitHub project</h1>
+<p><strong>Build specification for an AI agent</strong></p>
+<table>
+<thead>
+<tr><th>Document control</th><th>Detail</th></tr>
+</thead>
+<tbody>
+<tr><td>Purpose</td><td>Requirements for an AI agent to set up one shared, organisation-level GitHub Project for the WHO Assured AI project (Gates Foundation grant INV-108130), linked to the workstream projects, with a small restricted repository for sensitive material</td></tr>
+<tr><td>Version</td><td>0.4.2 draft, 20 October 2026. Replaces v0.4.1. Changes in section 0</td></tr>
+<tr><td>Status</td><td>Approved for a pilot build. The build must not go beyond pre-flight (section 13, step 1) until the decisions in section 3 are confirmed</td></tr>
+<tr><td>Owner</td><td>PM &amp; Architecture Integration, Assured AI project, WHO</td></tr>
+<tr><td>Audience</td><td>AI build agent, WHO GitHub organisation owners, workstream leads</td></tr>
+</tbody>
+</table>
+<h2>0. What changed from v0.4.1</h2>
+<p>From the PM &amp; Architecture Integration's decisions of 20 October 2026 on <a href="https://github.com/litlfred/folio-assistant/issues/2605#issuecomment-6291128158">litlfred/folio-assistant#2605</a>:</p>
+<table>
+<thead>
+<tr><th>#</th><th>Change</th><th>Sections</th></tr>
+</thead>
+<tbody>
+<tr><td>1</td><td><strong>WS5 has no repository or project of its own.</strong> WS5 Governance and stewardship is led by the PM &amp; Architecture Integration and managed in the programme project. WS5 features and tasks live in <code>aai-programme</code></td><td>1, 1.1, 4, 5.1</td></tr>
+<tr><td>2</td><td><strong>New <code>aai-platform</code> repository</strong> for Platform: a cross-cutting technical delivery function supporting WS1 to WS5, not a sixth research workstream. Same rules as the workstream repositories. Lead to be confirmed</td><td>1.1, 4, 17</td></tr>
+<tr><td>3</td><td><strong>AUTO-01 adds <code>aai-programme</code> issues by issue type only</strong> (Epic, Milestone, Research question, Dependency, Decision, Assumption), so routine WS5 tasks stay off the shared board but still roll up into their epics</td><td>11, LINK-05</td></tr>
+<tr><td>4</td><td><strong>The pilot uses representative Assured AI items</strong>, marked as pilot, with no artificial dependencies. Project 110 items are not moved for the pilot; they are reviewed with Ritika after it passes</td><td>12</td></tr>
+<tr><td>5</td><td><strong>Project 110 stays separate.</strong> Its views and iteration setup may be reused for the workstream template, without changing 110</td><td>8.3, 17</td></tr>
+<tr><td>6</td><td>The Technical Integration Lead role is held by the WHO WS1 lead; the authority comes from the role</td><td>1.1</td></tr>
+<tr><td>7</td><td><strong><code>aai-programme</code> is public</strong>, by owner decision, as an exception to SEC-04. To be accepted by the PM &amp; Architecture Integration</td><td>6</td></tr>
+</tbody>
+</table>
+<p><strong>Staging.</strong> Until the owner syncs to the WHO organisation, <code>litlfred/aai-programme</code> (renamed from <code>litlfred/aai-platform</code> on 20 October 2026) stands in for <code>aai-programme</code>. A Platform repository named <code>aai-platform</code> is still needed (section 4).</p>
+<h2>1. What the build must achieve</h2>
+<p>Workstream leads run their own delivery in their own projects. Everyone involved in the programme, including partners and Gates Foundation contacts, sees one shared programme picture: what is planned, when, how healthy delivery is, what depends on what, and what is waiting for WHO review. Only genuinely sensitive material is kept back, in a small restricted repository. The same issue is never copied to make any of this work.</p>
+<p>The two principles the agent must follow:</p>
+<ul>
+<li><strong>Share operational status and delivery impact; keep sensitive reasoning and internal deliberation private.</strong></li>
+<li><strong>Issue fields hold the shared values; the projects are different views of them.</strong></li>
+</ul>
+<table>
+<thead>
+<tr><th>Layer</th><th>GitHub object</th><th>Purpose</th><th>Main users</th></tr>
+</thead>
+<tbody>
+<tr><td>Programme (shared)</td><td>Project: <strong>Assured AI Programme</strong></td><td>Plan, dates, delivery health, dependencies, integration readiness, WHO review status, decisions and research questions</td><td>Partners, Gates Foundation contacts, workstream leads, WHO team</td></tr>
+<tr><td>Restricted notes</td><td>Repository: <code>aai-pm</code> (no project)</td><td>Sensitive WHO material only (section 6)</td><td>PM &amp; Architecture Integration and named WHO staff</td></tr>
+<tr><td>Workstream delivery</td><td>Projects built by each workstream lead (WS1 to WS4, Platform) from the template</td><td>Sprint work: features, stories, spikes</td><td>Each workstream's lead and team</td></tr>
+<tr><td>WS5 delivery</td><td>The programme project itself</td><td>Governance and stewardship deliverables, as programme epics</td><td>PM &amp; Architecture Integration</td></tr>
+</tbody>
+</table>
+<h3>1.1 Terms used in this document</h3>
+<table>
+<thead>
+<tr><th>Term</th><th>Meaning</th></tr>
+</thead>
+<tbody>
+<tr><td>PM &amp; Architecture Integration</td><td>The programme manager role for the project. Referred to as &quot;the PM&quot;</td></tr>
+<tr><td>Technical Integration Lead</td><td>The person who confirms that technical components are ready to integrate and validates them (DP-05)</td></tr>
+<tr><td>Workstream (WS1 to WS5)</td><td>The five delivery streams of the project, each with its own lead. WS5 Governance and stewardship is led by the PM &amp; Architecture Integration and has no repository or project of its own</td></tr>
+<tr><td>Platform</td><td>A cross-cutting technical delivery function for shared hosting and engineering, supporting WS1 to WS5. It is not a sixth research workstream, but it has its own repository (<code>aai-platform</code>) and project and follows the same rules as the workstream repositories</td></tr>
+<tr><td>Epic code</td><td>The reference for each programme epic, for example WS1-E2 (workstream 1, epic 2)</td></tr>
+<tr><td>Gates output</td><td>A contractual output of the Gates Foundation grant, due in a given month</td></tr>
+<tr><td>Research questions (R1 to R7)</td><td>The seven questions the project is designed to answer</td></tr>
+<tr><td>Routes</td><td>The four ways of producing the same product that the project compares: Control (today's human process), Route 0 (an AI model alone), Route A (model plus authoring skills), Route B (model plus skills plus the knowledge graph)</td></tr>
+<tr><td>Pipeline stages</td><td>The steps from WHO guidance to finished products: L1 source guidance, KG knowledge graph, L2 operational content (DAK, the digital adaptation kit), L3 computable content (FHIR and CQL), L5 health skills for AI agents (served through MCP), EVAL evaluation, LOC localization for a country</td></tr>
+<tr><td>Thin slice</td><td>A small piece of content taken through every pipeline stage to prove the end-to-end flow</td></tr>
+<tr><td>D-number</td><td>A programme dependency record, D01 onward</td></tr>
+<tr><td>DEC-number</td><td>A programme decision record, DEC-001 onward</td></tr>
+<tr><td>Delivery health</td><td>Whether an item is On track, At risk or Blocked</td></tr>
+<tr><td>SME sign-off</td><td>Review by a WHO subject-matter expert, for example from the HIV or immunization programme</td></tr>
+<tr><td>Validation packet</td><td>The evidence pack submitted for review of a produced artefact</td></tr>
+<tr><td>Science Division publication clearance</td><td>WHO's internal clearance before anything is published</td></tr>
+</tbody>
+</table>
+<h2>2. Design principles</h2>
+<table>
+<thead>
+<tr><th>ID</th><th>Principle</th></tr>
+</thead>
+<tbody>
+<tr><td>DP-01</td><td><strong>Create once, show many times.</strong> One issue can appear in several projects. Never clone an issue to report its status somewhere else.</td></tr>
+<tr><td>DP-02</td><td><strong>Workstream leads own their delivery.</strong> The agent creates programme epics and the workstream template. It does not create features or stories in workstream repositories.</td></tr>
+<tr><td>DP-03</td><td><strong>Programme work is not sprint work.</strong> Sprints are managed inside the workstream projects. The programme project tracks dates, milestones, delivery health and readiness, not sprints.</td></tr>
+<tr><td>DP-04</td><td><strong>Open by default, restricted by exception.</strong> Anything that could affect another workstream's sequencing, dependencies or delivery plans is shared. Only the material listed in section 6 is restricted.</td></tr>
+<tr><td>DP-05</td><td><strong>Technical integration judgements sit with the Technical Integration Lead.</strong> The Technical Integration Lead owns technical integration readiness and validation, working with the relevant workstream leads and subject-matter experts. The role is currently held by the WHO WS1 lead, but the authority comes from the role, not from WS1. The PM manages sequencing, dates, dependencies, evidence and escalation, and does not make technical readiness judgements.</td></tr>
+<tr><td>DP-06</td><td><strong>Automation must not make judgements.</strong> Automation may make deterministic administrative updates, such as adding items, lifecycle status changes and flags raised from labels. It never makes readiness, approval, risk-acceptance or decision judgements.</td></tr>
+<tr><td>DP-07</td><td><strong>Keep it simple.</strong> Delivery health, risk category, impact and dates only. No probability or impact scoring model.</td></tr>
+<tr><td>DP-08</td><td><strong>Prove it small before building it big.</strong> A pilot build (section 12) must pass before any bulk import.</td></tr>
+<tr><td>DP-09</td><td><strong>Plain language.</strong> All titles, field options, view names and READMEs use plain, simple English. Use the role name &quot;PM &amp; Architecture Integration&quot; exactly as written.</td></tr>
+</tbody>
+</table>
+<h2>3. Decisions needed before the build</h2>
+<p>The agent may carry out step 1 of section 13 (pre-flight) at any time. It must not configure or create anything from step 2 onward until every decision relevant to that step is confirmed. Each decision has a recommended default.</p>
+<table>
+<thead>
+<tr><th>ID</th><th>Decision</th><th>Recommended default</th><th>Why it matters</th></tr>
+</thead>
+<tbody>
+<tr><td>BD-01</td><td>GitHub organisation</td><td><strong>Decided: the existing World Health Organization organisation, shared with other WHO teams.</strong> Login: <code>WorldHealthOrganization</code> (https://github.com/WorldHealthOrganization)</td><td>Everything sits in it. Because the organisation is shared, the safeguards in BD-01a apply</td></tr>
+<tr><td>BD-01a</td><td>Shared organisation safeguards: (1) the current base permission for members. If it is anything other than &quot;No permission&quot;, partners invited as members could read other WHO teams' repositories, and the build must not change it (SEC-05); (2) how many of the 25 organisation issue fields are already used by other teams; (3) which issue types already exist; (4) whether the owners will allow project-specific issue types, and pinning fields to them; (5) that the agent works through a named account with delegated rights, never a shared login</td><td>WHO GitHub owner to confirm before step 2. If (1) cannot be met, partners join as outside collaborators instead (see BD-03)</td><td>Organisation-wide settings, issue fields and issue types affect every WHO team using the organisation, not just this project</td></tr>
+<tr><td>BD-02</td><td>All Assured AI coordination repositories (programme, restricted and workstream repositories holding issues, features, stories and spikes) sit in that organisation</td><td><strong>Decided: yes</strong></td><td>Issue fields only work on issues in repositories owned by the same organisation</td></tr>
+<tr><td>BD-02a</td><td>Partner source-code repositories, models and other technical assets may stay in partners' own GitHub organisations</td><td><strong>Decided: yes, where partners need it</strong></td><td>Their work is still tracked through issues in the WHO workstream repositories, which link to the external repository. Issues held in external repositories are never added to the programme project</td></tr>
+<tr><td>BD-02b</td><td>How each workstream will link external technical assets, if any, to its WHO-hosted coordination issues</td><td>Workstream lead to confirm before bulk import</td><td>Each workstream needs a consistent way to point from a WHO issue to the partner's code, for example a link in the issue body or a pull request reference</td></tr>
+<tr><td>BD-03</td><td>Partners join as organisation members</td><td><strong>Decided: members, subject to BD-01a(1) and the checks in BD-03a.</strong> If the base permission cannot be &quot;No permission&quot;, fall back to outside collaborators with access granted per repository. Whichever model is used for partners and for Gates Foundation contacts is recorded in the build report and the programme README</td><td>Only organisation members can belong to GitHub teams. Recording the model matters when new partners or contacts are added later</td></tr>
+<tr><td>BD-03a</td><td>Checks before partners are invited: (1) whether the organisation uses SAML single sign-on or Enterprise Managed Users, and if so how partners get WHO identities; (2) seat cost per partner member; (3) base permission for members set to &quot;No permission&quot;; (4) members cannot create repositories or change visibility</td><td>WHO GitHub owner and WHO IT to confirm</td><td>With single sign-on, members must sign in through WHO's identity provider. With Enterprise Managed Users, WHO's identity system must create the accounts. Either could block or delay partner access</td></tr>
+<tr><td>BD-03b</td><td>A test account with partner-level access for the pilot</td><td>WHO GitHub owner to provide one test account, removed after the build</td><td>Pilot tests PIL-03 and PIL-07 need a real user with partner access. The agent cannot create GitHub accounts</td></tr>
+<tr><td>BD-04</td><td>Repository roles</td><td>Partners: Read on <code>aai-programme</code>; Maintain for the workstream lead and Write for the team on their own workstream repository; Triage on other workstream repositories where they contribute. Gates Foundation contacts: Read on <code>aai-programme</code> and the workstream repositories, and read access to the programme project. Nobody outside named WHO staff has access to <code>aai-pm</code></td><td>Triage lets people manage issues without changing code</td></tr>
+<tr><td>BD-05</td><td>Organisation owners willing to create issue fields and issue types</td><td>One named WHO owner to run step 2 of section 13</td><td>Only organisation owners can create issue fields and issue types</td></tr>
+<tr><td>BD-05a</td><td>Inspect the organisation's existing issue fields before creating any new ones</td><td>Reuse compatible existing fields; do not duplicate them</td><td>The organisation-level field limit is shared across the whole organisation</td></tr>
+<tr><td>BD-06</td><td>Issue fields available on WHO's GitHub plan and permitted by WHO enterprise policy</td><td>Check and confirm</td><td>If they are unavailable or restricted, the fallback in section 7.4 applies</td></tr>
+<tr><td>BD-07</td><td>Gates Foundation contacts have access to the programme project</td><td><strong>Decided: yes.</strong> They see everything that is shared, including delivery health and review status</td><td>Shared information must be written on the assumption that the funder will read it (SEC-03)</td></tr>
+<tr><td>BD-08</td><td>Credentials for the GitHub Actions in section 11</td><td>Prefer a GitHub App with least-privilege permissions where WHO policy supports it; otherwise an approved fine-grained token. A WHO GitHub owner creates it and stores it as an organisation secret available only to the repository that holds the scripts</td><td>AUTO-03, AUTO-04 and AUTO-10 write to issue fields across repositories, which the default Actions token cannot do. The agent must not design, create or embed credentials itself</td></tr>
+</tbody>
+</table>
+<h2>4. Structure</h2>
+<pre><code>GitHub organisation: WorldHealthOrganization
+│
+├── repo  aai-programme   Shared
+│         Epics, milestones, research questions, dependencies (D-numbers),
+│         decisions (DEC-numbers), assumptions, workstream directory,
+│         automation scripts
+│
+├── repo  aai-pm          Restricted (named WHO staff only); no project
+│         Sensitive notes only (section 6), each linked from the shared issue it relates to
+│
+├── repo  aai-ws1 … aai-ws4, aai-platform
+│         Created by the build once each lead is confirmed; the lead holds Maintain
+│         Features, stories, spikes, as sub-issues of aai-programme epics;
+│         may link to partner source-code repositories outside WHO GitHub
+│         (no aai-ws5: WS5 work lives in aai-programme)
+│
+├── Project  Assured AI Programme     programme-level aai-programme issues, plus selected workstream items;
+│                                      also the project management environment for WS5
+└── Project template  Assured AI Workstream Template    copied by each workstream lead
+</code></pre>
+<p>Use these repository names unless the PM gives others.</p>
+<p>In this document, &quot;workstream repositories&quot; means <code>aai-ws1</code> to <code>aai-ws4</code> and <code>aai-platform</code>. WS5 features, stories and tasks live in <code>aai-programme</code>.</p>
+<p>Workstream leads and partners cannot create repositories in the organisation (BD-03a), so the build creates the workstream repositories. It creates each <code>aai-wsN</code> and <code>aai-platform</code> only once that workstream's lead and repository name are confirmed, with the labels in section 7.3, and gives the lead Maintain access. For the pilot it creates only the two workstream repositories the pilot needs. Leads then create their projects from the template.</p>
+<p>Issues in <code>aai-pm</code> are never added to the programme project. The PM works with them through the repository's own issue list.</p>
+<p>D-number and DEC-number issues start their title with the number, for example &quot;D07: Validated HIV graph before route runs&quot;.</p>
+<h2>5. Work item taxonomy</h2>
+<h3>5.1 Issue types</h3>
+<p><strong>Shared organisation rule.</strong> The World Health Organization organisation is shared with other WHO teams. Every organisation issue field and every new issue type created for this project is prefixed <code>AAI</code>, for example <code>AAI Workstream</code> or <code>AAI Decision</code>, so it cannot be confused with or collide with another team's. Existing generic issue types (such as Epic, Feature or Task) may be reused if the owners agree. Fields are pinned only to <code>AAI</code> issue types, never to shared generic ones, because pinning shows the field on every team's issues of that type. If the owners do not allow <code>AAI</code> issue types, do not pin; set the fields through the project views instead and record this in the build report. The rest of this document uses the short names without the prefix.</p>
+<p>These are created at organisation level (BD-05). If the organisation already has issue types with the same meaning, reuse them.</p>
+<table>
+<thead>
+<tr><th>Issue type</th><th>Lives in</th><th>Used for</th></tr>
+</thead>
+<tbody>
+<tr><td>Epic</td><td><code>aai-programme</code></td><td>Programme-level work. One per row in the epics import CSV (section 14)</td></tr>
+<tr><td>Milestone</td><td><code>aai-programme</code></td><td>Gates outputs and internal gates</td></tr>
+<tr><td>Research question</td><td><code>aai-programme</code></td><td>R1 to R7</td></tr>
+<tr><td>Dependency</td><td><code>aai-programme</code></td><td>Programme-significant dependencies (section 9)</td></tr>
+<tr><td>Decision</td><td><code>aai-programme</code></td><td>Programme decisions, open and closed. The decision and its outcome are shared; deliberation stays in <code>aai-pm</code></td></tr>
+<tr><td>Assumption</td><td><code>aai-programme</code></td><td>Material programme assumptions</td></tr>
+<tr><td>Feature, Story, Spike</td><td>Workstream repositories; <code>aai-programme</code> for WS5</td><td>Created by workstream teams, as sub-issues of epics</td></tr>
+</tbody>
+</table>
+<p>Issues in <code>aai-pm</code> need no issue type.</p>
+<h3>5.2 Hierarchy</h3>
+<ul>
+<li>Sub-issues represent work breakdown only: Epic, then Feature, then Story or Spike.</li>
+<li>Research questions are <strong>not</strong> parents of epics. An item links to research questions through the <code>rq:</code> labels, which list every question it contributes to, including its primary one. The Primary research question field records the main question only, for grouping. The research question issue holds the question, its sub-questions, the rationale and any narrative summary. View V4 is the authoritative list of contributing items; nobody keeps a second list by hand.</li>
+<li>Milestone issues are not parents of epics either. Items link to Gates outputs through the <code>gates:</code> labels (the complete record) and the Gates output field (the primary output).</li>
+</ul>
+<h3>5.3 Fields shown on each issue type</h3>
+<p>Organisation issue fields must be pinned to issue types to appear on the issue form. GitHub allows up to 10 pinned fields per issue type. Pin only these. Fields not pinned to a type can still be set from the project views.</p>
+<table>
+<thead>
+<tr><th>Issue type</th><th>Pinned fields</th></tr>
+</thead>
+<tbody>
+<tr><td>Epic</td><td>Workstream, Programme status, Delivery health, Pipeline stage, Integration readiness, Gates output, Primary research question, Start date, Target date, Backlog ref</td></tr>
+<tr><td>Milestone</td><td>Programme status, Delivery health, Gates output, Start date, Target date</td></tr>
+<tr><td>Research question</td><td>Programme status, Primary research question</td></tr>
+<tr><td>Dependency</td><td>Workstream, Programme status, Delivery health, Risk category, Impact, Target date</td></tr>
+<tr><td>Decision</td><td>Workstream, Programme status, Target date</td></tr>
+<tr><td>Assumption</td><td>Workstream, Delivery health, Impact, Target date</td></tr>
+<tr><td>Feature, Story, Spike</td><td>Workstream, Pipeline stage, Integration readiness, Delivery health, Risk category, Impact, Review type, Review status, Primary research question, Target date</td></tr>
+</tbody>
+</table>
+<h2>6. Information classification</h2>
+<table>
+<thead>
+<tr><th>Class</th><th>Meaning</th><th>Where it may appear</th></tr>
+</thead>
+<tbody>
+<tr><td>Shared</td><td>Fine for every partner and Gates Foundation contact to read</td><td>Everything in <code>aai-programme</code>, the workstream repositories and the programme project</td></tr>
+<tr><td>Restricted</td><td>Named WHO staff only</td><td><code>aai-pm</code> only</td></tr>
+</tbody>
+</table>
+<p>Restricted material is limited to:</p>
+<ul>
+<li>internal deliberations and draft WHO positions not yet agreed</li>
+<li>escalation notes</li>
+<li>contractual, funding or personnel matters</li>
+<li>sensitive security, legal or privacy issues</li>
+<li>internal review commentary, reviewer details and adjudication reasoning</li>
+</ul>
+<p>Rules:</p>
+<ul>
+<li><strong>SEC-01.</strong> Treat everything on an issue in a shared repository as shared: title, body, comments, labels, issue fields and relationships. Anyone with read access to the repository can read its issue fields.</li>
+<li><strong>SEC-02.</strong> Restricted material is never written in a shared repository, including in comments. Put it in an <code>aai-pm</code> issue and link to that issue from the shared one. People without access to <code>aai-pm</code> cannot open the link (pilot test PIL-03 confirms this), but the link text is visible, so it must be neutral, for example &quot;Restricted note&quot;. Restricted issue titles must also be neutral, because a title can show in previews.</li>
+<li><strong>SEC-03.</strong> Write shared information on the assumption that every partner and the funder will read it. State facts and the next action, not blame. For example, &quot;Blocked: waiting for the HIV graph schema from WS1, due 20 Nov&quot; rather than an opinion on why.</li>
+<li><strong>SEC-04.</strong> Making any project or repository public is a separate governance decision with its own privacy review. The build must not assume it will happen, and must not prepare for it.
+<ul>
+<li><strong>Exception: <code>aai-programme</code> is public</strong> (owner, 20 October 2026; to be accepted by the PM &amp; Architecture Integration). It therefore holds only material fit for anyone to read, a stricter bar than &quot;shared&quot; in this section. Restricted material stays in <code>aai-pm</code>, linked with neutral text as SEC-02 says.</li>
+</ul>
+</li>
+<li><strong>SEC-05.</strong> Never weaken repository or project permissions to make linking easier, and never change organisation-wide security settings.</li>
+</ul>
+<h2>7. Fields</h2>
+<h3>7.1 Organisation issue fields</h3>
+<p>Shared values. Each one is set once on the issue and shows the same value in every project.</p>
+<table>
+<thead>
+<tr><th>Field</th><th>Type</th><th>Options or format</th></tr>
+</thead>
+<tbody>
+<tr><td>Workstream</td><td>Single select</td><td>WS1 Knowledge graph, WS2 Authoring, WS3 Evaluation, WS4 Localization, WS5 Governance and stewardship, Platform, Cross-workstream</td></tr>
+<tr><td>Programme status</td><td>Single select</td><td>Not started, In progress, In review, Done, Cancelled</td></tr>
+<tr><td>Delivery health</td><td>Single select</td><td>On track, At risk, Blocked</td></tr>
+<tr><td>Risk category</td><td>Single select</td><td>Dependency, Schedule, Technical, Resource, Review, External, Governance</td></tr>
+<tr><td>Impact</td><td>Single select</td><td>Low, Medium, High</td></tr>
+<tr><td>Pipeline stage</td><td>Single select</td><td>L1 Corpus, KG Knowledge graph, L2 Operational (DAK), L3 Computable (FHIR/CQL), L5 Health skills + MCP, EVAL Evaluation, LOC Localization, Cross-cutting / N/A</td></tr>
+<tr><td>Integration readiness</td><td>Single select</td><td>Not assessed, Not ready, Partly ready, Ready to integrate, Validated</td></tr>
+<tr><td>Review type</td><td>Single select</td><td>Not needed, SME sign-off, Validation packet adjudication, Science Division publication clearance</td></tr>
+<tr><td>Review status</td><td>Single select</td><td>Not submitted, Submitted, Under WHO review, Feedback issued, Resubmitted, Approved, Closed</td></tr>
+<tr><td>Gates output</td><td>Single select</td><td>One option per Gates output from the input list, plus None</td></tr>
+<tr><td>Primary research question</td><td>Single select</td><td>R1 to R7, plus None</td></tr>
+<tr><td>Start date</td><td>Date</td><td></td></tr>
+<tr><td>Target date</td><td>Date</td><td>For a review item, the date the review is due. For a dependency, the date it is needed by</td></tr>
+<tr><td>Backlog ref</td><td>Text</td><td>Epic code, for example WS1-E2</td></tr>
+</tbody>
+</table>
+<p>That uses up to 14 organisation issue fields. Before creating any of them, the agent must inspect the organisation's existing issue fields, reuse any compatible fields, and confirm that creating the remainder will not exceed the organisation limit or consume unreasonable shared capacity. If headroom is short, the PM decides which fields to drop; the agent does not choose.</p>
+<p>Each project has a limit of 50 fields in total, including system fields and issue fields. Workstream leads can add fields to their own projects, so pre-flight and validation must check both limits.</p>
+<p>Notes on meaning:</p>
+<ul>
+<li><strong>Delivery health</strong> describes where the work stands. It is not a WHO judgement of a partner. Risk category and Impact are set only when Delivery health is At risk or Blocked.</li>
+<li><strong>Next action.</strong> When Delivery health is At risk or Blocked, the issue body carries a short &quot;Next action&quot; line: what will happen, who will do it, and by when. It is kept in the body rather than as a field, to save field capacity.</li>
+<li><strong>Integration readiness</strong> is a shared technical delivery status, not an internal WHO assurance judgement.</li>
+<li><strong>Review status</strong> is shared, so partners can see where a review stands. Reviewer details, comments and adjudication reasoning are restricted (section 6).</li>
+<li><strong>Pipeline stage</strong> describes the end-to-end technical flow. Governance and stewardship are cross-cutting; WS5 work uses <code>Cross-cutting / N/A</code> where no pipeline stage applies.</li>
+<li><strong>Programme status.</strong> Programme views use Programme status, not the built-in Status field. The built-in Status is stored separately in each project, so it will differ between projects. Workstream projects keep the built-in Status for their own boards. Do not automatically mirror a workstream project's built-in Status into Programme status.</li>
+</ul>
+<h3>7.2 Project fields</h3>
+<p>The programme project needs no project-only fields. Do not add project fields that duplicate the section 7.1 fields.</p>
+<h3>7.3 Labels</h3>
+<p>Create these in every repository listed in section 4, except <code>aai-pm</code>. Workstream leads should keep them unchanged.</p>
+<table>
+<thead>
+<tr><th>Label</th><th>Meaning</th></tr>
+</thead>
+<tbody>
+<tr><td><code>rq:R1</code> to <code>rq:R7</code></td><td>Every research question the item contributes to, including the primary one also recorded in the Primary research question field. The labels are the complete record; the field is the main question only</td></tr>
+<tr><td><code>route:control</code>, <code>route:0</code>, <code>route:a</code>, <code>route:b</code></td><td>Which comparison routes the item covers</td></tr>
+<tr><td><code>gates:</code> plus the output number, one per Gates output</td><td>Every Gates output the item contributes to, including the primary one also recorded in the Gates output field. The labels are the complete record; the field is the primary output only</td></tr>
+<tr><td><code>thin-slice</code></td><td>Part of the end-to-end demo slice</td></tr>
+<tr><td><code>sprint-demo</code></td><td>To be shown at the next fortnightly sprint review</td></tr>
+<tr><td><code>blocked</code>, <code>at-risk</code></td><td>Raised by the workstream team on its own items (AUTO-04)</td></tr>
+<tr><td><code>needs-review</code></td><td>Ready for WHO review</td></tr>
+<tr><td><code>validation-exception</code></td><td>Set by AUTO-10 only</td></tr>
+</tbody>
+</table>
+<h3>7.4 Fallback if issue fields are unavailable</h3>
+<p>If BD-05 or BD-06 cannot be met:</p>
+<ol>
+<li>Create the section 7.1 fields as project fields in the programme project, with identical names and options.</li>
+<li>Set values for workstream items in the programme project, not in the workstream projects. Workstream projects keep only their own fields.</li>
+<li>Record this in the build report.</li>
+</ol>
+<p>Do not mix the two approaches.</p>
+<h2>8. Views and metrics</h2>
+<h3>8.1 Assured AI Programme views</h3>
+<p>Each view lists its layout, which items it shows, how they are grouped and sorted, and the columns to display.</p>
+<table>
+<thead>
+<tr><th>ID</th><th>View</th><th>Layout</th><th>Items</th><th>Group and sort</th><th>Columns</th></tr>
+</thead>
+<tbody>
+<tr><td>V1</td><td>Master programme</td><td>Table</td><td>Epics</td><td>Group by Workstream; sort by Start date</td><td>Title, Programme status, Delivery health, Pipeline stage, Start date, Target date, Gates output, Primary research question, sub-issue progress</td></tr>
+<tr><td>V2</td><td>Roadmap</td><td>Roadmap</td><td>Epics and milestone issues with dates</td><td>Group by Workstream; zoom to quarter</td><td>Start date, Target date, Programme status, Delivery health</td></tr>
+<tr><td>V3</td><td>Milestones</td><td>Table</td><td>Milestone issues, plus items with any <code>gates:</code> label</td><td>Group by Gates output; sort by Target date. One saved filter per Gates output on its <code>gates:</code> label, which shows both primary and secondary contributions</td><td>Title, Workstream, Programme status, Delivery health, Target date</td></tr>
+<tr><td>V4</td><td>Research questions</td><td>Table</td><td>Research question issues, plus items with any <code>rq:</code> label</td><td>Group by Primary research question. One saved filter per research question on its <code>rq:</code> label</td><td>Title, Workstream, Programme status, <code>rq:</code> and <code>route:</code> labels</td></tr>
+<tr><td>V5</td><td>Pipeline stages</td><td>Board</td><td>Epics, plus anything labelled <code>thin-slice</code></td><td>Columns by Pipeline stage, L1 through LOC, with Cross-cutting / N/A shown separately. Saved filter for <code>label:thin-slice</code></td><td>Title, Workstream, Programme status, Delivery health</td></tr>
+<tr><td>V6</td><td>Integration readiness</td><td>Table</td><td>Items labelled <code>thin-slice</code>, and epics with Integration readiness other than Not assessed</td><td>Group by Pipeline stage; sort by Target date. Saved filter &quot;Awaiting validation&quot;: Integration readiness is Ready to integrate</td><td>Title, Workstream, Integration readiness, assignee, Target date, sub-issue progress</td></tr>
+<tr><td>V7</td><td>Sprint review</td><td>Table</td><td>Items labelled <code>sprint-demo</code></td><td>Group by Workstream</td><td>Title, Workstream, Programme status, linked epic</td></tr>
+<tr><td>V8</td><td>Next 30 days</td><td>Table</td><td>Open epics, milestones, dependencies and cross-workstream deliverables with Target date in the next 30 days</td><td>Group by Workstream; sort by Target date</td><td>Title, Workstream, Programme status, Delivery health, assignee, Target date</td></tr>
+<tr><td>V9</td><td>Dependencies</td><td>Table</td><td>Dependency issues</td><td>Group by Workstream (the waiting workstream); sort by Target date</td><td>Title (starts with D-number), Workstream, Delivery health, Impact, Target date, assignee</td></tr>
+<tr><td>V10</td><td>Blocked and at risk</td><td>Table</td><td>Delivery health At risk or Blocked, or label <code>blocked</code>, <code>at-risk</code> or <code>validation-exception</code></td><td>Group by Delivery health, then Workstream; sort by Impact, then Target date</td><td>Title, Workstream, Risk category, Impact, Target date, assignee</td></tr>
+<tr><td>V11</td><td>WHO review</td><td>Board</td><td>Items with Review type other than Not needed</td><td>Columns by Review status; sort by Target date</td><td>Title, Workstream, Review type, Target date</td></tr>
+<tr><td>V12</td><td>Decisions</td><td>Table</td><td>Decision issues</td><td>Group by open or closed; sort by Target date</td><td>Title (starts with DEC-number), Workstream, Programme status, Target date</td></tr>
+<tr><td>V13</td><td>Overdue</td><td>Table</td><td>Target date before today and Programme status not Done or Cancelled</td><td>Group by Workstream</td><td>Title, Target date, Delivery health, assignee</td></tr>
+</tbody>
+</table>
+<p>Notes:</p>
+<ul>
+<li>V6 answers &quot;are we ready to integrate it?&quot;, while V5 answers &quot;where is the work?&quot;. The &quot;Awaiting validation&quot; filter is the Technical Integration Lead's work queue.</li>
+<li>V7 depends on workstream items labelled <code>sprint-demo</code> being added to the project automatically (AUTO-01). After each review the workstream lead removes the label.</li>
+<li>V10 exists so workstreams can act, not just see. Every item in it must carry a &quot;Next action&quot; line in its issue body (section 7.1). The view description tells readers to open the item for it.</li>
+<li>In V11, Science Division items appear only when Review type is Science Division publication clearance.</li>
+<li>V12 makes the DEC issues the decision record from the build onward. Decisions made before the build stay in the PM's existing decision log, and the agent does not import them.</li>
+</ul>
+<h3>8.2 Metrics</h3>
+<p>Use the project's built-in Insights charts for these. Where a chart cannot be built natively, record that in the build report rather than building a workaround, except for M6.</p>
+<table>
+<thead>
+<tr><th>ID</th><th>Measure</th><th>Built from</th></tr>
+</thead>
+<tbody>
+<tr><td>M1</td><td>Share of epics On track, At risk and Blocked</td><td>Delivery health, epics only</td></tr>
+<tr><td>M2</td><td>Blocked items by workstream</td><td>Delivery health = Blocked, grouped by Workstream</td></tr>
+<tr><td>M3</td><td>At-risk or blocked dependencies</td><td>Dependency issues with Delivery health At risk or Blocked</td></tr>
+<tr><td>M4</td><td>Overdue deliverables</td><td>Same filter as V13</td></tr>
+<tr><td>M5</td><td>Integration readiness by pipeline stage</td><td>Integration readiness, grouped by Pipeline stage</td></tr>
+<tr><td>M6</td><td>Average age of blocked items (optional)</td><td>A script (AUTO-12) reads the issue timeline to find when Delivery health became Blocked</td></tr>
+</tbody>
+</table>
+<h3>8.3 Assured AI Workstream Template</h3>
+<p>Create this as an organisation project template. It contains:</p>
+<ul>
+<li>the issue fields from section 7.1, shown as columns</li>
+<li>a Sprint iteration field (two weeks)</li>
+<li>three views: Sprint board (current sprint, grouped by built-in Status), Backlog (table of all open items), and Roadmap</li>
+</ul>
+<p>The template may reuse the views and iteration setup of project 110 (Backlog, Board, Current iteration, Roadmap) by copying it without its draft items. Project 110 itself is not changed. Its six workflows are GitHub defaults.</p>
+<p>Project templates do not copy auto-add workflows. The template README must tell leads how to set up auto-add for their own repository.</p>
+<h2>9. Dependencies</h2>
+<ul>
+<li>
+<p><strong>DEP-01.</strong> Ordinary technical dependencies use GitHub's native &quot;blocked by&quot; and &quot;blocking&quot; relationships between the issues concerned. Workstream teams create these themselves.</p>
+</li>
+<li>
+<p><strong>DEP-02.</strong> A dependency becomes a D-number issue in <code>aai-programme</code> if it is programme-significant: it crosses workstreams or partners and needs a deadline, negotiation, escalation or an assessment of consequences.</p>
+</li>
+<li>
+<p><strong>DEP-03.</strong> Each D-number issue links to the waiting epic and to what it waits on. Where that is another epic and the relationship is a true blocking dependency, the agent also creates a native &quot;blocked by&quot; relationship between the two epics. Where the dependency is on a review, an external decision or a shared platform item, no native relationship is created.</p>
+</li>
+<li>
+<p><strong>DEP-04.</strong> The agent imports the existing dependency register (D01 to D29) as D-number issues in <code>aai-programme</code>.</p>
+</li>
+<li>
+<p><strong>DEP-05.</strong> Do not create extra fields for waiting epic, epic waited on or needed-by date. Each D-number issue uses Workstream (the waiting workstream), Target date (the needed-by date), Delivery health, Risk category, Impact and Assignee. Its issue body follows this template:</p>
+<ul>
+<li>Waiting workstream</li>
+<li>Waiting epic</li>
+<li>Depends on workstream</li>
+<li>Depends on epic</li>
+<li>Needed by</li>
+<li>Consequence if late</li>
+<li>Next action</li>
+<li>Owner</li>
+</ul>
+</li>
+</ul>
+<h2>10. Linking to workstream projects</h2>
+<table>
+<thead>
+<tr><th>ID</th><th>Requirement</th></tr>
+</thead>
+<tbody>
+<tr><td>LINK-01</td><td>Create a pinned issue in <code>aai-programme</code> titled &quot;Workstream directory&quot;. For each workstream it lists the lead, the repository and the project URL. Leave entries blank until leads supply them.</td></tr>
+<tr><td>LINK-02</td><td>The programme project README links to the directory issue and to the Roadmap view (V2). Do not add a separate static roadmap or Gantt chart to the README; V2 is the roadmap, kept current from the epic dates.</td></tr>
+<tr><td>LINK-03</td><td>The template README tells leads to link back to Assured AI Programme.</td></tr>
+<tr><td>LINK-04</td><td>Workstream features and stories are sub-issues of the relevant epic, so sub-issue progress shows in V1. The pilot must confirm that sub-issues from another repository roll up correctly.</td></tr>
+<tr><td>LINK-05</td><td>A workstream item, including a WS5 feature or task in <code>aai-programme</code>, enters the programme project only if it is labelled <code>thin-slice</code> or <code>sprint-demo</code>, has Delivery health At risk or Blocked, or is a cross-workstream deliverable. Anything else stays in its workstream project.</td></tr>
+<tr><td>LINK-06</td><td>Every item in the programme project must have a Workstream value.</td></tr>
+<tr><td>LINK-07</td><td>Epics are programme-level and owned by the PM. A workstream lead who needs a new or changed epic opens an issue in <code>aai-programme</code> proposing it; the PM accepts or declines it. Leads create features, stories and spikes under epics freely. The programme README explains this.</td></tr>
+</tbody>
+</table>
+<h2>11. Automation</h2>
+<table>
+<thead>
+<tr><th>ID</th><th>Requirement</th></tr>
+</thead>
+<tbody>
+<tr><td>AUTO-01</td><td>Auto-add to the programme project: <code>aai-programme</code> issues of type Epic, Milestone, Research question, Dependency, Decision or Assumption, and workstream issues (including WS5 items in <code>aai-programme</code>) labelled <code>thin-slice</code>, <code>sprint-demo</code>, <code>blocked</code> or <code>at-risk</code>. Other WS5 items stay off the board and still roll up into their epics through sub-issues. The pilot confirms that the auto-add filter can select by issue type; if it cannot, use a GitHub Action and record this. GitHub limits the number of auto-add workflows per project depending on the plan. If the limit is reached, use a GitHub Action instead and record this.</td></tr>
+<tr><td>AUTO-02</td><td>Never add issues from <code>aai-pm</code> to the programme project.</td></tr>
+<tr><td>AUTO-03</td><td>A GitHub Action, using the BD-08 credentials. When a programme epic, milestone, research question, dependency or decision issue is created, set Programme status to Not started unless a value was supplied. When a programme-tracked issue is closed as completed, set Done. When it is closed as not planned, set Cancelled. When it is reopened, set In progress. Built-in project workflows can only set a project's own Status field, so they cannot do this.</td></tr>
+<tr><td>AUTO-04</td><td>Delivery health roll-up. A scheduled Action finds <code>blocked</code> or <code>at-risk</code> labels on sub-issues and sets Delivery health on the parent epic to the worst signal found, in the order Blocked, then At risk, then On track. It never lowers or clears Delivery health; the epic's owner does that. The PM has approved this rule.</td></tr>
+<tr><td>AUTO-05</td><td>No automation sets Integration readiness, Review status, Risk category, Impact, a decision or risk acceptance.</td></tr>
+<tr><td>AUTO-06</td><td>Where a saved view or chart can do the job, use it instead of an Action.</td></tr>
+<tr><td>AUTO-07</td><td>Document every automation in the programme project README: what triggers it, what it does, its scope and who owns it.</td></tr>
+<tr><td>AUTO-08</td><td>All scripts are safe to rerun without creating duplicates and have a <code>--dry-run</code> mode. They live in <code>aai-programme/scripts</code>.</td></tr>
+<tr><td>AUTO-09</td><td>If an automation needs a token or raised permissions, stop before creating the secret and report exactly what permission is needed. The BD-08 credentials are expected; any others are not.</td></tr>
+<tr><td>AUTO-10</td><td>Validation check. The Technical Integration Lead confirms validation by adding a comment to the item that starts with <code>Validation confirmed:</code> followed by a short note or evidence link. A scheduled Action checks every item whose Integration readiness is Validated. If there is no confirmation comment from the Technical Integration Lead, it adds the <code>validation-exception</code> label and one comment explaining why. It is idempotent: it never adds a second comment for the same exception. When the confirmation comment appears, or the value moves off Validated, it removes the label. It never changes Integration readiness. The Technical Integration Lead's GitHub username is a setting in <code>aai-programme/scripts</code>, not hard-coded.</td></tr>
+<tr><td>AUTO-11</td><td>Backfill. Auto-add workflows only catch items created or updated after they are switched on. A one-off script, run in build step 8, adds existing qualifying items to the programme project.</td></tr>
+<tr><td>AUTO-12</td><td>Optional. A weekly script calculates M6 (average age of blocked items) from the issue timelines and posts it as a comment on a pinned &quot;Programme metrics&quot; issue in <code>aai-programme</code>. Not part of the pilot. Build it only after the pilot passes, and only if there is capacity; M1 to M5 are enough to start with.</td></tr>
+</tbody>
+</table>
+<p>Integration readiness is proposed by the relevant workstream lead, who sets Ready to integrate. The Technical Integration Lead then posts the <code>Validation confirmed:</code> comment with the supporting evidence and sets Validated (DP-05). Automation never sets Validated. The confirmation comment is the authoritative validation record because it captures an explicit approval and lets the Technical Integration Lead point to the evidence. GitHub records issue field changes in the issue timeline, and that history may be used as additional audit information, but changing the field alone does not count as validation. Validation is never inferred from closed sub-issues.</p>
+<h2>12. Pilot build</h2>
+<p>Before any bulk import, the agent builds and tests this small set. Use representative Assured AI work items that reflect genuine planned activities, each clearly marked as a pilot. Do not create artificial dependencies between unrelated technical tasks, and do not move or change existing operational work (for example the project 110 items) to test the configuration. After the pilot passes, the project 110 items are reviewed with Ritika and agreed work is brought into the right repositories; where technical work stays in an external repository, the WHO coordination issue links to it.</p>
+<ul>
+<li>1 epic in <code>aai-programme</code></li>
+<li>2 features in two different workstream repositories, as sub-issues of the epic</li>
+<li>1 native &quot;blocked by&quot; relationship between the two features</li>
+<li>1 D-number issue in <code>aai-programme</code></li>
+<li>1 decision issue in <code>aai-programme</code></li>
+<li>1 research question issue</li>
+<li>1 milestone issue</li>
+<li>1 restricted note in <code>aai-pm</code>, linked from the pilot epic</li>
+<li>1 item with Review type set</li>
+<li>1 item labelled <code>thin-slice</code></li>
+<li>1 item labelled <code>sprint-demo</code></li>
+<li>1 workstream issue linking to an external partner repository (BD-02a)</li>
+</ul>
+<p>The pilot must prove each of these:</p>
+<table>
+<thead>
+<tr><th>ID</th><th>Test</th></tr>
+</thead>
+<tbody>
+<tr><td>PIL-01</td><td>An organisation issue field changed on a <code>thin-slice</code> workstream item shows the same value in its workstream project and the programme project</td></tr>
+<tr><td>PIL-02</td><td>Sub-issue progress from two repositories rolls up into the epic in V1</td></tr>
+<tr><td>PIL-03</td><td>The test partner account cannot open the <code>aai-pm</code> note or see its content from the link on the pilot epic</td></tr>
+<tr><td>PIL-04</td><td>No <code>aai-pm</code> issue appears in the programme project</td></tr>
+<tr><td>PIL-05</td><td>A <code>blocked</code> label on a feature sets Delivery health to Blocked on the epic within one run of the Action, and the epic appears in V10</td></tr>
+<tr><td>PIL-06</td><td>Every view in section 8.1 returns the right pilot items</td></tr>
+<tr><td>PIL-07</td><td>The test partner account sets Integration readiness to Validated on a pilot item with no confirmation comment. AUTO-10 adds the <code>validation-exception</code> label and one comment. Running it again adds nothing more. When the Technical Integration Lead adds the confirmation comment, the label is removed</td></tr>
+<tr><td>PIL-08</td><td>Closing a pilot epic as completed sets Programme status to Done through AUTO-03</td></tr>
+<tr><td>PIL-09</td><td>Closing a pilot item as not planned sets Programme status to Cancelled, and reopening it sets In progress</td></tr>
+<tr><td>PIL-10</td><td>The pinned fields in section 5.3 appear on the issue form for each pilot issue type</td></tr>
+<tr><td>PIL-11</td><td>Charts M1 to M5 show the pilot items correctly, or the report records which cannot be built natively</td></tr>
+</tbody>
+</table>
+<p>If any test fails, stop and report. Delete or close the pilot items once the bulk import is complete.</p>
+<h2>13. Build sequence</h2>
+<ol>
+<li><strong>Pre-flight.</strong> Confirm the section 3 decisions are recorded. Inspect existing issue types, issue fields, organisation issue-field headroom, project field counts, projects, teams, repository policies, SSO/EMU constraints and permissions in the organisation. Reuse compatible organisation configuration and do not create anything that duplicates something already there.</li>
+<li><strong>Organisation setup.</strong> An organisation owner creates or reuses the section 5.1 issue types and section 7.1 issue fields. If they cannot, use the section 7.4 fallback.</li>
+<li><strong>Repositories.</strong> Create <code>aai-programme</code>, <code>aai-pm</code> and the two workstream repositories the pilot needs, with the access agreed in BD-03 and BD-04, and the labels in section 7.3. Create the remaining <code>aai-wsN</code> repositories as each lead is confirmed. Pin fields to issue types as set out in section 5.3.</li>
+<li><strong>Projects.</strong> Create the programme project and the template, with the views in section 8, in the order listed.</li>
+<li><strong>READMEs and directory.</strong> Write the READMEs and create the directory issue.</li>
+<li><strong>Automations.</strong> Set up AUTO-01 to AUTO-11. Stop if the BD-08 credentials are not yet in place.</li>
+<li><strong>Pilot.</strong> Run section 12. Stop if any test fails.</li>
+<li><strong>Bulk import.</strong> Import the epics, milestones, research questions, dependencies and the decision template from the inputs in section 14, then run the AUTO-11 backfill.</li>
+<li><strong>Charts and validation.</strong> Build charts M1 to M5 and check the acceptance criteria in section 15.</li>
+<li><strong>Build report.</strong> Hand back the report described in section 16.</li>
+</ol>
+<h2>14. Inputs the PM will provide</h2>
+<table>
+<thead>
+<tr><th>Input</th><th>Used for</th></tr>
+</thead>
+<tbody>
+<tr><td>Epics import CSV, with columns for title, epic code, workstream, start date, target date, Gates outputs, research questions and routes. Each workstream lead reviews their workstream's epics before the bulk import</td><td>Epics, and the dates that drive the Roadmap view (V2)</td></tr>
+<tr><td>Gates outputs list with output months</td><td>Milestone issues and Gates output options</td></tr>
+<tr><td>Research questions R1 to R7, with sub-questions</td><td>Research question issues</td></tr>
+<tr><td>Dependency register D01 to D29</td><td>D-number issues in <code>aai-programme</code></td></tr>
+<tr><td>Workstream directory details</td><td>Directory issue, filled in as leads create their projects</td></tr>
+<tr><td>GitHub usernames of the Gates Foundation contacts and the Technical Integration Lead</td><td>Access (BD-04) and the AUTO-10 setting</td></tr>
+</tbody>
+</table>
+<p>The agent must not invent users, teams, repositories, dates or field values. Where a value is missing, leave it empty and list it in the build report. Before importing the dependency register, the PM removes any restricted content from it (section 6).</p>
+<h2>15. Acceptance criteria</h2>
+<table>
+<thead>
+<tr><th>ID</th><th>Criterion</th></tr>
+</thead>
+<tbody>
+<tr><td>AC-01</td><td>The programme project and the template exist in the agreed organisation, with the agreed access for partners, Gates Foundation contacts and WHO staff</td></tr>
+<tr><td>AC-02</td><td>Every view in section 8.1 exists and shows the intended items</td></tr>
+<tr><td>AC-03</td><td>The section 7.1 fields are organisation issue fields, and no project field duplicates them (unless the section 7.4 fallback was used)</td></tr>
+<tr><td>AC-04</td><td>Every epic from the CSV appears once in V1</td></tr>
+<tr><td>AC-05</td><td>Every Gates output has exactly one milestone issue and one saved filter in V3</td></tr>
+<tr><td>AC-06</td><td>All seven research questions exist, and every epic has a Primary research question, which may be None</td></tr>
+<tr><td>AC-07</td><td>Every D-number from the register exists once in <code>aai-programme</code> and links to the waiting epic and what it waits on; native &quot;blocked by&quot; relationships exist only where DEP-03 calls for them</td></tr>
+<tr><td>AC-08</td><td>No restricted material (section 6) appears in any shared repository</td></tr>
+<tr><td>AC-09</td><td>No automation sets readiness, approval, risk category, impact, a decision or risk acceptance</td></tr>
+<tr><td>AC-10</td><td>The READMEs explain each field, how items enter the project, who owns what, what is restricted and why, and how the projects link</td></tr>
+<tr><td>AC-11</td><td>All pilot tests PIL-01 to PIL-11 passed before the bulk import</td></tr>
+<tr><td>AC-12</td><td>No <code>aai-ws5</code> repository or WS5 project exists. Every workstream repository created so far exists in the WHO organisation with the agreed roles, and none was created before its lead was confirmed; no issue from an external repository has been added to the programme project</td></tr>
+<tr><td>AC-13</td><td>WS5 Governance and stewardship is not represented as the final sequential pipeline stage; cross-cutting items use Pipeline stage = Cross-cutting / N/A where appropriate</td></tr>
+<tr><td>AC-14</td><td>Every D-number and DEC-number issue title starts with its number</td></tr>
+<tr><td>AC-15</td><td>Organisation issue-field headroom and every project's total field count are within GitHub limits, and both are recorded in the build report</td></tr>
+<tr><td>AC-16</td><td>Every item with a Gates output value also carries the matching <code>gates:</code> label</td></tr>
+<tr><td>AC-17</td><td>Every item with a Primary research question other than None also carries the matching <code>rq:</code> label</td></tr>
+<tr><td>AC-18</td><td>Charts M1 to M5 exist, or the report records which cannot be built natively</td></tr>
+<tr><td>AC-19</td><td>Every pilot item in V10 carries a &quot;Next action&quot; line in its issue body</td></tr>
+</tbody>
+</table>
+<h2>16. Build report</h2>
+<p>The agent hands back a short report covering:</p>
+<ul>
+<li>the access model used for partners and for Gates Foundation contacts (members or outside collaborators)</li>
+<li>what was created, what existing organisation configuration was reused, the organisation issue-field headroom and each project's total field count after the build</li>
+<li>the pass or fail result for each pilot test and acceptance criterion</li>
+<li>any fallback used, and why</li>
+<li>permissions that still need an organisation owner</li>
+<li>every value left empty because it was missing from the inputs</li>
+</ul>
+<h2>17. Open points to be confirmed by the PM</h2>
+<ul>
+<li>The start date of the first sprint (S0), used for the Sprint iteration field in the workstream template. Project 110's iteration dates may inform it once checked against the Assured AI programme calendar.</li>
+<li>The accountable Platform lead, confirmed with Ritika and the relevant technical colleagues, before <code>aai-platform</code> access is assigned.</li>
+<li>Which activities belong to Platform and which to WS1 or the other technical workstreams.</li>
+<li>If project 110 becomes the Platform board, who owns it (Ritika and the Platform lead to agree).</li>
+<li>The final Gates output list and output months.</li>
+<li>The final workstream names used as Workstream field options (WS1 to WS5), before the field is created. Renaming options later is possible but disruptive.</li>
+<li>For each workstream, which partner source-code repositories stay external, and how WHO issues link to them (BD-02b).</li>
+<li>Which Gates Foundation contacts need accounts, and whether they join as members or outside collaborators (BD-03 and BD-03a apply).</li>
+</ul>
+<h2>18. Out of scope</h2>
+<ul>
+<li>Workstream backlogs, and any views specific to one workstream.</li>
+<li>A separate private PM project.</li>
+<li>A separate WS5 repository or project.</li>
+<li>A partner contribution or partner commitments view.</li>
+<li>Probability and impact scoring.</li>
+<li>Importing the PM's existing decision log or the project asset inventory.</li>
+<li>Making any project or repository public.</li>
+<li>Changing organisation-wide GitHub security or access policies.</li>
+</ul>
+
+</main>
+<footer>Built from <a href="https://github.com/litlfred/aai-programme/tree/21de491990fa80fbd44bc47d9e1c81339df437fb">litlfred/aai-programme@21de491</a>.</footer>
+</body>
+</html>

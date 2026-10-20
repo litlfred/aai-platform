@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>library/assured-ai-github-programme-requirements-v041/sections/s023-11-automation.md · Assured AI programme</title>
+<style>
+:root { --fg:#1f2328; --bg:#fff; --muted:#59636e; --line:#d1d9e0; --link:#0969da; --code:#f6f8fa; --banner:#fff8c5; }
+@media (prefers-color-scheme: dark) { :root { --fg:#e6edf3; --bg:#0d1117; --muted:#9198a1; --line:#3d444d; --link:#4493f8; --code:#151b23; --banner:#3b2e00; } }
+body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif; }
+header { border-bottom:1px solid var(--line); padding:12px 16px; display:flex; flex-wrap:wrap; gap:6px 18px; align-items:baseline; }
+header strong { margin-right:8px; }
+header a { color:var(--link); text-decoration:none; }
+main { max-width:980px; margin:0 auto; padding:16px; overflow-wrap:anywhere; }
+a { color:var(--link); }
+code { background:var(--code); padding:0 4px; border-radius:4px; font-size:.92em; }
+pre { background:var(--code); padding:12px; overflow:auto; border-radius:6px; }
+pre code { padding:0; }
+table { border-collapse:collapse; display:block; overflow:auto; margin:12px 0; }
+th, td { border:1px solid var(--line); padding:6px 10px; vertical-align:top; text-align:left; }
+img { max-width:100%; background:#fff; }
+.banner { background:var(--banner); padding:8px 16px; border-bottom:1px solid var(--line); }
+footer { color:var(--muted); font-size:.85em; max-width:980px; margin:24px auto; padding:0 16px; }
+</style>
+</head>
+<body>
+<header><strong>Assured AI programme</strong><a href="../../../index.html">Home</a><a href="../../../pulled/index.html">Board</a><a href="../../../processes/index.html">Processes</a><a href="../../../docs/requirements-v0.4.2.html">Requirements v0.4.2</a><a href="../../../library/index.html">Library</a></header>
+<main>
+<hr />
+<h2>doc_id: assured-ai-github-programme-requirements-v041
+doc_title: &quot;Assured AI: requirements for the programme GitHub project&quot;
+section_id: s023-11-automation
+section_title: &quot;11. Automation&quot;
+file: &quot;Assured_AI_GitHub_Programme_Requirements_v0.4.1.md&quot;
+lines: 322-340
+source_sha256: bba5ea9ca2d3cff7
+granularity: heading</h2>
+<h2>11. Automation</h2>
+<table>
+<thead>
+<tr><th>ID</th><th>Requirement</th></tr>
+</thead>
+<tbody>
+<tr><td>AUTO-01</td><td>Auto-add to the programme project: all issues in <code>aai-programme</code>, and workstream issues labelled <code>thin-slice</code>, <code>sprint-demo</code>, <code>blocked</code> or <code>at-risk</code>. GitHub limits the number of auto-add workflows per project depending on the plan. If the limit is reached, use a GitHub Action instead and record this.</td></tr>
+<tr><td>AUTO-02</td><td>Never add issues from <code>aai-pm</code> to the programme project.</td></tr>
+<tr><td>AUTO-03</td><td>A GitHub Action, using the BD-08 credentials. When a programme epic, milestone, research question, dependency or decision issue is created, set Programme status to Not started unless a value was supplied. When a programme-tracked issue is closed as completed, set Done. When it is closed as not planned, set Cancelled. When it is reopened, set In progress. Built-in project workflows can only set a project's own Status field, so they cannot do this.</td></tr>
+<tr><td>AUTO-04</td><td>Delivery health roll-up. A scheduled Action finds <code>blocked</code> or <code>at-risk</code> labels on sub-issues and sets Delivery health on the parent epic to the worst signal found, in the order Blocked, then At risk, then On track. It never lowers or clears Delivery health; the epic's owner does that. The PM has approved this rule.</td></tr>
+<tr><td>AUTO-05</td><td>No automation sets Integration readiness, Review status, Risk category, Impact, a decision or risk acceptance.</td></tr>
+<tr><td>AUTO-06</td><td>Where a saved view or chart can do the job, use it instead of an Action.</td></tr>
+<tr><td>AUTO-07</td><td>Document every automation in the programme project README: what triggers it, what it does, its scope and who owns it.</td></tr>
+<tr><td>AUTO-08</td><td>All scripts are safe to rerun without creating duplicates and have a <code>--dry-run</code> mode. They live in <code>aai-programme/scripts</code>.</td></tr>
+<tr><td>AUTO-09</td><td>If an automation needs a token or raised permissions, stop before creating the secret and report exactly what permission is needed. The BD-08 credentials are expected; any others are not.</td></tr>
+<tr><td>AUTO-10</td><td>Validation check. The Technical Integration Lead confirms validation by adding a comment to the item that starts with <code>Validation confirmed:</code> followed by a short note or evidence link. A scheduled Action checks every item whose Integration readiness is Validated. If there is no confirmation comment from the Technical Integration Lead, it adds the <code>validation-exception</code> label and one comment explaining why. It is idempotent: it never adds a second comment for the same exception. When the confirmation comment appears, or the value moves off Validated, it removes the label. It never changes Integration readiness. The Technical Integration Lead's GitHub username is a setting in <code>aai-programme/scripts</code>, not hard-coded.</td></tr>
+<tr><td>AUTO-11</td><td>Backfill. Auto-add workflows only catch items created or updated after they are switched on. A one-off script, run in build step 8, adds existing qualifying items to the programme project.</td></tr>
+<tr><td>AUTO-12</td><td>Optional. A weekly script calculates M6 (average age of blocked items) from the issue timelines and posts it as a comment on a pinned &quot;Programme metrics&quot; issue in <code>aai-programme</code>. Not part of the pilot. Build it only after the pilot passes, and only if there is capacity; M1 to M5 are enough to start with.</td></tr>
+</tbody>
+</table>
+<p>Integration readiness is proposed by the relevant workstream lead, who sets Ready to integrate. The Technical Integration Lead then posts the <code>Validation confirmed:</code> comment with the supporting evidence and sets Validated (DP-05). Automation never sets Validated. The confirmation comment is the authoritative validation record because it captures an explicit approval and lets the Technical Integration Lead point to the evidence. GitHub records issue field changes in the issue timeline, and that history may be used as additional audit information, but changing the field alone does not count as validation. Validation is never inferred from closed sub-issues.</p>
+
+</main>
+<footer>Built from <a href="https://github.com/litlfred/aai-programme/tree/21de491990fa80fbd44bc47d9e1c81339df437fb">litlfred/aai-programme@21de491</a>.</footer>
+</body>
+</html>

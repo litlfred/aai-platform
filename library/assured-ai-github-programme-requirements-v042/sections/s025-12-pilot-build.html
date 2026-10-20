@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>library/assured-ai-github-programme-requirements-v042/sections/s025-12-pilot-build.md · Assured AI programme</title>
+<style>
+:root { --fg:#1f2328; --bg:#fff; --muted:#59636e; --line:#d1d9e0; --link:#0969da; --code:#f6f8fa; --banner:#fff8c5; }
+@media (prefers-color-scheme: dark) { :root { --fg:#e6edf3; --bg:#0d1117; --muted:#9198a1; --line:#3d444d; --link:#4493f8; --code:#151b23; --banner:#3b2e00; } }
+body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif; }
+header { border-bottom:1px solid var(--line); padding:12px 16px; display:flex; flex-wrap:wrap; gap:6px 18px; align-items:baseline; }
+header strong { margin-right:8px; }
+header a { color:var(--link); text-decoration:none; }
+main { max-width:980px; margin:0 auto; padding:16px; overflow-wrap:anywhere; }
+a { color:var(--link); }
+code { background:var(--code); padding:0 4px; border-radius:4px; font-size:.92em; }
+pre { background:var(--code); padding:12px; overflow:auto; border-radius:6px; }
+pre code { padding:0; }
+table { border-collapse:collapse; display:block; overflow:auto; margin:12px 0; }
+th, td { border:1px solid var(--line); padding:6px 10px; vertical-align:top; text-align:left; }
+img { max-width:100%; background:#fff; }
+.banner { background:var(--banner); padding:8px 16px; border-bottom:1px solid var(--line); }
+footer { color:var(--muted); font-size:.85em; max-width:980px; margin:24px auto; padding:0 16px; }
+</style>
+</head>
+<body>
+<header><strong>Assured AI programme</strong><a href="../../../index.html">Home</a><a href="../../../pulled/index.html">Board</a><a href="../../../processes/index.html">Processes</a><a href="../../../docs/requirements-v0.4.2.html">Requirements v0.4.2</a><a href="../../../library/index.html">Library</a></header>
+<main>
+<hr />
+<h2>doc_id: assured-ai-github-programme-requirements-v042
+doc_title: &quot;Assured AI: requirements for the programme GitHub project&quot;
+section_id: s025-12-pilot-build
+section_title: &quot;12. Pilot build&quot;
+file: &quot;Assured_AI_GitHub_Programme_Requirements_v0.4.2.md&quot;
+lines: 367-401
+source_sha256: 74634ec34e62b978
+granularity: heading</h2>
+<h2>12. Pilot build</h2>
+<p>Before any bulk import, the agent builds and tests this small set. Use representative Assured AI work items that reflect genuine planned activities, each clearly marked as a pilot. Do not create artificial dependencies between unrelated technical tasks, and do not move or change existing operational work (for example the project 110 items) to test the configuration. After the pilot passes, the project 110 items are reviewed with Ritika and agreed work is brought into the right repositories; where technical work stays in an external repository, the WHO coordination issue links to it.</p>
+<ul>
+<li>1 epic in <code>aai-programme</code></li>
+<li>2 features in two different workstream repositories, as sub-issues of the epic</li>
+<li>1 native &quot;blocked by&quot; relationship between the two features</li>
+<li>1 D-number issue in <code>aai-programme</code></li>
+<li>1 decision issue in <code>aai-programme</code></li>
+<li>1 research question issue</li>
+<li>1 milestone issue</li>
+<li>1 restricted note in <code>aai-pm</code>, linked from the pilot epic</li>
+<li>1 item with Review type set</li>
+<li>1 item labelled <code>thin-slice</code></li>
+<li>1 item labelled <code>sprint-demo</code></li>
+<li>1 workstream issue linking to an external partner repository (BD-02a)</li>
+</ul>
+<p>The pilot must prove each of these:</p>
+<table>
+<thead>
+<tr><th>ID</th><th>Test</th></tr>
+</thead>
+<tbody>
+<tr><td>PIL-01</td><td>An organisation issue field changed on a <code>thin-slice</code> workstream item shows the same value in its workstream project and the programme project</td></tr>
+<tr><td>PIL-02</td><td>Sub-issue progress from two repositories rolls up into the epic in V1</td></tr>
+<tr><td>PIL-03</td><td>The test partner account cannot open the <code>aai-pm</code> note or see its content from the link on the pilot epic</td></tr>
+<tr><td>PIL-04</td><td>No <code>aai-pm</code> issue appears in the programme project</td></tr>
+<tr><td>PIL-05</td><td>A <code>blocked</code> label on a feature sets Delivery health to Blocked on the epic within one run of the Action, and the epic appears in V10</td></tr>
+<tr><td>PIL-06</td><td>Every view in section 8.1 returns the right pilot items</td></tr>
+<tr><td>PIL-07</td><td>The test partner account sets Integration readiness to Validated on a pilot item with no confirmation comment. AUTO-10 adds the <code>validation-exception</code> label and one comment. Running it again adds nothing more. When the Technical Integration Lead adds the confirmation comment, the label is removed</td></tr>
+<tr><td>PIL-08</td><td>Closing a pilot epic as completed sets Programme status to Done through AUTO-03</td></tr>
+<tr><td>PIL-09</td><td>Closing a pilot item as not planned sets Programme status to Cancelled, and reopening it sets In progress</td></tr>
+<tr><td>PIL-10</td><td>The pinned fields in section 5.3 appear on the issue form for each pilot issue type</td></tr>
+<tr><td>PIL-11</td><td>Charts M1 to M5 show the pilot items correctly, or the report records which cannot be built natively</td></tr>
+</tbody>
+</table>
+<p>If any test fails, stop and report. Delete or close the pilot items once the bulk import is complete.</p>
+
+</main>
+<footer>Built from <a href="https://github.com/litlfred/aai-programme/tree/21de491990fa80fbd44bc47d9e1c81339df437fb">litlfred/aai-programme@21de491</a>.</footer>
+</body>
+</html>

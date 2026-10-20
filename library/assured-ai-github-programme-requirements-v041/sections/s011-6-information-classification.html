@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>library/assured-ai-github-programme-requirements-v041/sections/s011-6-information-classification.md · Assured AI programme</title>
+<style>
+:root { --fg:#1f2328; --bg:#fff; --muted:#59636e; --line:#d1d9e0; --link:#0969da; --code:#f6f8fa; --banner:#fff8c5; }
+@media (prefers-color-scheme: dark) { :root { --fg:#e6edf3; --bg:#0d1117; --muted:#9198a1; --line:#3d444d; --link:#4493f8; --code:#151b23; --banner:#3b2e00; } }
+body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif; }
+header { border-bottom:1px solid var(--line); padding:12px 16px; display:flex; flex-wrap:wrap; gap:6px 18px; align-items:baseline; }
+header strong { margin-right:8px; }
+header a { color:var(--link); text-decoration:none; }
+main { max-width:980px; margin:0 auto; padding:16px; overflow-wrap:anywhere; }
+a { color:var(--link); }
+code { background:var(--code); padding:0 4px; border-radius:4px; font-size:.92em; }
+pre { background:var(--code); padding:12px; overflow:auto; border-radius:6px; }
+pre code { padding:0; }
+table { border-collapse:collapse; display:block; overflow:auto; margin:12px 0; }
+th, td { border:1px solid var(--line); padding:6px 10px; vertical-align:top; text-align:left; }
+img { max-width:100%; background:#fff; }
+.banner { background:var(--banner); padding:8px 16px; border-bottom:1px solid var(--line); }
+footer { color:var(--muted); font-size:.85em; max-width:980px; margin:24px auto; padding:0 16px; }
+</style>
+</head>
+<body>
+<header><strong>Assured AI programme</strong><a href="../../../index.html">Home</a><a href="../../../pulled/index.html">Board</a><a href="../../../processes/index.html">Processes</a><a href="../../../docs/requirements-v0.4.2.html">Requirements v0.4.2</a><a href="../../../library/index.html">Library</a></header>
+<main>
+<hr />
+<h2>doc_id: assured-ai-github-programme-requirements-v041
+doc_title: &quot;Assured AI: requirements for the programme GitHub project&quot;
+section_id: s011-6-information-classification
+section_title: &quot;6. Information classification&quot;
+file: &quot;Assured_AI_GitHub_Programme_Requirements_v0.4.1.md&quot;
+lines: 152-174
+source_sha256: bba5ea9ca2d3cff7
+granularity: heading</h2>
+<h2>6. Information classification</h2>
+<table>
+<thead>
+<tr><th>Class</th><th>Meaning</th><th>Where it may appear</th></tr>
+</thead>
+<tbody>
+<tr><td>Shared</td><td>Fine for every partner and Gates Foundation contact to read</td><td>Everything in <code>aai-programme</code>, the workstream repositories and the programme project</td></tr>
+<tr><td>Restricted</td><td>Named WHO staff only</td><td><code>aai-pm</code> only</td></tr>
+</tbody>
+</table>
+<p>Restricted material is limited to:</p>
+<ul>
+<li>internal deliberations and draft WHO positions not yet agreed</li>
+<li>escalation notes</li>
+<li>contractual, funding or personnel matters</li>
+<li>sensitive security, legal or privacy issues</li>
+<li>internal review commentary, reviewer details and adjudication reasoning</li>
+</ul>
+<p>Rules:</p>
+<ul>
+<li><strong>SEC-01.</strong> Treat everything on an issue in a shared repository as shared: title, body, comments, labels, issue fields and relationships. Anyone with read access to the repository can read its issue fields.</li>
+<li><strong>SEC-02.</strong> Restricted material is never written in a shared repository, including in comments. Put it in an <code>aai-pm</code> issue and link to that issue from the shared one. People without access to <code>aai-pm</code> cannot open the link (pilot test PIL-03 confirms this), but the link text is visible, so it must be neutral, for example &quot;Restricted note&quot;. Restricted issue titles must also be neutral, because a title can show in previews.</li>
+<li><strong>SEC-03.</strong> Write shared information on the assumption that every partner and the funder will read it. State facts and the next action, not blame. For example, &quot;Blocked: waiting for the HIV graph schema from WS1, due 20 Nov&quot; rather than an opinion on why.</li>
+<li><strong>SEC-04.</strong> Making any project or repository public is a separate governance decision with its own privacy review. The build must not assume it will happen, and must not prepare for it.</li>
+<li><strong>SEC-05.</strong> Never weaken repository or project permissions to make linking easier, and never change organisation-wide security settings.</li>
+</ul>
+
+</main>
+<footer>Built from <a href="https://github.com/litlfred/aai-programme/tree/21de491990fa80fbd44bc47d9e1c81339df437fb">litlfred/aai-programme@21de491</a>.</footer>
+</body>
+</html>

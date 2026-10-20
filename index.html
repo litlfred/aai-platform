@@ -1,4 +1,97 @@
 <!doctype html>
+<html lang="en">
+<head>
 <meta charset="utf-8">
-<title>Placeholder</title>
-<p>This site has not been published yet. The publish workflow replaces this page.</p>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>aai-programme · Assured AI programme</title>
+<style>
+:root { --fg:#1f2328; --bg:#fff; --muted:#59636e; --line:#d1d9e0; --link:#0969da; --code:#f6f8fa; --banner:#fff8c5; }
+@media (prefers-color-scheme: dark) { :root { --fg:#e6edf3; --bg:#0d1117; --muted:#9198a1; --line:#3d444d; --link:#4493f8; --code:#151b23; --banner:#3b2e00; } }
+body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif; }
+header { border-bottom:1px solid var(--line); padding:12px 16px; display:flex; flex-wrap:wrap; gap:6px 18px; align-items:baseline; }
+header strong { margin-right:8px; }
+header a { color:var(--link); text-decoration:none; }
+main { max-width:980px; margin:0 auto; padding:16px; overflow-wrap:anywhere; }
+a { color:var(--link); }
+code { background:var(--code); padding:0 4px; border-radius:4px; font-size:.92em; }
+pre { background:var(--code); padding:12px; overflow:auto; border-radius:6px; }
+pre code { padding:0; }
+table { border-collapse:collapse; display:block; overflow:auto; margin:12px 0; }
+th, td { border:1px solid var(--line); padding:6px 10px; vertical-align:top; text-align:left; }
+img { max-width:100%; background:#fff; }
+.banner { background:var(--banner); padding:8px 16px; border-bottom:1px solid var(--line); }
+footer { color:var(--muted); font-size:.85em; max-width:980px; margin:24px auto; padding:0 16px; }
+</style>
+</head>
+<body>
+<header><strong>Assured AI programme</strong><a href="./index.html">Home</a><a href="./pulled/index.html">Board</a><a href="./processes/index.html">Processes</a><a href="./docs/requirements-v0.4.2.html">Requirements v0.4.2</a><a href="./library/index.html">Library</a></header>
+<main>
+<h1>aai-programme</h1>
+<p>Coordination for the WHO Assured AI programme: the requirements, the processes that build the programme's GitHub set-up, and the combined work plan. Staged here, in <code>litlfred/aai-programme</code>, until the owner syncs it to the WHO organisation. Programme status is held on GitHub issues; see the programme set-up request, <a href="https://github.com/litlfred/folio-assistant/issues/2605">litlfred/folio-assistant#2605</a>.</p>
+<p>The site is at <a href="https://litlfred.github.io/aai-programme/">https://litlfred.github.io/aai-programme/</a>, and each pull request's preview at <code>STAGING/&lt;branch&gt;/</code> under it.</p>
+<p>Until Platform has a repository of its own, its scope is recorded here.</p>
+<h2>What Platform is</h2>
+<p>Agreed by the PM &amp; Architecture Integration on <a href="https://github.com/litlfred/folio-assistant/issues/2605#issuecomment-6291128158">folio-assistant#2605</a>:</p>
+<ul>
+<li>Platform is a <strong>cross-cutting technical delivery function</strong> that supports WS1 to WS5. It is not a sixth research workstream.</li>
+<li>It follows the same issue, field, label and linking rules as the workstream repositories <code>aai-ws1</code> to <code>aai-ws4</code>. Its deliverables are features under programme epics in <code>aai-programme</code>.</li>
+<li>It has a named lead with Maintain access on this repository. <strong>The lead is not yet confirmed.</strong></li>
+<li>Technical integration readiness is judged by the Technical Integration Lead, not by Platform.</li>
+</ul>
+<h3>Still to agree</h3>
+<ul>
+<li><strong>Lead.</strong> To be confirmed with Ritika and the relevant technical colleagues.</li>
+<li><strong>Scope.</strong> Which activities belong to Platform and which to WS1 or the other technical workstreams. Candidates from project 110, to be reviewed with Ritika before anything moves: rendering knowledge-graph content to Pages, pipeline Docker images, deploying folio-assistant to OHS, safe self-hosting, and the country data-sovereign pipeline (cross-workstream).</li>
+<li><strong>Board.</strong> If project 110 becomes the Platform board, Ritika and the Platform lead agree who owns it.</li>
+</ul>
+<h2>Issues and beans</h2>
+<p>The Platform board of record is the <strong>issues</strong> on the programme and Platform projects. Beans are the agents' working notes on how to do that work. They never replace an issue.</p>
+<p><strong>Proposed rule for when a bean becomes an issue</strong> (open for discussion):</p>
+<ul>
+<li><strong>Open an issue</strong> when the work needs a person to see or act on it: it delivers part of a programme epic, changes a date, creates or clears a dependency on another workstream, or needs a human review or decision. Link the bean to it with <code>issue:</code>.</li>
+<li><strong>Keep it a bean</strong> when it is a step inside work that already has an issue, or agent housekeeping that nobody outside the repository needs to track.</li>
+<li><strong>Going back.</strong> An issue that turns out to be agent housekeeping is closed as not planned, with a link to the bean that carries on the work.</li>
+</ul>
+<p>The board below counts open beans without an issue, so the gaps stay visible.</p>
+<h2>This repository is a knowledge graph</h2>
+<p>It is a cat-harness instance named <code>aai-programme</code>, declared in <a href="https://github.com/litlfred/aai-programme/blob/21de491990fa80fbd44bc47d9e1c81339df437fb/aai-programme.json"><code>aai-programme.json</code></a>. It holds:</p>
+<ul>
+<li><strong><code>processes/</code></strong>: the programme's processes as BPMN, starting with the build sequence. See <a href="processes/index.html"><code>processes/README.md</code></a>.</li>
+<li><strong><code>library/</code></strong>: the programme requirements, ingested from <a href="https://github.com/litlfred/aai-programme/tree/21de491990fa80fbd44bc47d9e1c81339df437fb/uploads/"><code>uploads/</code></a>: v0.4.1 as written by the PM &amp; Architecture Integration and the v0.4.2 draft. Each section is a JSON-LD node that beans, processes and issues can cite.</li>
+<li><strong><code>beans/</code></strong>: the work plan, kept on the branch <code>cat/aai-platform/beans</code>.</li>
+</ul>
+<p><a href="https://github.com/litlfred/aai-programme/blob/21de491990fa80fbd44bc47d9e1c81339df437fb/index.config.json"><code>index.config.json</code></a> lists the other knowledge graphs whose work plans the board reviews, each pinned to a commit the owner approved and limited to its <code>beans</code> directory. Until that list has been tested, <code>beans-sources.json</code> and <code>scripts/pull-beans.ts</code> still build the board.</p>
+<h2>Labels</h2>
+<p>The labels from section 7.3 of the programme requirements. Keep them unchanged.</p>
+<table>
+<thead>
+<tr><th>Label</th><th>Meaning</th></tr>
+</thead>
+<tbody>
+<tr><td><code>rq:R1</code> to <code>rq:R7</code></td><td>Every research question the item contributes to</td></tr>
+<tr><td><code>route:control</code>, <code>route:0</code>, <code>route:a</code>, <code>route:b</code></td><td>Which comparison routes the item covers</td></tr>
+<tr><td><code>thin-slice</code></td><td>Part of the end-to-end demo slice</td></tr>
+<tr><td><code>sprint-demo</code></td><td>To be shown at the next fortnightly sprint review</td></tr>
+<tr><td><code>blocked</code>, <code>at-risk</code></td><td>Raised by the team on its own items. Add a &quot;Next action&quot; line to the issue body: what will happen, who will do it, and by when</td></tr>
+<tr><td><code>needs-review</code></td><td>Ready for WHO review</td></tr>
+<tr><td><code>validation-exception</code></td><td>Set by automation only</td></tr>
+</tbody>
+</table>
+<p>The <code>gates:</code> labels, one per Gates output, are added once the PM supplies the Gates output list.</p>
+<h2>Beans board</h2>
+<p>Beans are the agents' work plan: one Markdown file per work item, read by the <a href="https://github.com/hmans/beans"><code>beans</code></a> CLI.</p>
+<ul>
+<li><strong>This repository's beans</strong> live on the branch <a href="https://github.com/litlfred/aai-programme/tree/cat/aai-platform/beans"><code>cat/aai-platform/beans</code></a>. Run <code>scripts/state-mount.sh</code> to put it at <code>.state/</code>, where <code>.beans.yml</code> points the CLI.</li>
+<li><strong>The combined board</strong>, <a href="pulled/index.html"><code>pulled/README.md</code></a>, lists the beans of every repository in <a href="https://github.com/litlfred/aai-programme/blob/21de491990fa80fbd44bc47d9e1c81339df437fb/beans-sources.json"><code>beans-sources.json</code></a>. To add or remove a repository, edit that file. Repositories on its <code>deny</code> list are refused.</li>
+<li>A bean that tracks programme work carries <code>issue:</code> with the URL of its GitHub issue. The issue is the source of truth; the board counts open beans without one.</li>
+</ul>
+<pre><code class="language-sh">bun run scripts/pull-beans.ts            # rebuild pulled/
+bun run scripts/pull-beans.ts --dry-run  # print the summary only
+bun run scripts/pull-beans.ts --check    # fail if pulled/ is out of date
+</code></pre>
+<p>The <code>Pull beans</code> workflow rebuilds the board every day and on demand.</p>
+
+</main>
+<footer>Built from <a href="https://github.com/litlfred/aai-programme/tree/21de491990fa80fbd44bc47d9e1c81339df437fb">litlfred/aai-programme@21de491</a>.</footer>
+</body>
+</html>

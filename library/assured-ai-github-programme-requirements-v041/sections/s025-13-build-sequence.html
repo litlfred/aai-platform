@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>library/assured-ai-github-programme-requirements-v041/sections/s025-13-build-sequence.md · Assured AI programme</title>
+<style>
+:root { --fg:#1f2328; --bg:#fff; --muted:#59636e; --line:#d1d9e0; --link:#0969da; --code:#f6f8fa; --banner:#fff8c5; }
+@media (prefers-color-scheme: dark) { :root { --fg:#e6edf3; --bg:#0d1117; --muted:#9198a1; --line:#3d444d; --link:#4493f8; --code:#151b23; --banner:#3b2e00; } }
+body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif; }
+header { border-bottom:1px solid var(--line); padding:12px 16px; display:flex; flex-wrap:wrap; gap:6px 18px; align-items:baseline; }
+header strong { margin-right:8px; }
+header a { color:var(--link); text-decoration:none; }
+main { max-width:980px; margin:0 auto; padding:16px; overflow-wrap:anywhere; }
+a { color:var(--link); }
+code { background:var(--code); padding:0 4px; border-radius:4px; font-size:.92em; }
+pre { background:var(--code); padding:12px; overflow:auto; border-radius:6px; }
+pre code { padding:0; }
+table { border-collapse:collapse; display:block; overflow:auto; margin:12px 0; }
+th, td { border:1px solid var(--line); padding:6px 10px; vertical-align:top; text-align:left; }
+img { max-width:100%; background:#fff; }
+.banner { background:var(--banner); padding:8px 16px; border-bottom:1px solid var(--line); }
+footer { color:var(--muted); font-size:.85em; max-width:980px; margin:24px auto; padding:0 16px; }
+</style>
+</head>
+<body>
+<header><strong>Assured AI programme</strong><a href="../../../index.html">Home</a><a href="../../../pulled/index.html">Board</a><a href="../../../processes/index.html">Processes</a><a href="../../../docs/requirements-v0.4.2.html">Requirements v0.4.2</a><a href="../../../library/index.html">Library</a></header>
+<main>
+<hr />
+<h2>doc_id: assured-ai-github-programme-requirements-v041
+doc_title: &quot;Assured AI: requirements for the programme GitHub project&quot;
+section_id: s025-13-build-sequence
+section_title: &quot;13. Build sequence&quot;
+file: &quot;Assured_AI_GitHub_Programme_Requirements_v0.4.1.md&quot;
+lines: 376-388
+source_sha256: bba5ea9ca2d3cff7
+granularity: heading</h2>
+<h2>13. Build sequence</h2>
+<ol>
+<li><strong>Pre-flight.</strong> Confirm the section 3 decisions are recorded. Inspect existing issue types, issue fields, organisation issue-field headroom, project field counts, projects, teams, repository policies, SSO/EMU constraints and permissions in the organisation. Reuse compatible organisation configuration and do not create anything that duplicates something already there.</li>
+<li><strong>Organisation setup.</strong> An organisation owner creates or reuses the section 5.1 issue types and section 7.1 issue fields. If they cannot, use the section 7.4 fallback.</li>
+<li><strong>Repositories.</strong> Create <code>aai-programme</code>, <code>aai-pm</code> and the two workstream repositories the pilot needs, with the access agreed in BD-03 and BD-04, and the labels in section 7.3. Create the remaining <code>aai-wsN</code> repositories as each lead is confirmed. Pin fields to issue types as set out in section 5.3.</li>
+<li><strong>Projects.</strong> Create the programme project and the template, with the views in section 8, in the order listed.</li>
+<li><strong>READMEs and directory.</strong> Write the READMEs and create the directory issue.</li>
+<li><strong>Automations.</strong> Set up AUTO-01 to AUTO-11. Stop if the BD-08 credentials are not yet in place.</li>
+<li><strong>Pilot.</strong> Run section 12. Stop if any test fails.</li>
+<li><strong>Bulk import.</strong> Import the epics, milestones, research questions, dependencies and the decision template from the inputs in section 14, then run the AUTO-11 backfill.</li>
+<li><strong>Charts and validation.</strong> Build charts M1 to M5 and check the acceptance criteria in section 15.</li>
+<li><strong>Build report.</strong> Hand back the report described in section 16.</li>
+</ol>
+
+</main>
+<footer>Built from <a href="https://github.com/litlfred/aai-programme/tree/21de491990fa80fbd44bc47d9e1c81339df437fb">litlfred/aai-programme@21de491</a>.</footer>
+</body>
+</html>

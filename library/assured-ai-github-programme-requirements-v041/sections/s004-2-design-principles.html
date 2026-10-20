@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>library/assured-ai-github-programme-requirements-v041/sections/s004-2-design-principles.md · Assured AI programme</title>
+<style>
+:root { --fg:#1f2328; --bg:#fff; --muted:#59636e; --line:#d1d9e0; --link:#0969da; --code:#f6f8fa; --banner:#fff8c5; }
+@media (prefers-color-scheme: dark) { :root { --fg:#e6edf3; --bg:#0d1117; --muted:#9198a1; --line:#3d444d; --link:#4493f8; --code:#151b23; --banner:#3b2e00; } }
+body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif; }
+header { border-bottom:1px solid var(--line); padding:12px 16px; display:flex; flex-wrap:wrap; gap:6px 18px; align-items:baseline; }
+header strong { margin-right:8px; }
+header a { color:var(--link); text-decoration:none; }
+main { max-width:980px; margin:0 auto; padding:16px; overflow-wrap:anywhere; }
+a { color:var(--link); }
+code { background:var(--code); padding:0 4px; border-radius:4px; font-size:.92em; }
+pre { background:var(--code); padding:12px; overflow:auto; border-radius:6px; }
+pre code { padding:0; }
+table { border-collapse:collapse; display:block; overflow:auto; margin:12px 0; }
+th, td { border:1px solid var(--line); padding:6px 10px; vertical-align:top; text-align:left; }
+img { max-width:100%; background:#fff; }
+.banner { background:var(--banner); padding:8px 16px; border-bottom:1px solid var(--line); }
+footer { color:var(--muted); font-size:.85em; max-width:980px; margin:24px auto; padding:0 16px; }
+</style>
+</head>
+<body>
+<header><strong>Assured AI programme</strong><a href="../../../index.html">Home</a><a href="../../../pulled/index.html">Board</a><a href="../../../processes/index.html">Processes</a><a href="../../../docs/requirements-v0.4.2.html">Requirements v0.4.2</a><a href="../../../library/index.html">Library</a></header>
+<main>
+<hr />
+<h2>doc_id: assured-ai-github-programme-requirements-v041
+doc_title: &quot;Assured AI: requirements for the programme GitHub project&quot;
+section_id: s004-2-design-principles
+section_title: &quot;2. Design principles&quot;
+file: &quot;Assured_AI_GitHub_Programme_Requirements_v0.4.1.md&quot;
+lines: 48-61
+source_sha256: bba5ea9ca2d3cff7
+granularity: heading</h2>
+<h2>2. Design principles</h2>
+<table>
+<thead>
+<tr><th>ID</th><th>Principle</th></tr>
+</thead>
+<tbody>
+<tr><td>DP-01</td><td><strong>Create once, show many times.</strong> One issue can appear in several projects. Never clone an issue to report its status somewhere else.</td></tr>
+<tr><td>DP-02</td><td><strong>Workstream leads own their delivery.</strong> The agent creates programme epics and the workstream template. It does not create features or stories in workstream repositories.</td></tr>
+<tr><td>DP-03</td><td><strong>Programme work is not sprint work.</strong> Sprints are managed inside the workstream projects. The programme project tracks dates, milestones, delivery health and readiness, not sprints.</td></tr>
+<tr><td>DP-04</td><td><strong>Open by default, restricted by exception.</strong> Anything that could affect another workstream's sequencing, dependencies or delivery plans is shared. Only the material listed in section 6 is restricted.</td></tr>
+<tr><td>DP-05</td><td><strong>Technical integration judgements sit with the Technical Integration Lead.</strong> The Technical Integration Lead owns technical integration readiness and validation, working with the relevant workstream leads and subject-matter experts. The role is currently held by the WHO WS1 lead, but the authority comes from the role, not from WS1. The PM manages sequencing, dates, dependencies, evidence and escalation, and does not make technical readiness judgements.</td></tr>
+<tr><td>DP-06</td><td><strong>Automation must not make judgements.</strong> Automation may make deterministic administrative updates, such as adding items, lifecycle status changes and flags raised from labels. It never makes readiness, approval, risk-acceptance or decision judgements.</td></tr>
+<tr><td>DP-07</td><td><strong>Keep it simple.</strong> Delivery health, risk category, impact and dates only. No probability or impact scoring model.</td></tr>
+<tr><td>DP-08</td><td><strong>Prove it small before building it big.</strong> A pilot build (section 12) must pass before any bulk import.</td></tr>
+<tr><td>DP-09</td><td><strong>Plain language.</strong> All titles, field options, view names and READMEs use plain, simple English. Use the role name &quot;PM &amp; Architecture Integration&quot; exactly as written.</td></tr>
+</tbody>
+</table>
+
+</main>
+<footer>Built from <a href="https://github.com/litlfred/aai-programme/tree/21de491990fa80fbd44bc47d9e1c81339df437fb">litlfred/aai-programme@21de491</a>.</footer>
+</body>
+</html>
