@@ -1079,6 +1079,14 @@
       "isTest": false
     },
     {
+      "module": "cat-harness/schemas/library-structure-families.test.ts",
+      "instance": "cat-harness",
+      "name": "library-structure-families.test",
+      "graphNode": "undeclared",
+      "summary": "A library's `structure.json` is routed to the family its format names",
+      "isTest": true
+    },
+    {
       "module": "cat-harness/schemas/log-entry.ts",
       "instance": "cat-harness",
       "name": "log-entry",
@@ -1665,6 +1673,14 @@
       "graphNode": "schema",
       "summary": "Which URL schemes may reach an `href`, and why the answer is a list.",
       "isTest": false
+    },
+    {
+      "module": "cat-harness/schemas/scenario-overlay-needed.test.ts",
+      "instance": "cat-harness",
+      "name": "scenario-overlay-needed.test",
+      "graphNode": "undeclared",
+      "summary": "An instance audit resolves actors from the platform, every instance the",
+      "isTest": true
     },
     {
       "module": "cat-harness/schemas/scenario-overlay.ts",
@@ -34093,6 +34109,39 @@
           "type": "z.array(z.string().min(1)).optional()",
           "optional": true,
           "array": true
+        },
+        {
+          "name": "container",
+          "type": "z.boolean().optional()",
+          "optional": true,
+          "array": false,
+          "doc": "A bound volume split into its papers by qou's `split-bound-volume.py`:"
+        },
+        {
+          "name": "container_children",
+          "type": "z.array(z.string().min(1)).optional()",
+          "optional": true,
+          "array": true
+        },
+        {
+          "name": "container_note",
+          "type": "z.string().optional()",
+          "optional": true,
+          "array": false
+        },
+        {
+          "name": "toc_note",
+          "type": "z.string().optional()",
+          "optional": true,
+          "array": false,
+          "doc": "Where the headings came from when a person supplied them, not the producer."
+        },
+        {
+          "name": "text_extraction",
+          "type": "z .object({ route: z.enum([\"ocr\", \"embedded\"]), reason: z.string().optional(), engine: z.string().optional(), render: z…",
+          "optional": true,
+          "array": false,
+          "doc": "How the text was obtained when it was done by hand, outside the"
         }
       ],
       "extendsNames": [],
@@ -34104,7 +34153,8 @@
         "cat-harness/schemas/pdf-structure.ts#PdfPageLabelSchema",
         "cat-harness/schemas/pdf-structure.ts#PdfSectionSchema",
         "cat-harness/schemas/pdf-structure.ts#PdfSourceSchema",
-        "cat-harness/schemas/pdf-structure.ts#PdfTocEntrySchema"
+        "cat-harness/schemas/pdf-structure.ts#PdfTocEntrySchema",
+        "cat-harness/schemas/pdf-structure.ts#Sha256"
       ],
       "unresolved": [],
       "external": [
@@ -72281,6 +72331,14 @@
       "array": true
     },
     {
+      "from": "cat-harness/schemas/pdf-structure.ts#PdfStructureSchema",
+      "to": "cat-harness/schemas/pdf-structure.ts#Sha256",
+      "via": "text_extraction",
+      "kind": "field",
+      "optional": true,
+      "array": false
+    },
+    {
       "from": "cat-harness/schemas/pinned-terminology.ts#PinnedTerminologySchema",
       "to": "cat-harness/schemas/pinned-terminology.ts#PinnedConceptSchema",
       "via": "concepts",
@@ -78307,6 +78365,24 @@
       "page": "en/cat-harness/node-kind-index/"
     },
     {
+      "id": "notebook-structure/v1",
+      "source": "family",
+      "decl": "cat-harness/schemas/document-structure.ts#NotebookStructureSchema",
+      "instance": "cat-harness",
+      "typologies": [
+        "library"
+      ]
+    },
+    {
+      "id": "pdf-structure/v1",
+      "source": "family",
+      "decl": "cat-harness/schemas/pdf-structure.ts#PdfStructureSchema",
+      "instance": "cat-harness",
+      "typologies": [
+        "library"
+      ]
+    },
+    {
       "id": "policies",
       "source": "typology",
       "decl": "cat-harness/schemas/odrl.ts#OdrlPolicySchema",
@@ -78427,6 +78503,15 @@
       "instance": "cat-harness",
       "typologies": [
         "test-report"
+      ]
+    },
+    {
+      "id": "text-structure/v1",
+      "source": "family",
+      "decl": "cat-harness/schemas/document-structure.ts#TextStructureSchema",
+      "instance": "cat-harness",
+      "typologies": [
+        "library"
       ]
     },
     {
