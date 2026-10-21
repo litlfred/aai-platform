@@ -577,33 +577,33 @@
   them: those are versioned in their own URLs already.
 -->
 <!-- The harness icon row's own style, which railed pages load without docs-ui.css (beans `lhvt`, `9rq1`). -->
-<link rel="stylesheet" href="/aai-programme/assets/css/navbar-row.css?v=1792591348">
-<link rel="stylesheet" href="/aai-programme/assets/css/docs-ui.css?v=1792591348">
+<link rel="stylesheet" href="/aai-programme/assets/css/navbar-row.css?v=1792595885">
+<link rel="stylesheet" href="/aai-programme/assets/css/docs-ui.css?v=1792595885">
 <!-- Narrow viewports: wide content scrolls in its own box, never the page
      (bean `2r2n`). The standalone viewers inline the same file through
      `withViewerNav`, so both kinds of page read one set of rules. -->
-<link rel="stylesheet" href="/aai-programme/assets/css/narrow-viewport.css?v=1792591348">
+<link rel="stylesheet" href="/aai-programme/assets/css/narrow-viewport.css?v=1792595885">
 
 <!--
   The work-plan dashboard's styles, split from docs-ui.css so that
   `state-visualizer.ts` can inline exactly these bytes into the generated
   `<base>/<stub>/state-visualizer/` pages. One rule, two surfaces.
 -->
-<link rel="stylesheet" href="/aai-programme/assets/css/work-plan.css?v=1792591348">
+<link rel="stylesheet" href="/aai-programme/assets/css/work-plan.css?v=1792595885">
 <!-- Sticky themes. GENERATED from the theme nodes in `schemas/themes.ts` by
      `bun run cat themes:css`; `themes:css:check` fails the build when it is stale.
      Loaded AFTER docs-ui.css deliberately: it supplies the `--fa-sticky-*`
      roles that docs-ui.css consumes, and a custom property has to be set on a
      matching element before the rule reading it takes effect. -->
-<link rel="stylesheet" href="/aai-programme/assets/css/themes.css?v=1792591348">
+<link rel="stylesheet" href="/aai-programme/assets/css/themes.css?v=1792595885">
 <!-- UML overview colours: one class per graph typology, set on the Mermaid nodes
      that `scripts/gen-uml-overview.ts` writes into docs/uml/overview/. -->
-<link rel="stylesheet" href="/aai-programme/assets/css/uml.css?v=1792591348">
+<link rel="stylesheet" href="/aai-programme/assets/css/uml.css?v=1792595885">
 <!-- Kind avatars. GENERATED from `schemas/avatars.ts` by `bun run cat avatars:css`;
      `avatars:css:check` fails the build when it is stale. One stylesheet
      rather than 68 assets: the glyph is a mask and the colour is a property,
      so a scheme swap is a custom property and the trash state is a selector. -->
-<link rel="stylesheet" href="/aai-programme/assets/css/avatars.css?v=1792591348">
+<link rel="stylesheet" href="/aai-programme/assets/css/avatars.css?v=1792595885">
 
 <!--
   The kinds THIS INSTANCE DECLARES, for the avatar fan.
@@ -624,12 +624,12 @@
 <!-- BEFORE docs-ui.js and work-plan.js: both read window.faRender. -->
 <script src="/aai-programme/assets/js/kg-render.js" defer></script>
 <!-- BEFORE docs-ui.js, which calls it: the one drawing of the harness icon row (beans `lhvt`, `9rq1`). -->
-<script src="/aai-programme/assets/js/navbar-row.js?v=1792591348" defer></script>
-<script src="/aai-programme/assets/js/docs-ui.js?v=1792591348" defer></script>
+<script src="/aai-programme/assets/js/navbar-row.js?v=1792595885" defer></script>
+<script src="/aai-programme/assets/js/docs-ui.js?v=1792595885" defer></script>
 <!-- The edit, source and feedback links of every page, from the platform's one
   recipe (cat-harness-tools/src/core/edit-links.ts, bean v433): links carry their
   facts and this builds the hrefs. -->
-<script src="/aai-programme/assets/js/edit-links.js?v=1792591348" defer></script>
+<script src="/aai-programme/assets/js/edit-links.js?v=1792595885" defer></script>
 
 <!--
   The work-plan dashboard. SELF-MOUNTING on any page carrying
@@ -716,7 +716,7 @@
 
 <link rel="stylesheet" href="../assets/css/navbar.css"><script src="../assets/navbar/rail-h6la0y4e05.js" defer></script><script src="../assets/js/navbar.js" defer></script><link rel="stylesheet" href="../assets/page-layout.css" data-fa-page-layout><script src="../assets/page-layout.js" defer data-fa-page-layout></script><meta name="fa-pinned-data" content=".."></head>
 
-<body><script type="application/json" id="fa-rail" data-fa-root="https://litlfred.github.io/folio-assistant" data-fa-to-root="..">{"data":"rail-h6la0y4e05","here":"/programme/workstreams.html"}</script><nav class="fa-nav" aria-label="folio-assistant" data-fa-rail="pending"><a href="../">Assured AI programme</a></nav>
+<body><script type="application/json" id="fa-rail" data-fa-root="https://litlfred.github.io/folio-assistant" data-fa-to-root="..">{"data":"rail-h6la0y4e05","here":"/programme/workstreams.html","documentIndex":{"label":"On this page","icon":"§","items":[{"href":"#ws1-knowledge-graph","label":"WS1 Knowledge graph","children":[{"href":"#epic-proposal-ws1-who-guidance-into-the-l1-knowledge-graph-proposal","label":"Epic proposal (WS1): WHO guidance into the L1 knowledge graph (proposal)","depth":1}],"fold":"1 sub-section"},{"href":"#ws2-authoring","label":"WS2 Authoring","children":[{"href":"#epic-proposal-ws2-l1-and-dak-authoring-on-the-smart-stack-proposal","label":"Epic proposal (WS2): L1 and DAK authoring on the SMART stack (proposal)","depth":1}],"fold":"1 sub-section"},{"href":"#ws3-evaluation","label":"WS3 Evaluation","children":[{"href":"#epic-proposal-ws3-evaluate-outputs-across-models-and-routes-proposal","label":"Epic proposal (WS3): evaluate outputs across models and routes (proposal)","depth":1}],"fold":"1 sub-section"},{"href":"#ws4-localization","label":"WS4 Localization","children":[{"href":"#epic-proposal-ws4-translated-renders-and-their-review-proposal","label":"Epic proposal (WS4): translated renders and their review (proposal)","depth":1}],"fold":"1 sub-section"},{"href":"#ws5-governance-and-stewardship","label":"WS5 Governance and stewardship","children":[{"href":"#epic-proposal-ws5-programme-governance-and-stewardship-proposal","label":"Epic proposal (WS5): programme governance and stewardship (proposal)","depth":1}],"fold":"1 sub-section"},{"href":"#platform","label":"Platform","children":[{"href":"#epic-proposal-platform-deployment-publishing-and-the-knowledge-graphs-publication-proposal","label":"Epic proposal (Platform): deployment, publishing and the knowledge graph’s publication (proposal)","depth":1}],"fold":"1 sub-section"},{"href":"#cross-workstream","label":"Cross-workstream","children":[{"href":"#pilot-epic-one-who-recommendation-from-source-guidance-to-a-health-skill-epic","label":"[Pilot] Epic: one WHO recommendation from source guidance to a health skill (epic)","depth":1}],"fold":"1 sub-section"}],"collapsible":true}}</script><nav class="fa-nav" aria-label="folio-assistant" data-fa-rail="pending"><a href="../">Assured AI programme</a></nav>
   <a class="skip-to-main" href="#main-content">Skip to main content</a>
   <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
   <symbol id="svg-link" viewBox="0 0 24 24">
@@ -823,6 +823,332 @@
     
 
 <p>Each workstream’s epics and epic proposals, their features, and the beans each feature carries, with the bean’s live status from the snapshot. A ⚑ marks a feature the drift check flagged.</p>
+<h2 id="ws1-knowledge-graph">
+  
+  
+    <a href="#ws1-knowledge-graph" class="anchor-heading" aria-labelledby="ws1-knowledge-graph"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> WS1 Knowledge graph
+  
+  
+</h2>
+    
+<h3 id="epic-proposal-ws1-who-guidance-into-the-l1-knowledge-graph-proposal">
+  
+  
+    <a href="#epic-proposal-ws1-who-guidance-into-the-l1-knowledge-graph-proposal" class="anchor-heading" aria-labelledby="epic-proposal-ws1-who-guidance-into-the-l1-knowledge-graph-proposal"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> <a href="https://github.com/litlfred/aai-programme/issues/13">Epic proposal (WS1): WHO guidance into the L1 knowledge graph</a> <em>(proposal)</em>
+  
+  
+</h3>
+    
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Feature</th>
+      <th>State</th>
+      <th>Beans</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://github.com/litlfred/aai-programme/issues/24">Bibliography as knowledge-graph reference nodes</a></td>
+      <td>open</td>
+      <td><a href="https://github.com/litlfred/folio-assistant/blob/cat/cat-harness/beans/beans/defs/folio-assistant-63q4--bibliography-reference-nodes-viewer-and-exports.md">folio-assistant-63q4</a> in-progress</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/litlfred/aai-programme/issues/23">Check terminology against existing vocabularies, and adjudicate</a></td>
+      <td>open</td>
+      <td><a href="https://github.com/litlfred/folio-assistant/blob/cat/cat-harness/beans/beans/defs/folio-assistant-5yhm--terminology-identification-mapping-and-adjudicatio.md">folio-assistant-5yhm</a> in-progress</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/litlfred/aai-programme/issues/22">Ingest the evidence behind a guideline (PICO, reviews, GRADE)</a></td>
+      <td>open</td>
+      <td><a href="https://github.com/litlfred/folio-assistant/blob/cat/cat-harness/beans/beans/defs/folio-assistant-0lde--l1-evidence-ingest-the-external-evidence-an-l1-gui.md">folio-assistant-0lde</a> todo</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/litlfred/aai-programme/issues/21">One ingestion pipeline from uploaded sources to a complete L1 library</a></td>
+      <td>open</td>
+      <td><a href="https://github.com/litlfred/folio-assistant/blob/cat/cat-harness/beans/beans/defs/folio-assistant-slw1--ingest-one-pipeline-from-uploads-to-a-complete-l1.md">folio-assistant-slw1</a> todo</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/litlfred/aai-programme/issues/20">Tabular source data as CSVW, measured on real sources</a></td>
+      <td>open</td>
+      <td><a href="https://github.com/litlfred/folio-assistant-core/blob/main/beans/defs/folio-core-urat--migrate-folio-tabular-recordsv1-to-folio-tabular-c.md">folio-core-urat</a> in-progress</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/litlfred/aai-programme/issues/19">Extract L1 knowledge-graph nodes from guideline documents</a></td>
+      <td>open</td>
+      <td><a href="https://github.com/litlfred/cat-harness/blob/cat/cat-harness/beans/beans/defs/folio-assistant-8pzh--smart-base-extract-smart-kg-l1-instance-documents.md">folio-assistant-8pzh</a> in-progress</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/litlfred/aai-programme/issues/18">Immunizations L1 knowledge graph from DAK Component 1</a></td>
+      <td>open</td>
+      <td><a href="https://github.com/litlfred/folio-assistant/blob/cat/cat-harness/beans/beans/defs/folio-assistant-ioa4--x.md">folio-assistant-ioa4</a> in-progress</td>
+    </tr>
+  </tbody>
+</table></div>
+<h2 id="ws2-authoring">
+  
+  
+    <a href="#ws2-authoring" class="anchor-heading" aria-labelledby="ws2-authoring"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> WS2 Authoring
+  
+  
+</h2>
+    
+<h3 id="epic-proposal-ws2-l1-and-dak-authoring-on-the-smart-stack-proposal">
+  
+  
+    <a href="#epic-proposal-ws2-l1-and-dak-authoring-on-the-smart-stack-proposal" class="anchor-heading" aria-labelledby="epic-proposal-ws2-l1-and-dak-authoring-on-the-smart-stack-proposal"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> <a href="https://github.com/litlfred/aai-programme/issues/14">Epic proposal (WS2): L1 and DAK authoring on the SMART stack</a> <em>(proposal)</em>
+  
+  
+</h3>
+    
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Feature</th>
+      <th>State</th>
+      <th>Beans</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://github.com/litlfred/aai-programme/issues/32">Review large documents such as a DAK</a></td>
+      <td>open</td>
+      <td><a href="https://github.com/litlfred/folio-assistant/blob/cat/cat-harness/beans/beans/defs/folio-assistant-q4jm--large-document-review-a-review-visualiser-for-a-fo.md">folio-assistant-q4jm</a> todo</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/litlfred/aai-programme/issues/31">Skills and processes for ontologists and terminologists</a></td>
+      <td>open</td>
+      <td><a href="https://github.com/litlfred/folio-assistant/blob/cat/cat-harness/beans/beans/defs/folio-assistant-4nfs--ontologist-terminologist-skills-methodologies-tool.md">folio-assistant-4nfs</a> todo</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/litlfred/aai-programme/issues/30">Process catalogues: clinical, public health and health system</a></td>
+      <td>open</td>
+      <td><a href="https://github.com/litlfred/folio-assistant/blob/cat/cat-harness/beans/beans/defs/folio-assistant-2ipj--process-catalogues-clinical-smart-base-clinical-ho.md">folio-assistant-2ipj</a> todo</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/litlfred/aai-programme/issues/29">Data dictionary as a web annex in the knowledge graph</a></td>
+      <td>open</td>
+      <td><a href="https://github.com/litlfred/folio-assistant/blob/cat/cat-harness/beans/beans/defs/folio-assistant-fm9n--data-dictionary-web-annex-in-the-kg-loaded-dynamic.md">folio-assistant-fm9n</a> todo</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/litlfred/aai-programme/issues/28">Link IG personas to BPMN swimlanes</a></td>
+      <td>open</td>
+      <td><a href="https://github.com/litlfred/folio-assistant/blob/cat/cat-harness/beans/beans/defs/folio-assistant-cydz--ig-personas-cross-link-to-bpmn-swimlanes-with-a-la.md">folio-assistant-cydz</a> todo</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/litlfred/aai-programme/issues/27">Immunizations business processes as BPMN</a></td>
+      <td>open</td>
+      <td><a href="https://github.com/litlfred/folio-assistant/blob/cat/cat-harness/beans/beans/defs/folio-assistant-96y4--smart-immunizations-has-no-bpmn-immza-i-exist-only.md">folio-assistant-96y4</a> in-progress</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/litlfred/aai-programme/issues/26">The DAK type, with its Logical Model</a></td>
+      <td>open</td>
+      <td><a href="https://github.com/litlfred/folio-assistant-core/blob/main/beans/defs/folio-assistant-cz17--migrate-dakjson-in-the-dak-type-is-ours-and-its-lo.md">folio-assistant-cz17</a> todo</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/litlfred/aai-programme/issues/25">L1 and DAK as document kinds in smart-base</a></td>
+      <td>open</td>
+      <td><a href="https://github.com/litlfred/folio-assistant/blob/cat/cat-harness/beans/beans/defs/folio-assistant-qvxh--smart-l1-and-dak-as-document-kinds-with-visualizer.md">folio-assistant-qvxh</a> in-progress</td>
+    </tr>
+  </tbody>
+</table></div>
+<h2 id="ws3-evaluation">
+  
+  
+    <a href="#ws3-evaluation" class="anchor-heading" aria-labelledby="ws3-evaluation"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> WS3 Evaluation
+  
+  
+</h2>
+    
+<h3 id="epic-proposal-ws3-evaluate-outputs-across-models-and-routes-proposal">
+  
+  
+    <a href="#epic-proposal-ws3-evaluate-outputs-across-models-and-routes-proposal" class="anchor-heading" aria-labelledby="epic-proposal-ws3-evaluate-outputs-across-models-and-routes-proposal"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> <a href="https://github.com/litlfred/aai-programme/issues/15">Epic proposal (WS3): evaluate outputs across models and routes</a> <em>(proposal)</em>
+  
+  
+</h3>
+    
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Feature</th>
+      <th>State</th>
+      <th>Beans</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://github.com/litlfred/aai-programme/issues/36">Experiment: a run forced along its process versus one that manages it</a></td>
+      <td>open</td>
+      <td><a href="https://github.com/litlfred/folio-assistant/blob/cat/cat-harness/beans/beans/defs/folio-assistant-502c--experiment-forced-along-a-bpmn-vs-managing-it-do-o.md">folio-assistant-502c</a> todo</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/litlfred/aai-programme/issues/35">Fixed and generated test data sets</a></td>
+      <td>open</td>
+      <td><a href="https://github.com/litlfred/folio-assistant/blob/cat/cat-harness/beans/beans/defs/folio-assistant-vm6m--test-data-fixed-and-generated-data-sets-as-a-skill.md">folio-assistant-vm6m</a> todo</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/litlfred/aai-programme/issues/34">Test data for SME review of decision support and indicators</a></td>
+      <td>open</td>
+      <td><a href="https://github.com/litlfred/folio-assistant/blob/cat/cat-harness/beans/beans/defs/folio-assistant-vljz--qa-test-data-for-sme-review-of-decision-support-an.md">folio-assistant-vljz</a> todo</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/litlfred/aai-programme/issues/33">Outcome evaluation of runs across models</a></td>
+      <td>open</td>
+      <td><a href="https://github.com/litlfred/folio-assistant/blob/cat/cat-harness/beans/beans/defs/folio-assistant-oz9e--benchmark-outcome-evaluation-of-harness-runs-acros.md">folio-assistant-oz9e</a> todo</td>
+    </tr>
+  </tbody>
+</table></div>
+<h2 id="ws4-localization">
+  
+  
+    <a href="#ws4-localization" class="anchor-heading" aria-labelledby="ws4-localization"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> WS4 Localization
+  
+  
+</h2>
+    
+<h3 id="epic-proposal-ws4-translated-renders-and-their-review-proposal">
+  
+  
+    <a href="#epic-proposal-ws4-translated-renders-and-their-review-proposal" class="anchor-heading" aria-labelledby="epic-proposal-ws4-translated-renders-and-their-review-proposal"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> <a href="https://github.com/litlfred/aai-programme/issues/16">Epic proposal (WS4): translated renders and their review</a> <em>(proposal)</em>
+  
+  
+</h3>
+    
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Feature</th>
+      <th>State</th>
+      <th>Beans</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>⚑ <a href="https://github.com/litlfred/aai-programme/issues/38">Adjudicate the 68 round-trip translation findings</a></td>
+      <td>open</td>
+      <td><a href="https://github.com/litlfred/folio-assistant-core/blob/main/beans/defs/folio-core-2mb0--adjudicate-the-68-round-trip-findings-on-who-iriss.md">folio-core-2mb0</a> completed</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/litlfred/aai-programme/issues/37">Author the 36 translation catalogues</a></td>
+      <td>open</td>
+      <td><a href="https://github.com/litlfred/folio-assistant/blob/cat/cat-harness/beans/beans/defs/folio-assistant-m4s1--translation-catalogues-36-locale-page-po-files-mus.md">folio-assistant-m4s1</a> todo</td>
+    </tr>
+  </tbody>
+</table></div>
+<h2 id="ws5-governance-and-stewardship">
+  
+  
+    <a href="#ws5-governance-and-stewardship" class="anchor-heading" aria-labelledby="ws5-governance-and-stewardship"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> WS5 Governance and stewardship
+  
+  
+</h2>
+    
+<h3 id="epic-proposal-ws5-programme-governance-and-stewardship-proposal">
+  
+  
+    <a href="#epic-proposal-ws5-programme-governance-and-stewardship-proposal" class="anchor-heading" aria-labelledby="epic-proposal-ws5-programme-governance-and-stewardship-proposal"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> <a href="https://github.com/litlfred/aai-programme/issues/50">Epic proposal (WS5): programme governance and stewardship</a> <em>(proposal)</em>
+  
+  
+</h3>
+    
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Feature</th>
+      <th>State</th>
+      <th>Beans</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://github.com/litlfred/aai-programme/issues/51">Programme progress as a burn-down for the board</a></td>
+      <td>open</td>
+      <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/beans/defs/cat-tools-tk99--programme-progress-an-epic-burn-down-and-a-math-pr.md">cat-tools-tk99</a> todo</td>
+    </tr>
+  </tbody>
+</table></div>
+<h2 id="platform">
+  
+  
+    <a href="#platform" class="anchor-heading" aria-labelledby="platform"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Platform
+  
+  
+</h2>
+    
+<h3 id="epic-proposal-platform-deployment-publishing-and-the-knowledge-graphs-publication-proposal">
+  
+  
+    <a href="#epic-proposal-platform-deployment-publishing-and-the-knowledge-graphs-publication-proposal" class="anchor-heading" aria-labelledby="epic-proposal-platform-deployment-publishing-and-the-knowledge-graphs-publication-proposal"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> <a href="https://github.com/litlfred/aai-programme/issues/17">Epic proposal (Platform): deployment, publishing and the knowledge graph’s publication</a> <em>(proposal)</em>
+  
+  
+</h3>
+    
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Feature</th>
+      <th>State</th>
+      <th>Beans</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://github.com/litlfred/aai-programme/issues/44">Publish the knowledge graph with a complete JSON-LD context</a></td>
+      <td>open</td>
+      <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/beans/defs/folio-assistant-zzmr--kg-the-knowledge-graphs-own-structure-declaration.md">folio-assistant-zzmr</a> in-progress</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/litlfred/aai-programme/issues/43">Named, versioned tool releases with provenance</a></td>
+      <td>open</td>
+      <td><a href="https://github.com/litlfred/cat-harness/blob/cat/cat-harness/beans/beans/defs/folio-assistant-3sbm--tool-releases-profiles-named-versioned-hashed-tool.md">folio-assistant-3sbm</a> in-progress</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/litlfred/aai-programme/issues/42">Tool contracts as published JSON Schema (the MCP surface)</a></td>
+      <td>open</td>
+      <td><a href="https://github.com/litlfred/folio-assistant/blob/cat/cat-harness/beans/beans/defs/folio-assistant-tdir--tools-get-their-own-folders-one-tool-per-tools-id.md">folio-assistant-tdir</a> in-progress</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/litlfred/aai-programme/issues/41">Render SMART IG pages with the site’s own theme</a></td>
+      <td>open</td>
+      <td><a href="https://github.com/litlfred/folio-assistant/blob/cat/cat-harness/beans/beans/defs/folio-assistant-jut3--smart-via-just-the-docs-stop-mounting-ig-publisher.md">folio-assistant-jut3</a> in-progress</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/litlfred/aai-programme/issues/40">Agent-run publishing for the SMART IG repositories</a></td>
+      <td>open</td>
+      <td><a href="https://github.com/litlfred/folio-assistant/blob/cat/cat-harness/beans/beans/defs/folio-assistant-n3h9--harness-the-smart-ig-repositories-indexconfigjson.md">folio-assistant-n3h9</a> in-progress</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/litlfred/aai-programme/issues/39">Deployment topologies and operating modes</a></td>
+      <td>open</td>
+      <td><a href="https://github.com/litlfred/folio-assistant/blob/cat/cat-harness/beans/beans/defs/folio-assistant-5a3l--deployment-topologies-and-operating-modes-are-two.md">folio-assistant-5a3l</a> in-progress</td>
+    </tr>
+  </tbody>
+</table></div>
+<h2 id="cross-workstream">
+  
+  
+    <a href="#cross-workstream" class="anchor-heading" aria-labelledby="cross-workstream"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Cross-workstream
+  
+  
+</h2>
+    
+<h3 id="pilot-epic-one-who-recommendation-from-source-guidance-to-a-health-skill-epic">
+  
+  
+    <a href="#pilot-epic-one-who-recommendation-from-source-guidance-to-a-health-skill-epic" class="anchor-heading" aria-labelledby="pilot-epic-one-who-recommendation-from-source-guidance-to-a-health-skill-epic"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> <a href="https://github.com/litlfred/aai-programme/issues/4">[Pilot] Epic: one WHO recommendation from source guidance to a health skill</a> <em>(epic)</em>
+  
+  
+</h3>
+    
+
+<p><em>No features yet.</em></p>
 
           
 
