@@ -577,33 +577,33 @@
   them: those are versioned in their own URLs already.
 -->
 <!-- The harness icon row's own style, which railed pages load without docs-ui.css (beans `lhvt`, `9rq1`). -->
-<link rel="stylesheet" href="/aai-programme/assets/css/navbar-row.css?v=1792522781">
-<link rel="stylesheet" href="/aai-programme/assets/css/docs-ui.css?v=1792522781">
+<link rel="stylesheet" href="/aai-programme/assets/css/navbar-row.css?v=1792562167">
+<link rel="stylesheet" href="/aai-programme/assets/css/docs-ui.css?v=1792562167">
 <!-- Narrow viewports: wide content scrolls in its own box, never the page
      (bean `2r2n`). The standalone viewers inline the same file through
      `withViewerNav`, so both kinds of page read one set of rules. -->
-<link rel="stylesheet" href="/aai-programme/assets/css/narrow-viewport.css?v=1792522781">
+<link rel="stylesheet" href="/aai-programme/assets/css/narrow-viewport.css?v=1792562167">
 
 <!--
   The work-plan dashboard's styles, split from docs-ui.css so that
   `state-visualizer.ts` can inline exactly these bytes into the generated
   `<base>/<stub>/state-visualizer/` pages. One rule, two surfaces.
 -->
-<link rel="stylesheet" href="/aai-programme/assets/css/work-plan.css?v=1792522781">
+<link rel="stylesheet" href="/aai-programme/assets/css/work-plan.css?v=1792562167">
 <!-- Sticky themes. GENERATED from the theme nodes in `schemas/themes.ts` by
      `bun run cat themes:css`; `themes:css:check` fails the build when it is stale.
      Loaded AFTER docs-ui.css deliberately: it supplies the `--fa-sticky-*`
      roles that docs-ui.css consumes, and a custom property has to be set on a
      matching element before the rule reading it takes effect. -->
-<link rel="stylesheet" href="/aai-programme/assets/css/themes.css?v=1792522781">
+<link rel="stylesheet" href="/aai-programme/assets/css/themes.css?v=1792562167">
 <!-- UML overview colours: one class per graph typology, set on the Mermaid nodes
      that `scripts/gen-uml-overview.ts` writes into docs/uml/overview/. -->
-<link rel="stylesheet" href="/aai-programme/assets/css/uml.css?v=1792522781">
+<link rel="stylesheet" href="/aai-programme/assets/css/uml.css?v=1792562167">
 <!-- Kind avatars. GENERATED from `schemas/avatars.ts` by `bun run cat avatars:css`;
      `avatars:css:check` fails the build when it is stale. One stylesheet
      rather than 68 assets: the glyph is a mask and the colour is a property,
      so a scheme swap is a custom property and the trash state is a selector. -->
-<link rel="stylesheet" href="/aai-programme/assets/css/avatars.css?v=1792522781">
+<link rel="stylesheet" href="/aai-programme/assets/css/avatars.css?v=1792562167">
 
 <!--
   The kinds THIS INSTANCE DECLARES, for the avatar fan.
@@ -624,12 +624,12 @@
 <!-- BEFORE docs-ui.js and work-plan.js: both read window.faRender. -->
 <script src="/aai-programme/assets/js/kg-render.js" defer></script>
 <!-- BEFORE docs-ui.js, which calls it: the one drawing of the harness icon row (beans `lhvt`, `9rq1`). -->
-<script src="/aai-programme/assets/js/navbar-row.js?v=1792522781" defer></script>
-<script src="/aai-programme/assets/js/docs-ui.js?v=1792522781" defer></script>
+<script src="/aai-programme/assets/js/navbar-row.js?v=1792562167" defer></script>
+<script src="/aai-programme/assets/js/docs-ui.js?v=1792562167" defer></script>
 <!-- The edit, source and feedback links of every page, from the platform's one
   recipe (cat-harness-tools/src/core/edit-links.ts, bean v433): links carry their
   facts and this builds the hrefs. -->
-<script src="/aai-programme/assets/js/edit-links.js?v=1792522781" defer></script>
+<script src="/aai-programme/assets/js/edit-links.js?v=1792562167" defer></script>
 
 <!--
   The work-plan dashboard. SELF-MOUNTING on any page carrying
@@ -716,7 +716,7 @@
 
 <link rel="stylesheet" href="../assets/css/navbar.css"><script src="../assets/navbar/rail-h6la0y4e05.js" defer></script><script src="../assets/js/navbar.js" defer></script><link rel="stylesheet" href="../assets/page-layout.css" data-fa-page-layout><script src="../assets/page-layout.js" defer data-fa-page-layout></script><meta name="fa-platform-base" content="https://litlfred.github.io/folio-assistant" data-fa-platform-ui><link rel="stylesheet" href="../assets/css/docs-ui.css" data-fa-platform-ui><script src="../assets/js/docs-ui.js" defer data-fa-platform-ui></script><meta name="fa-pinned-data" content=".."></head>
 
-<body><script type="application/json" id="fa-rail" data-fa-root="https://litlfred.github.io/folio-assistant" data-fa-to-root="..">{"data":"rail-h6la0y4e05","here":"/board/","documentIndex":{"label":"On this page","icon":"§","items":[{"href":"#stores","label":"Stores"},{"href":"#blocked","label":"Blocked"},{"href":"#open-beans","label":"Open beans","children":[{"href":"#aai-platform-25-open","label":"aai-platform (25 open)","depth":1},{"href":"#folio-assistant-123-open","label":"folio-assistant (123 open)","depth":1},{"href":"#cat-harness-22-open","label":"cat-harness (22 open)","depth":1},{"href":"#cat-harness-tools-13-open","label":"cat-harness-tools (13 open)","depth":1},{"href":"#folio-assistant-core-14-open","label":"folio-assistant-core (14 open)","depth":1},{"href":"#smart-ra-1-open","label":"smart-ra (1 open)","depth":1}],"fold":"6 sub-sections"}],"collapsible":true}}</script><nav class="fa-nav" aria-label="folio-assistant" data-fa-rail="pending"><a href="../">Assured AI programme</a></nav>
+<body><script type="application/json" id="fa-rail" data-fa-root="https://litlfred.github.io/folio-assistant" data-fa-to-root="..">{"data":"rail-h6la0y4e05","here":"/board/","documentIndex":{"label":"On this page","icon":"§","items":[{"href":"#stores","label":"Stores"},{"href":"#blocked","label":"Blocked"},{"href":"#open-beans","label":"Open beans","children":[{"href":"#aai-platform-25-open","label":"aai-platform (25 open)","depth":1},{"href":"#folio-assistant-122-open","label":"folio-assistant (122 open)","depth":1},{"href":"#cat-harness-22-open","label":"cat-harness (22 open)","depth":1},{"href":"#cat-harness-tools-12-open","label":"cat-harness-tools (12 open)","depth":1},{"href":"#folio-assistant-core-12-open","label":"folio-assistant-core (12 open)","depth":1},{"href":"#smart-ra-1-open","label":"smart-ra (1 open)","depth":1}],"fold":"6 sub-sections"}],"collapsible":true}}</script><nav class="fa-nav" aria-label="folio-assistant" data-fa-rail="pending"><a href="../">Assured AI programme</a></nav>
   <a class="skip-to-main" href="#main-content">Skip to main content</a>
   <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
   <symbol id="svg-link" viewBox="0 0 24 24">
@@ -859,13 +859,13 @@
     </tr>
     <tr>
       <td><a href="https://github.com/litlfred/folio-assistant">folio-assistant</a></td>
-      <td><code class="language-plaintext highlighter-rouge">cat/cat-harness/beans</code> @ <code class="language-plaintext highlighter-rouge">70e1ae6</code> (160 bean(s) also kept, more recently, in another store)</td>
-      <td style="text-align: right">58</td>
-      <td style="text-align: right">65</td>
+      <td><code class="language-plaintext highlighter-rouge">cat/cat-harness/beans</code> @ <code class="language-plaintext highlighter-rouge">f208a03</code> (159 bean(s) also kept, more recently, in another store)</td>
+      <td style="text-align: right">59</td>
+      <td style="text-align: right">63</td>
       <td style="text-align: right">2</td>
-      <td style="text-align: right">1382</td>
+      <td style="text-align: right">1384</td>
       <td style="text-align: right">41</td>
-      <td style="text-align: right">123</td>
+      <td style="text-align: right">122</td>
     </tr>
     <tr>
       <td><a href="https://github.com/litlfred/bootstrap">bootstrap</a></td>
@@ -899,23 +899,23 @@
     </tr>
     <tr>
       <td><a href="https://github.com/litlfred/cat-harness-tools">cat-harness-tools</a></td>
-      <td><code class="language-plaintext highlighter-rouge">main</code> @ <code class="language-plaintext highlighter-rouge">912e66b</code> (283 bean(s) also kept, more recently, in another store)</td>
-      <td style="text-align: right">4</td>
-      <td style="text-align: right">9</td>
+      <td><code class="language-plaintext highlighter-rouge">main</code> @ <code class="language-plaintext highlighter-rouge">ff40640</code> (283 bean(s) also kept, more recently, in another store)</td>
+      <td style="text-align: right">5</td>
+      <td style="text-align: right">7</td>
       <td style="text-align: right">1</td>
-      <td style="text-align: right">12</td>
-      <td style="text-align: right">0</td>
       <td style="text-align: right">13</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">12</td>
     </tr>
     <tr>
       <td><a href="https://github.com/litlfred/folio-assistant-core">folio-assistant-core</a></td>
-      <td><code class="language-plaintext highlighter-rouge">main</code> @ <code class="language-plaintext highlighter-rouge">a2b6524</code> (181 bean(s) also kept, more recently, in another store)</td>
+      <td><code class="language-plaintext highlighter-rouge">main</code> @ <code class="language-plaintext highlighter-rouge">8e61a14</code> (182 bean(s) also kept, more recently, in another store)</td>
       <td style="text-align: right">2</td>
+      <td style="text-align: right">10</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">6</td>
+      <td style="text-align: right">0</td>
       <td style="text-align: right">12</td>
-      <td style="text-align: right">0</td>
-      <td style="text-align: right">5</td>
-      <td style="text-align: right">0</td>
-      <td style="text-align: right">14</td>
     </tr>
     <tr>
       <td><a href="https://github.com/litlfred/folio-assistant-sci">folio-assistant-sci</a></td>
@@ -1348,10 +1348,10 @@
     </tr>
   </tbody>
 </table></div>
-<h3 id="folio-assistant-123-open">
+<h3 id="folio-assistant-122-open">
   
   
-    <a href="#folio-assistant-123-open" class="anchor-heading" aria-labelledby="folio-assistant-123-open"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> folio-assistant (123 open)
+    <a href="#folio-assistant-122-open" class="anchor-heading" aria-labelledby="folio-assistant-122-open"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> folio-assistant (122 open)
   
   
 </h3>
@@ -1583,6 +1583,14 @@
       <td>normal</td>
       <td>task</td>
       <td>QA-PUBLISH must publish real results once main holds none (5hox blocker)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/litlfred/folio-assistant/blob/cat/cat-harness/beans/beans/defs/folio-assistant-4dbr--forge-portability-gitlab-and-sovereign-compute-as.md">folio-assistant-4dbr</a></td>
+      <td>in-progress</td>
+      <td>normal</td>
+      <td>task</td>
+      <td>Forge portability: GitLab and sovereign-compute as additional Tool nodes, not a sixth repo</td>
       <td> </td>
     </tr>
     <tr>
@@ -1938,14 +1946,6 @@
       <td> </td>
     </tr>
     <tr>
-      <td><a href="https://github.com/litlfred/folio-assistant/blob/cat/cat-harness/beans/beans/defs/folio-assistant-4dbr--forge-portability-gitlab-and-sovereign-compute-as.md">folio-assistant-4dbr</a></td>
-      <td>todo</td>
-      <td>normal</td>
-      <td>task</td>
-      <td>Forge portability: GitLab and sovereign-compute as additional Tool nodes, not a sixth repo</td>
-      <td> </td>
-    </tr>
-    <tr>
       <td><a href="https://github.com/litlfred/folio-assistant/blob/cat/cat-harness/beans/beans/defs/folio-assistant-4y2i--topology-sovereign-cloud-hosted-forge-jurisdiction.md">folio-assistant-4y2i</a></td>
       <td>todo</td>
       <td>normal</td>
@@ -2159,14 +2159,6 @@
       <td>normal</td>
       <td>feature</td>
       <td>INTERACTION: the asking rule is enforced by three layers, not remembered</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td><a href="https://github.com/litlfred/folio-assistant/blob/cat/cat-harness/beans/beans/defs/folio-assistant-k8rc--the-typescript-prose-backlog-344-and-two-of-them.md">folio-assistant-k8rc</a></td>
-      <td>todo</td>
-      <td>normal</td>
-      <td>task</td>
-      <td>The TypeScript prose backlog: 344 mentions, and the exemption does not cover all of them</td>
       <td> </td>
     </tr>
     <tr>
@@ -2554,10 +2546,10 @@
     </tr>
   </tbody>
 </table></div>
-<h3 id="cat-harness-tools-13-open">
+<h3 id="cat-harness-tools-12-open">
   
   
-    <a href="#cat-harness-tools-13-open" class="anchor-heading" aria-labelledby="cat-harness-tools-13-open"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> cat-harness-tools (13 open)
+    <a href="#cat-harness-tools-12-open" class="anchor-heading" aria-labelledby="cat-harness-tools-12-open"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> cat-harness-tools (12 open)
   
   
 </h3>
@@ -2576,19 +2568,27 @@
   </thead>
   <tbody>
     <tr>
-      <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/beans/defs/cat-tools-bbnd--translation-info-drawer-open-more-translation-deta.md">cat-tools-bbnd</a></td>
+      <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/beans/defs/cat-tools-5jij--qa-axis-summary-reads-a-json-shape-qa-sweep-never-e.md">cat-tools-5jij</a></td>
       <td>in-progress</td>
       <td>normal</td>
-      <td>feature</td>
-      <td>Translation info drawer: open more translation detail from every translation warning — blocks, pages, (sub)graphs, locales</td>
+      <td>bug</td>
+      <td>qa-axis-summary reads a JSON shape qa-sweep never emits, so every axis reports “criteria run: 0”</td>
       <td> </td>
     </tr>
     <tr>
-      <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/beans/defs/cat-tools-e1lo--ingest-narrative-description-per-image-localized-i.md">cat-tools-e1lo</a></td>
+      <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/beans/defs/cat-tools-og5t--paper-site-in-the-harness-rendering-yj32-math-lean.md">cat-tools-og5t</a></td>
       <td>in-progress</td>
       <td>normal</td>
-      <td>task</td>
-      <td>INGEST: narrative description per image, localized, including images extracted from PDFs</td>
+      <td>feature</td>
+      <td>PAPER SITE in the harness rendering (yj32): math, Lean links and notation macros, blocking qou’s legacy-render retirement</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/beans/defs/cat-tools-sthf--url-space-rendered-assets-mirror-the-instantiation.md">cat-tools-sthf</a></td>
+      <td>in-progress</td>
+      <td>normal</td>
+      <td>feature</td>
+      <td>URL SPACE: rendered assets mirror the instantiation structure — <baseurl>/ for the root, <baseurl>/<instance>/<path> for every enabled harness</path></instance></baseurl></baseurl></td>
       <td> </td>
     </tr>
     <tr>
@@ -2624,27 +2624,11 @@
       <td> </td>
     </tr>
     <tr>
-      <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/beans/defs/cat-tools-5jij--qa-axis-summary-reads-a-json-shape-qa-sweep-never-e.md">cat-tools-5jij</a></td>
+      <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/beans/defs/cat-tools-e1lo--ingest-narrative-description-per-image-localized-i.md">cat-tools-e1lo</a></td>
       <td>todo</td>
       <td>normal</td>
-      <td>bug</td>
-      <td>qa-axis-summary reads a JSON shape qa-sweep never emits, so every axis reports “criteria run: 0”</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/beans/defs/cat-tools-og5t--paper-site-in-the-harness-rendering-yj32-math-lean.md">cat-tools-og5t</a></td>
-      <td>todo</td>
-      <td>normal</td>
-      <td>feature</td>
-      <td>PAPER SITE in the harness rendering (yj32): math, Lean links and notation macros, blocking qou’s legacy-render retirement</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td><a href="https://github.com/litlfred/cat-harness-tools/blob/main/beans/defs/cat-tools-sthf--url-space-rendered-assets-mirror-the-instantiation.md">cat-tools-sthf</a></td>
-      <td>todo</td>
-      <td>normal</td>
-      <td>feature</td>
-      <td>URL SPACE: rendered assets mirror the instantiation structure — <baseurl>/ for the root, <baseurl>/<instance>/<path> for every enabled harness</path></instance></baseurl></baseurl></td>
+      <td>task</td>
+      <td>INGEST: narrative description per image, localized, including images extracted from PDFs</td>
       <td> </td>
     </tr>
     <tr>
@@ -2681,10 +2665,10 @@
     </tr>
   </tbody>
 </table></div>
-<h3 id="folio-assistant-core-14-open">
+<h3 id="folio-assistant-core-12-open">
   
   
-    <a href="#folio-assistant-core-14-open" class="anchor-heading" aria-labelledby="folio-assistant-core-14-open"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> folio-assistant-core (14 open)
+    <a href="#folio-assistant-core-12-open" class="anchor-heading" aria-labelledby="folio-assistant-core-12-open"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> folio-assistant-core (12 open)
   
   
 </h3>
@@ -2796,22 +2780,6 @@
       <td>normal</td>
       <td>task</td>
       <td>WORKFLOW VIEW: cat-harness folio shows where todos and beans sit in the BPMN/DMN, and where a process is breaking down</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td><a href="https://github.com/litlfred/folio-assistant-core/blob/main/beans/defs/folio-core-2mb0--adjudicate-the-68-round-trip-findings-on-who-iriss.md">folio-core-2mb0</a></td>
-      <td>todo</td>
-      <td>normal</td>
-      <td>task</td>
-      <td>Adjudicate the 68 round-trip findings on who-iris’s catalogues (66 warn, 2 fail)</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td><a href="https://github.com/litlfred/folio-assistant-core/blob/main/beans/defs/folio-core-shsz--translation-info-drawer-on-every-translation-warni.md">folio-core-shsz</a></td>
-      <td>todo</td>
-      <td>normal</td>
-      <td>feature</td>
-      <td>Translation info drawer on every translation warning (pointer → cat-tools-bbnd)</td>
       <td> </td>
     </tr>
   </tbody>
